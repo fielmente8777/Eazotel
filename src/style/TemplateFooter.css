@@ -1,0 +1,45 @@
+.template-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.template-footer button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 4rem;
+    width: auto;
+    font-size: 1.5rem;
+}
+
+.template-footer h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FD5C01;
+}
+
+.template-footer p {
+    padding: 0 3rem;
+    font-size: 1.5rem;
+    word-spacing: 2px;
+    font-weight: 600;
+    color: #193971;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width:480px) {
+
+    .template-footer h1 {
+        font-size: 2rem;
+    }
+
+    .template-footer p {
+        padding: 0 .5rem;
+        font-size: 1rem;
+        word-spacing: 2px;
+    }
+
+
+}

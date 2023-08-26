@@ -1,0 +1,222 @@
+.test {
+    margin-top: 4rem;
+}
+
+.test .test-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.test .test-heading {
+    color: #193971;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    font-size: 2.3rem;
+    font-weight: 900;
+}
+
+.test .inputname {
+    color: #193971;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+.test .inputarea {
+    background: #F2FAFF;
+    border-radius: 5px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 3px solid #193971;
+    border-left: 3px solid #193971;
+    padding: .6rem .5rem;
+}
+
+.test .forminput {
+    display: flex;
+    flex-direction: column;
+}
+
+.test .extra {
+    margin-bottom: 1.5rem;
+}
+
+.test .test-image {
+    padding-left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+
+.test .ackrow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 3rem;
+}
+
+.test .ack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.test .acknowledgement {
+    font-size: .7rem;
+    color: #193971;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.test .submitbutton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.test .submitted {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    width: 210px;
+    height: 70px;
+    background: #193971;
+    border: 0;
+    box-shadow: 0px 3.71601px 11.148px rgba(0, 0, 0, 0.05), 0px 18.5801px 44.5922px rgba(0, 0, 0, 0.15);
+    border-radius: 104.823px;
+}
+
+.test .submitted:hover {
+    background: #FD5C01;
+    transition: .1s;
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .test {
+        margin-top: 4rem;
+    }
+
+    .test .test-heading {
+        position: relative;
+        display: flex;
+        top: 40px;
+        justify-content: end;
+        font-size: 2.3rem;
+        font-weight: 900;
+    }
+
+    .test .test-data {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .test .ackrow {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 3rem;
+    }
+
+
+    .test .submitted {
+        font-size: 1.4rem;
+        width: 180px;
+        height: 60px;
+    }
+
+    .test .submitted:hover {
+        background: #FD5C01;
+        transition: .1s;
+        border: 5.75949px solid #FFFFFF;
+        box-shadow: 0px 3.71601px 11.148px rgba(0, 0, 0, 0.05), 0px 18.5801px 44.5922px rgba(0, 0, 0, 0.15);
+        border-radius: 104.823px;
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .test {
+        margin-top: 5rem;
+    }
+
+    .test .test-heading {
+        top: 20px;
+        font-size: 1.5rem;
+    }
+
+
+    .test .inputname {
+        display: none;
+    }
+
+    .test .inputarea {
+        padding: .5rem 1rem;
+        border-bottom: 3px solid #A1B7DC;
+        border-left: 3px solid #A1B7DC;
+    }
+
+    .test .extra {
+        margin-bottom: 0;
+    }
+
+    .test .test-data {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .test .test-image {
+        order: -1;
+        padding-left: .5rem;
+        padding-bottom: .5rem;
+    }
+
+
+
+    .test .room {
+        margin-top: 1.5rem;
+    }
+
+    .test .state {
+        display: none;
+    }
+
+    .test .country {
+        display: none;
+    }
+
+    .test .city {
+        display: none;
+    }
+
+    .test .acknowledgement {
+        font-size: .4rem;
+        color: #193971;
+        font-weight: 600;
+    }
+
+    .test .address {
+        margin-bottom: 0;
+    }
+
+    .test .ackrow {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        padding-top: 0;
+    }
+
+    .test .submitted {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        width: 140px;
+        height: 45px;
+    }
+}

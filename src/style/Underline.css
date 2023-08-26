@@ -1,0 +1,16 @@
+
+.underline .content{
+    display: flex;
+    align-items: center;
+}
+.underline .line{
+    border-top: 3px solid  #193971;
+}
+
+
+@media  screen and (max-width:481px) {
+    .underline .content{
+        display: none;
+        
+    }
+}

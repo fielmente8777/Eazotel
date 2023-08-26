@@ -1,0 +1,134 @@
+.bookingengine {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.bookingengine .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookingengine .col-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bookingengine span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FD5C01;
+    line-height: 25px;
+}
+
+.bookingengine h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 40px;
+    color: #193971;
+}
+
+.bookingengine h3 {
+    font-size: 3rem;
+    color: #FD5C01;
+}
+
+.bookingengine p {
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #193971;
+}
+
+.bookingengine button,
+.booking-content-list2 button {
+    margin-top: 2rem;
+    padding: 0 4rem;
+    width: auto;
+    font-size: 1.5rem;
+}
+
+.bookingengine img {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.booking-content-list1 {
+    padding-bottom: 2rem;
+    color: #ffffff;
+    background-color: #193971;
+}
+
+.booking-content-list1 h2 {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.booking-content-list1 li,
+.booking-content-list2 li {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.booking-content-list2 {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    color: #193971;
+}
+
+.booking-content-list2 .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.booking-content-list2 h2 {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    word-spacing: 3px;
+    font-weight: 700;
+}
+
+.booking-content-list2 button {
+    margin-top: 2rem;
+    padding: 0 4rem;
+    width: auto;
+    font-size: 1.5rem;
+}
+
+
+
+
+@media screen and (max-width:480px) {
+
+    .booking-content-list1 h2,
+    .booking-content-list2 h2 {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .booking-content-list1 li,
+    .booking-content-list2 li {
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: start;
+    }
+
+    .bookingengine h1 {
+        font-size: 1.5rem;
+    }
+
+    .bookingengine h3 {
+        font-size: 2rem;
+    }
+
+    .bookingengine p {
+        font-size: 1.8rem;
+    }
+}

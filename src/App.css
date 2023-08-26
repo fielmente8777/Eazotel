@@ -1,0 +1,73 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Playfair+Display&display=swap');
+
+*{
+  font-family: var(--pix-heading-font),sans-serif !
+}
+
+*{
+    padding: 0;
+    margin:0;
+}
+
+*.textblue{
+    color:#193971;
+}
+*.textorange{
+    color:#fd5c01;
+}
+
+
+ .createwebsitebutton ,.demobutton{
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  width: auto;
+  padding: 0 2rem;
+  height: 60px;
+  letter-spacing: 1px;
+  background: #193971;
+  border: 0;
+  box-shadow: 0px 3.71601px 11.148px rgba(0, 0, 0, 0.05), 0px 18.5801px 44.5922px rgba(0, 0, 0, 0.15);
+  border-radius: 104.823px;
+}
+ .createwebsitebutton:hover,.demobutton:hover{
+  background:#FD5C01;
+  transition: .1s;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .createwebsitebutton ,.demobutton{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    height: 50px;
+    letter-spacing: 1px;
+    background: #193971;
+    border: 0;
+    box-shadow: 0px 3.71601px 11.148px rgba(0, 0, 0, 0.05), 0px 18.5801px 44.5922px rgba(0, 0, 0, 0.15);
+    border-radius: 104.823px;
+  }
+}
+
+@media screen and  (max-width: 480px) {
+  .createwebsitebutton ,.demobutton{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    height: 45px;
+    letter-spacing: 1px;
+    background: #193971;
+    border: 0;
+    box-shadow: 0px 3.71601px 11.148px rgba(0, 0, 0, 0.05), 0px 18.5801px 44.5922px rgba(0, 0, 0, 0.15);
+    border-radius: 104.823px;
+  }
+}
+input::placeholder {
+  background-color:transparent;
+  font-weight: 600;
+}
+

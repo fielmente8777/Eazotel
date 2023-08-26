@@ -1,0 +1,268 @@
+.logineazotel {
+  background: solid white;
+}
+
+.login-content {
+  border-radius: 5px;
+  height: 95vh;
+}
+
+.login-content .login-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logineazotel .createwebsitebutton {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  margin-top: 2rem;
+  width: 200px;
+  height: 50px;
+  background: #193971;
+  border: 0;
+  border-radius: 104.823px;
+  box-shadow: 0;
+}
+
+.logineazotel .button:hover {
+  background: #FD5C01;
+  transition: 0.1s;
+}
+
+.logineazotel .input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+}
+
+.logineazotel input {
+  width: 30%;
+  height: 2.5rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  padding: 1rem;
+  color: #193971;
+  border: 1px solid #193971;
+  border-bottom: 3px solid #193971;
+  border-left: 3px solid #193971;
+}
+
+.logineazotel .image {
+  display: contents;
+
+}
+
+.logineazotel .input {
+  position: relative;
+}
+
+.logineazotel .eye-icon {
+  position: absolute;
+  top: 50%;
+  left: 62%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+
+
+.logineazotel img {
+  width: 18%;
+  margin-bottom: 6rem;
+
+}
+
+.logineazotel .sub {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.logineazotel .dont {
+  color: #193971;
+  text-decoration: none;
+
+}
+
+.logineazotel .radio {
+  margin-top: 1px;
+  height: .9rem;
+  width: .9rem;
+  color: #1A1A1A;
+  background-color: #1A1A1A;
+}
+
+.logineazotel .redio-data {
+  display: flex;
+  justify-content: center;
+}
+
+.logineazotel .remember {
+  font-size: 1rem;
+  color: #7E8EA6;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4px;
+}
+
+.logineazotel .forget {
+  font-size: 1rem;
+  color: #7E8EA6;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.logineazotel .abs {
+  font-size: .6rem;
+  color: #193971;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.logineazotel .googleauth {
+  border-radius: 10px;
+  border: 1px solid #193971;
+  border-bottom: 3px solid #193971;
+  border-left: 3px solid #193971;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  height: 2.5rem;
+  padding: 1rem;
+  background: solid white;
+}
+
+.logineazotel .google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logineazotel .glb {
+  margin-top: .4rem;
+  font-size: 1.2rem;
+  color: #193971;
+  font-weight: 700;
+
+}
+
+.logineazotel input::placeholder {
+  /* background-color: transparent; */
+  font-weight: 700;
+  color: #193971;
+
+}
+
+.logineazotel span {
+  display: flex;
+  align-items: flex-start;
+}
+
+.logineazotel button {
+  width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+  .logineazotel {
+    margin-top: 0;
+  }
+
+  .logineazotel img {
+    width: 30%;
+  }
+
+  .logineazotel .input {
+    width: 60%;
+  }
+
+  .logineazotel input {
+    width: 90%;
+  }
+
+  .logineazotel .sub {
+    width: 50%;
+  }
+
+  .logineazotel button {
+    width: 55%;
+  }
+
+  .logineazotel .googleauth {
+    width: 55%;
+  }
+
+  .logineazotel .glb {
+    font-size: 1.1rem;
+  }
+
+  .logineazotel .eye-icon {
+
+    left: 86%;
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logineazotel {
+    margin-top: 0;
+  }
+
+  .logineazotel img {
+    width: 60%;
+  }
+
+  .logineazotel .input {
+    width: 100%;
+  }
+
+  .logineazotel input {
+    width: 90%;
+  }
+
+  .logineazotel .sub {
+    width: 90%;
+  }
+
+  .logineazotel .googleauth {
+    width: 90%;
+  }
+
+  .logineazotel .glb {
+    font-size: 1.1rem;
+  }
+
+  .logineazotel button {
+    width: 90%;
+  }
+
+  .logineazotel .eye-icon {
+
+    left: 82%;
+
+  }
+
+  .logineazotel .remember {
+    font-size: .7rem;
+
+  }
+
+  .logineazotel .forget {
+    font-size: .7rem;
+
+  }
+}

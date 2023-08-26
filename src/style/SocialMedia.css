@@ -1,0 +1,184 @@
+.socialmedia,
+.socialmedia2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialmedia .content,
+.socialmedia2 .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.socialmedia img,
+.socialmedia2 img {
+    width: 100%;
+}
+
+
+/* second part */
+
+
+.socialmedia2 {
+    margin-top: 4rem;
+}
+
+.socialmedia2 .socialmedia2-content {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.socialmedia2 h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    color: #193971;
+}
+
+.socialmedia2 h3 {
+    margin-bottom: 1rem;
+    word-spacing: 5px;
+    font-size: 2rem;
+    color: #193971;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+.socialmedia2 p {
+    padding: 0 3rem;
+    font-size: 1.5rem;
+    word-spacing: 2px;
+    color: #193971;
+    font-weight: 600;
+}
+
+.socialmedia2 button {
+    margin-top: 2rem;
+    padding: 0 4rem;
+    width: auto;
+    font-size: 1.5rem;
+}
+
+.socialbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+
+}
+
+.socialbox .col-one,
+.socialbox .col-two,
+.socialbox .col-three {
+    display: flex;
+    padding: 2rem 2rem;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 8.125151634216309px 8.125151634216309px 3.6932506561279297px 0px rgba(25, 57, 113, 0.09) inset, 0.7386501431465149px 4.431900978088379px 5.17055082321167px 0px rgba(25, 57, 113, 0.49);
+    font-size: 2rem;
+    font-weight: 600;
+    color: #193971;
+}
+
+.socialbox .col-one {
+    margin-right: 4rem;
+}
+
+.socialbox .col-three {
+    margin-left: 4rem;
+}
+
+.socialfooter {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.socialfooter h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #193971;
+    margin-bottom: 3rem;
+}
+
+.socialfooter button {
+    margin-top: 2rem;
+    padding: 0 4rem;
+    width: auto;
+    font-size: 1.5rem;
+}
+
+
+
+@media screen and (max-width:480px) {
+
+
+    .socialmedia2 h1 {
+        font-size: 2rem;
+    }
+
+    .socialmedia2 h3 {
+        font-size: 2rem;
+        word-spacing: 2px;
+
+    }
+
+    .socialmedia2 p {
+        padding: 0 .5rem;
+        font-size: 1rem;
+        word-spacing: 0;
+    }
+
+    .socialbox {
+        padding: 2rem;
+    }
+
+    .socialbox .col-one,
+    .socialbox .col-two,
+    .socialbox .col-three {
+        padding: 2rem 2rem;
+        font-size: 1.5rem;
+    }
+
+    .socialbox .col-one {
+
+        margin-right: 0;
+    }
+
+    .socialbox .col-two {
+
+        margin-top: 2rem;
+    }
+
+    .socialbox .col-three {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .socialfooter {
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .socialfooter h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #193971;
+        margin-bottom: 3rem;
+    }
+
+    .socialfooter button {
+        margin-top: 2rem;
+        padding: 0 4rem;
+        width: auto;
+        font-size: 1.5rem;
+    }
+}

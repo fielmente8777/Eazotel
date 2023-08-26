@@ -1,0 +1,114 @@
+.award {
+  margin-top: 2rem;
+}
+
+.award .heading {
+  display: flex;
+  justify-content: center;
+  color: #193971;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 40px;
+  word-spacing: 1px;
+  letter-spacing: .1px;
+  width: 100%;
+}
+
+.award .award-card {
+  max-width:1140px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 20px;
+  padding-top: 3rem;
+  padding-bottom: 0rem;
+  height: 100%;
+}
+
+.award .card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  max-width: 300px;
+}
+
+.award .card-content img {
+  border-radius: 10px;
+  height: 170px;
+  width: 170px;
+  margin-bottom: 1rem;
+}
+.award .award-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+}
+
+.award .award-card > div {
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .award {
+    margin-top: 1rem;
+  }
+  .award .heading {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 40px;
+    word-spacing: 1px;
+    letter-spacing: .1px;
+    width: 100%;
+  }
+  .award .card-content {
+    width: 100%;   
+  }
+}
+@media only screen and (max-width: 480px) {
+  .award {
+    margin-top: 2rem;
+  }
+  .award .heading {
+    font-size: 1.1rem;
+    line-height: 30px;
+    word-spacing: .1px;
+    letter-spacing: 0.5px;
+    margin-bottom: 0rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .award .award-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+.award .award-card {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+.award .award-card > div {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  white-space: wrap;
+}
+
+.award .card-content {
+  width: 100%;   
+}
+  .award .award-section{
+    margin-top: 0;
+  }
+}
+

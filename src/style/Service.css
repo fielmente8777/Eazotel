@@ -1,0 +1,150 @@
+.service .heading {
+    display: flex;
+    justify-content: center;
+    color: #193971;
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 30px;
+    word-spacing: 10px;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.s-service {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.service-data {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+
+}
+
+.service-data .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.service-data .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.service img {
+    width: 100%;
+}
+
+.service .demo-heading {
+    order: 3;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* for small laptops  */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .service .heading {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.9rem;
+        line-height: 40px;
+        word-spacing: .1px;
+        letter-spacing: 0.1px;
+        margin-bottom: 2rem;
+    }
+
+    .service .demo-heading {
+        order: 3;
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .service .heading {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 40px;
+        word-spacing: .1px;
+        letter-spacing: 0.1px;
+        margin-bottom: 2rem;
+    }
+
+    .service .demo-heading {
+        order: 3;
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .s-service {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .service .heading {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 36px;
+        word-spacing: .1px;
+        letter-spacing: 0.1px;
+        margin-bottom: 5px;
+    }
+
+    .service-data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .service-data .left {
+        order: -1;
+        width: auto;
+        height: auto;
+    }
+
+    
+
+    .service-data .right {
+        order: 2;
+        margin-bottom: 0;
+        width: auto;
+        height: auto;
+    }
+
+    .service .demo-heading {
+        order: 3;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+    }
+
+    .service .dash {
+        margin-left: .5rem;
+    }
+}

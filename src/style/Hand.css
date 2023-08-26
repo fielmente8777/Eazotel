@@ -1,0 +1,84 @@
+/* First row css */
+.handcont {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hand .data {
+    margin-top: 2rem;
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hand h1 {
+    font-size: 2.5rem;
+    color: #193971;
+    font-weight: 700;
+    text-align: start;
+    word-spacing: 5px;
+}
+
+.hand p {
+    margin-top: 1rem;
+    color: #193971;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: start;
+    line-height: 35px;
+}
+
+.hand .img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-height: 60vh;
+}
+
+.hand img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .hand h1 {
+        font-size: 2.3rem;
+    }
+
+    .hand p {
+        font-size: .9rem;
+        line-height: 20px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .hand h1 {
+        font-size: 1.7rem;
+        text-align: center;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .hand .data {
+        padding-right: .7rem;
+        text-align: center;
+    }
+
+    .hand p {
+        font-size: 1rem;
+        line-height: 20px;
+        margin-bottom: 1rem;
+
+    }
+
+    .hand .img {
+        margin-top: 2rem;
+    }
+}

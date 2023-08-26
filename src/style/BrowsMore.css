@@ -1,0 +1,40 @@
+.brows .heading {
+    display: flex;
+    justify-content: center;
+    color: #FD5C01;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 30px;
+    text-decoration: underline;
+    word-spacing: 5px;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.brows .vector {
+    height: 20px;
+    margin-top:9px;
+    
+    margin-left: .3rem;
+
+}
+
+@media only screen and (max-width: 480px) {
+    .brows .heading {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: .8rem;
+        line-height: 25px;
+        letter-spacing: 1px;
+        word-spacing: .5px;
+        margin-bottom: 0;
+
+    }
+    .brows .vector {
+        height: 12px;
+        margin-top:9px;
+        margin-left: .3rem;
+    
+    }
+}

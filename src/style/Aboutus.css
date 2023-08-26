@@ -1,0 +1,148 @@
+/* First row css */
+.aboutus {
+    margin-top: 70px;
+    background: #0B3974;
+
+}
+
+
+.aboutus .aboutcontent {
+    display: flex;
+    padding: 5rem 0;
+}
+
+.aboutus .data {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.aboutcontent h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-align: start;
+    word-spacing: 5px;
+}
+
+.aboutus p {
+    margin-top: 1rem;
+    color: #F5F5F5;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: start;
+    line-height: 35px;
+}
+
+.aboutus .img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-height: 60vh;
+}
+
+.aboutus img {
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Second  row css */
+.second {
+    display: flex;
+    justify-content: center;
+}
+
+.second-data {
+    text-align: center;
+}
+
+.second h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FD5C01;
+}
+
+.second p {
+    margin-top: 1rem;
+    color: #193971;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .aboutus .aboutcontent {
+        padding-left: .7rem;
+    }
+
+    .aboutcontent h1 {
+        margin-bottom: 1rem;
+        font-size: 2.3rem;
+        line-height: 45px;
+        word-spacing: 2px;
+    }
+
+    .aboutus p {
+        font-size: .9rem;
+        line-height: 20px;
+    }
+
+    .aboutus img {
+        height: 100%;
+    }
+
+    /* secon row css */
+
+    .second h1 {
+        font-size: 2.3rem;
+    }
+
+    .second p {
+        margin-top: 1rem;
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .aboutus {
+        margin-top: 2.5rem;
+    }
+
+    .aboutus .aboutcontent {
+        padding-left: 0;
+        padding-top: 0;
+        height: auto;
+    }
+
+    .aboutcontent h1 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.7rem;
+        word-spacing: 2px;
+    }
+
+    .aboutus p {
+        font-size: 1rem;
+        line-height: 20px;
+    }
+
+    .aboutus .img {
+        margin-top: 2rem;
+        justify-content: center;
+    }
+
+    .aboutus img {
+        height: 100%;
+    }
+
+    /* secons row css */
+    .second h1 {
+        font-size: 1.7rem;
+    }
+
+    .second p {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+}

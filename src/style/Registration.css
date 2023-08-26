@@ -1,0 +1,81 @@
+.registrationeazotel {
+    position: fixed;
+    top: 30%;
+    z-index: 199999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registrationeazotel .login-content {
+    position: relative;
+
+    max-width: 400px;
+    height: auto;
+    background-color: #ccc;
+}
+
+.registrationeazotel .login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.registrationeazotel input {
+    border-radius: 3px;
+    padding: .5rem .9rem;
+    border: #ccc;
+}
+
+.registrationeazotel .image {
+    text-align: center;
+}
+
+.registrationeazotel img {
+    width: 50%;
+}
+
+.registrationeazotel .forget {
+    display: flex;
+    text-align: end;
+}
+
+.registrationeazotel h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    color: #FD5C01;
+    font-weight: 600;
+}
+
+.registrationeazotel .google {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: .3rem 0;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+
+.registrationeazotel p {
+    color: #193971;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.registrationeazotel .forget {
+    text-align: end;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #193971;
+}
+
+.registrationeazotel .icon {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: .5rem 1rem;
+}

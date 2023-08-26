@@ -1,0 +1,105 @@
+.dashboard {
+    margin-top: 3rem;
+}
+
+.dashboard .dashboard-image {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dashboard img {
+    width: 95%;
+    height: 95%;
+}
+
+.dashboard .dashboard-about {
+    padding: 3rem 0;
+}
+
+.dashboard .dashboard-heading {
+    color: #193971;
+    font-weight: 600;
+    font-size: 2.5rem;
+    word-spacing: 5px;
+    line-height: 3rem;
+
+}
+
+.dashboard .dashboard-para {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    color: #193971;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    word-spacing: 5px;
+    text-align: justify;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .dashboard .dashboard-about {
+        padding: 1rem 0;
+    }
+
+    .dashboard .dashboard-heading {
+        padding: 0 1rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #193971;
+        font-weight: 600;
+        font-size: 1.4rem;
+        word-spacing: 2px;
+        line-height: 25px;
+
+    }
+
+    .dashboard img {
+        object-fit: cover;
+    }
+
+    .dashboard .dashboard-para {
+        padding: 1rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .8rem;
+        line-height: 1.2rem;
+        word-spacing: 2px;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .dashboard .dashboard-about {
+        padding: 1rem 0;
+    }
+
+    .dashboard .dashboard-heading {
+        padding: 0 1rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #193971;
+        font-weight: 600;
+        font-size: 2rem;
+        word-spacing: 2px;
+        line-height: 2.1rem;
+
+    }
+
+    .dashboard .dashboard-para {
+        padding: 1rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .7rem;
+        line-height: 1rem;
+        word-spacing: 2px;
+        letter-spacing: .2px;
+        text-align: center;
+    }
+}

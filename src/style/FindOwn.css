@@ -1,0 +1,44 @@
+.findown{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.findown h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #193971;
+
+}
+.findown .socialicon{
+    margin: 4rem 4rem;
+    max-width: 25%;
+    max-height: 100%;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+}
+.findown .socialimage{
+    padding: 1rem;
+}
+.findown img{
+    height: 100%;
+    width: 100%;
+}
+.findown img:hover {
+    width: 75%;
+    height: 75%;
+    transition: .3s ease-in-out;
+  
+  }
+
+@media  screen and (max-width:481px) {
+    .findown .socialicon{
+        margin: 2rem 0;
+        max-width: 100%;
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        justify-content: center;
+    }
+}

@@ -1,0 +1,28 @@
+   .CarousalDiv1 {
+     padding-top: 4.3rem;
+     max-height: 800px;
+     overflow: hidden;
+     display: block;
+     position: relative;
+   }
+
+   .carousel {
+     position: static;
+   }
+
+
+   .carousel-indicators {
+     display: none !important;
+   }
+
+
+   .CarImg {
+     object-fit: fill;
+     width: 100%;
+     height: 100%;
+     image-rendering: -webkit-optimize-contrast;
+   }
+
+   .carDiv {
+     height: 600px;
+   }

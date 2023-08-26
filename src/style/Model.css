@@ -1,0 +1,29 @@
+.model-body{
+    padding-top: 0;
+    height: 100%;
+}
+.modal-content {
+    width: 82% !important;
+}
+.Modal-details-div{
+    padding-top: 0;
+    margin: 0;
+}
+.Modal-details-div .webLink{
+    padding-top: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    color: blue;
+    font-size: 1.2rem;
+}
+.Modal-details-div h4{
+    color: orange;
+   
+}
+
+.model-content .close{
+    display: flex;
+    justify-content: flex-end;
+}
+

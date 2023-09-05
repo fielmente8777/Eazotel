@@ -54,7 +54,7 @@ const Test = () => {
           const url = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&localityLanguage=en`;
           try {
             const result = await axios.get(url);
-            console.log(result.data)
+            // console.log(result.data)
             setLocation((prevLocation) => ({
               ...prevLocation,
               locality: result.data.locality,
@@ -80,7 +80,7 @@ const Test = () => {
   const CreateWebsite = async () => {
     try {
       setLoad(true)
-      const response1 = await fetch("http://127.0.0.1:8000/api/registerCreate", {
+      const response1 = await fetch("https://eazotel.eazotel.com/api/registerCreate", {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",
@@ -96,7 +96,7 @@ const Test = () => {
           hotelCountry: FormdatawithLocation.Country,
           hotelPinCode: FormdatawithLocation.pincode,
           hotelEmail: FormdatawithLocation.email,
-          hotelDomain: FormdatawithLocation.domain
+          hotelDomain: FormdatawithLocation.HotelName
 
         }),
       });
@@ -299,7 +299,7 @@ const Test = () => {
                         })}
                       />
                     </div>
-                    <div className="col-md-6 forminput">
+                    {/* <div className="col-md-6 forminput">
                       <label htmlFor="name" class="form-label inputname">
                         Hotel Domain
                       </label>
@@ -316,7 +316,7 @@ const Test = () => {
                           },
                         })}
                       />
-                    </div>
+                    </div> */}
                   </div>
                   <div className="ackrow">
 
@@ -389,7 +389,7 @@ function MyVerticallyCenteredModal(props) {
     setModalShow(false)
   }
 
-  console.log(props.weblink);
+  // console.log(props.weblink);
   return (
     <>
       <Modal style={{ height: "100%" }}

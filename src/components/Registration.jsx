@@ -12,11 +12,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import { GrClose } from "react-icons/gr";
 
 
-const newreghost = 'http://127.0.0.1:8000/api/register';
+const newreghost = 'https://eazotel.eazotel.com/api/register';
 
 
 const Registration = ({hoteldata}) => {
-
   const { setAuth, setHaveDashboardPassword, showpop, setShowpop, setSubmitForm } = useContext(AuthContext);
   
   const {
@@ -63,6 +62,75 @@ const Registration = ({hoteldata}) => {
   //   }
   // };
 
+  function Dinabite(token){
+    const url = 'https://www.dinabitedev.com/auth/account-google';
+    const payload = {
+      tokenId:token
+    };
+
+    const headers = new Headers();
+      headers.append('accept', 'application/json');
+      headers.append('Content-Type', 'application/json');
+      headers.append('x-api-key', process.env.REACT_APP_DINABITE_API_KEY); // Use the x-api-key header
+
+    fetch(url, {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(payload)
+    })
+    .then(response => response.json())
+    .then(data => {
+      // console.log(data); // Process the response data here
+      if(data.access_token){
+        localStorage.setItem("dinabiteToken",data.access_token)
+      }      
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  }
+
+  const DinabiteRegister=async (data)=>{
+    const url = 'https://www.dinabitedev.com/companies/company-user';
+    const info = {
+      name: hoteldata.HotelName,
+      phone: hoteldata.Hotelnumber,
+      phoneCode: "+91",
+      country:hoteldata.Country,
+      address: hoteldata.Address,
+      city:hoteldata.City,
+      zipCode:hoteldata.pincode,
+      webLink: "www.dinabite.ai",
+      facebookAdId: "string",
+      email: data.email,
+      firstName: data.name,
+      lastName:data.name,
+      accountType: "SOCIAL"
+    };
+
+    const headers = new Headers();
+    headers.append('accept', 'application/json');
+    headers.append('Content-Type', 'application/json');
+    headers.append('x-api-key', process.env.REACT_APP_DINABITE_API_KEY);
+
+    fetch(url, {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(info)
+    })
+    .then(response => response.json())
+    .then(data => {
+      // console.log(data); // Process the response data here
+      if(data.access_token){
+        localStorage.setItem("dinabiteToken",data.access_token)
+      } 
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  }
+
+
   const handleGoogleLogin = async (provider, data) => {
     setLoad(true)    
     const emailId = data.email;
@@ -84,11 +152,16 @@ const Registration = ({hoteldata}) => {
       
       const json = await response.json();
       if (json.Status === true){
+          Dinabite(data.access_token)
+          if(!localStorage.getItem("dinabiteToken")){
+            DinabiteRegister(data)
+            Dinabite(data.access_token)
+          }
         setAuth(true)
         localStorage.setItem("Token", json.Token);
         toast.success("Creating website for you")
         try{
-          const response1 = await fetch("http://127.0.0.1:8000/api/registerCreate", {
+          const response1 = await fetch("https://eazotel.eazotel.com/api/registerCreate", {
             method: "POST",
             headers: {
               Accept: "application/json, text/plain, */*",
@@ -104,7 +177,7 @@ const Registration = ({hoteldata}) => {
               hotelCountry: hoteldata.Country,
               hotelPinCode: hoteldata.pincode,
               hotelEmail: hoteldata.email,
-              hotelDomain: hoteldata.domain
+              hotelDomain: hoteldata.HotelName
 
             }),
           });
@@ -206,12 +279,12 @@ const Registration = ({hoteldata}) => {
           </p> */}
           <div className="googleauth mt-1 w-100">
             <LoginSocialGoogle
-              client_id="525278251391-g3jigd28se6a4fse2ld8pcp2spvv2jnp.apps.googleusercontent.com"
+              client_id={process.env.REACT_APP_GOOGLE_CLIENT_ID}
               scope="openid profile email"
               discoveryDocs="claims_supported"
               access_type="offline"
               onResolve={({ provider, data }) => {
-                console.log(data)
+                // console.log(data)
                 handleGoogleLogin(provider, data);
 
               }}

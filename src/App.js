@@ -31,7 +31,7 @@ function App() {
 
   async function CheckDashboardAPI() {
     const dashboard = await fetch(
-      `http://127.0.0.1:8000/api/getDashboardStatus?id=${localStorage.getItem('Token')}`,
+      `https://eazotel.eazotel.com/api/getDashboardStatus?id=${localStorage.getItem('Token')}`,
       {
         method: "GET",
         headers: {
@@ -42,6 +42,7 @@ function App() {
     );
     const nav = await dashboard.json();
     if (nav.Status) {
+      setAuth(true)
       setHaveDashboardPassword(true);
       setClientWebsite(nav.Data.websiteLink)
       setClientengine(nav.Data.bookingEngineLink)

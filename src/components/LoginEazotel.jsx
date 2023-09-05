@@ -12,7 +12,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const newLoginAPI = "http://127.0.0.1:8000/api/login"
+const newLoginAPI = "https://eazotel.eazotel.com/api/login"
 
 const LoginEazotel = () => {
   const { setAuth, setHaveDashboardPassword,setClientWebsite,setClientengine  } =
@@ -28,7 +28,7 @@ const LoginEazotel = () => {
 
   async function CheckDashboardAPI() {
     const dashboard = await fetch(
-      `http://127.0.0.1:8000/api/getDashboardStatus?id=${localStorage.getItem('Token')}`,
+      `https://eazotel.eazotel.com/api/getDashboardStatus?id=${localStorage.getItem('Token')}`,
       {
         method: "GET",
         headers: {
@@ -48,11 +48,40 @@ const LoginEazotel = () => {
     }
   }
 
+  function Dinabite(token){
+    const url = 'https://www.dinabitedev.com/auth/account-google';
+    const payload = {
+      tokenId:token
+    };
+
+    const headers = new Headers();
+      headers.append('accept', 'application/json');
+      headers.append('Content-Type', 'application/json');
+      headers.append('x-api-key', process.env.REACT_APP_GOOGLE_CLIENT_ID); // Use the x-api-key header
+
+    fetch(url, {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(payload)
+    })
+    .then(response => response.json())
+    .then(data => {
+      // console.log(data); // Process the response data here
+      if(data.access_token){
+        localStorage.setItem("dinabiteToken",data.access_token)
+      }      
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  }
+
+
   const onSubmit = async (data) => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/login", {
+      const response = await fetch("https://eazotel.eazotel.com/api/login", {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",
@@ -82,8 +111,6 @@ const LoginEazotel = () => {
   const handleGoogleLogin = async (provider, data) => {
     const email = data.email;
     const password = data.email;
-    // toast("Login successful")
-
     try {
       const response = await fetch(newLoginAPI, {
         method: "POST",
@@ -97,12 +124,11 @@ const LoginEazotel = () => {
         }),
       });
       const json = await response.json();
-
       if (json.Status === true) {
+        Dinabite(data.access_token)
         toast("Login successful")
         localStorage.setItem("Token", json.Token);
         sessionStorage.setItem("Token", json.Token);
-
         setAuth(true);
         CheckDashboardAPI();
       } else {
@@ -112,6 +138,7 @@ const LoginEazotel = () => {
       toast.error("server error");
     }
   };
+  
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
@@ -171,7 +198,7 @@ const LoginEazotel = () => {
             </p>
             <div className="googleauth mt-4">
               <LoginSocialGoogle
-                client_id="525278251391-g3jigd28se6a4fse2ld8pcp2spvv2jnp.apps.googleusercontent.com"
+                client_id={process.env.REACT_APP_GOOGLE_CLIENT_ID}
                 scope="openid profile email"
                 discoveryDocs="claims_supported"
                 access_type="offline"

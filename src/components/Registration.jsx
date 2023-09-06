@@ -15,8 +15,8 @@ import { GrClose } from "react-icons/gr";
 
 
 
-const Registration = ({hoteldata}) => {
-  const {baseUrl, setAuth, setHaveDashboardPassword, showpop, setShowpop, setSubmitForm } = useContext(AuthContext);
+const Registration = ({ hoteldata }) => {
+  const { baseUrl, setAuth, setHaveDashboardPassword, showpop, setShowpop, setSubmitForm } = useContext(AuthContext);
   const newreghost = `${baseUrl}/api/register`;
   const {
     register,
@@ -25,7 +25,7 @@ const Registration = ({hoteldata}) => {
   } = useForm();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  const {load, setLoad, modalShow, setModalShow,setClientWebsite, setClientengine} = useContext(AuthContext);
+  const { load, setLoad, modalShow, setModalShow, setClientWebsite, setClientengine } = useContext(AuthContext);
 
   // const onSubmit = async (data) => {
   //   setLoading(true);
@@ -62,49 +62,49 @@ const Registration = ({hoteldata}) => {
   //   }
   // };
 
-  function Dinabite(token){
+  function Dinabite(token) {
     const url = 'https://www.dinabitedev.com/auth/account-google';
     const payload = {
-      tokenId:token
+      tokenId: token
     };
 
     const headers = new Headers();
-      headers.append('accept', 'application/json');
-      headers.append('Content-Type', 'application/json');
-      headers.append('x-api-key', process.env.REACT_APP_DINABITE_API_KEY); // Use the x-api-key header
+    headers.append('accept', 'application/json');
+    headers.append('Content-Type', 'application/json');
+    headers.append('x-api-key', process.env.REACT_APP_DINABITE_API_KEY); // Use the x-api-key header
 
     fetch(url, {
       method: 'POST',
       headers: headers,
       body: JSON.stringify(payload)
     })
-    .then(response => response.json())
-    .then(data => {
-      // console.log(data); // Process the response data here
-      if(data.access_token){
-        localStorage.setItem("dinabiteToken",data.access_token)
-      }      
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
+      .then(response => response.json())
+      .then(data => {
+        // console.log(data); // Process the response data here
+        if (data.access_token) {
+          localStorage.setItem("dinabiteToken", data.access_token)
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   }
 
-  const DinabiteRegister=async (data)=>{
+  const DinabiteRegister = async (data) => {
     const url = 'https://www.dinabitedev.com/companies/company-user';
     const info = {
       name: hoteldata.HotelName,
       phone: hoteldata.Hotelnumber,
       phoneCode: "+91",
-      country:hoteldata.Country,
+      country: hoteldata.Country,
       address: hoteldata.Address,
-      city:hoteldata.City,
-      zipCode:hoteldata.pincode,
+      city: hoteldata.City,
+      zipCode: hoteldata.pincode,
       webLink: "www.dinabite.ai",
       facebookAdId: "string",
       email: data.email,
       firstName: data.name,
-      lastName:data.name,
+      lastName: data.name,
       accountType: "SOCIAL"
     };
 
@@ -118,21 +118,21 @@ const Registration = ({hoteldata}) => {
       headers: headers,
       body: JSON.stringify(info)
     })
-    .then(response => response.json())
-    .then(data => {
-      // console.log(data); // Process the response data here
-      if(data.access_token){
-        localStorage.setItem("dinabiteToken",data.access_token)
-      } 
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
+      .then(response => response.json())
+      .then(data => {
+        // console.log(data); // Process the response data here
+        if (data.access_token) {
+          localStorage.setItem("dinabiteToken", data.access_token)
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   }
 
 
   const handleGoogleLogin = async (provider, data) => {
-    setLoad(true)    
+    setLoad(true)
     const emailId = data.email;
     const userName = data.name;
     const accesskey = data.email;
@@ -149,18 +149,18 @@ const Registration = ({hoteldata}) => {
           accesskey: accesskey
         }),
       });
-      
+
       const json = await response.json();
-      if (json.Status === true){
+      if (json.Status === true) {
+        Dinabite(data.access_token)
+        if (!localStorage.getItem("dinabiteToken")) {
+          DinabiteRegister(data)
           Dinabite(data.access_token)
-          if(!localStorage.getItem("dinabiteToken")){
-            DinabiteRegister(data)
-            Dinabite(data.access_token)
-          }
+        }
         setAuth(true)
         localStorage.setItem("Token", json.Token);
         toast.success("Creating website for you")
-        try{
+        try {
           const response1 = await fetch(`${baseUrl}/api/registerCreate`, {
             method: "POST",
             headers: {
@@ -170,10 +170,10 @@ const Registration = ({hoteldata}) => {
             body: JSON.stringify({
               Token: localStorage.getItem('Token'),
               template: "1",
-              hotelName:hoteldata.HotelName,
-              hotelPhone:hoteldata.Hotelnumber,
-              hotelState:hoteldata.State,
-              hotelCity:hoteldata.City ,
+              hotelName: hoteldata.HotelName,
+              hotelPhone: hoteldata.Hotelnumber,
+              hotelState: hoteldata.State,
+              hotelCity: hoteldata.City,
               hotelCountry: hoteldata.Country,
               hotelPinCode: hoteldata.pincode,
               hotelEmail: hoteldata.email,
@@ -181,36 +181,55 @@ const Registration = ({hoteldata}) => {
 
             }),
           });
-          
+
           const json1 = await response1.json();
-          if(json1.Status===true){
-                setClientWebsite(json1.Website)
-                setClientengine(json1.BookingEngine)
-                setLoad(false)
-                setShowpop(false)
-                setModalShow(true)
-                setHaveDashboardPassword(true)
-                //redirections
+          if (json1.Status === true) {
+            setClientWebsite(json1.Website)
+            setClientengine(json1.BookingEngine)
+            setLoad(false)
+            setShowpop(false)
+            setModalShow(true)
+            setHaveDashboardPassword(true)
+            //redirections
+            redirectToDashboard();
           }
-          else{
+          else {
             setLoad(false)
             toast.error(json1.Message)
           }
         }
-        catch (error){
+        catch (error) {
           setLoad(false)
           toast.error("Unable to request Server");
         }
 
       }
-      else{
-        setLoad(false) 
+      else {
+        setLoad(false)
         toast.error("User Exists")
       }
     }
     catch (error) {
-        toast.error("Unable to request Server");
-      }
+      toast.error("Unable to request Server");
+    }
+  };
+
+
+  // Redirection function
+
+  const redirectToDashboard = () => {
+    // Open client's website, dashboard, and booking engine in new tabs
+    // const websiteTab = window.open(`https://clientwebsite.com`, '_blank');
+    // const dashboardTab = window.open(`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
+    // const bookingTab = window.open(`https://bookingengine.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
+
+    // Close the website tab after a delay
+    setTimeout(() => {
+      const websiteTab = window.open(`https://clientwebsite.com`, '_blank');
+      const dashboardTab = window.open(`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
+      const bookingTab = window.open(`https://bookingengine.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
+
+    }, 4000); // Adjust the delay if needed
   };
 
   const handleOnClick = () => {
@@ -222,9 +241,9 @@ const Registration = ({hoteldata}) => {
 
     <div className="registrationeazotel">
       <ToastContainer />
-      
+
       <div className="login-content">
-      {load?<Spinner />:""}
+        {load ? <Spinner /> : ""}
         <div className="icon">
           {showpop ? <GrClose size={20} onClick={handleOnClick} /> : ""}
 
@@ -292,7 +311,7 @@ const Registration = ({hoteldata}) => {
                 console.log(err);
               }}
             >
-             
+
               <div className="google">
                 <FcGoogle size={30} style={{ marginRight: "1rem" }} />
                 <h3 className="glb">Continue with Google</h3>

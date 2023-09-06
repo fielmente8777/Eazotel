@@ -11,13 +11,13 @@ const Tweet = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    speed: 200,
+    speed: 500,
     autoplay: true,
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          speed: 200,
+          speed: 500,
           slidesToShow: 3, // Show 2 cards in tablet mode
           slidesToScroll: 1,
         },
@@ -25,7 +25,7 @@ const Tweet = () => {
       {
         breakpoint: 480,
         settings: {
-          speed: 200,
+          speed: 500,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -85,7 +85,7 @@ const Tweet = () => {
                 <FaStar />
                 <FaStar />{" "}
               </p>
-              <h5 className="name">Tanya Roy</h5>
+              <h5 className="name">Mark Henry</h5>
               <p className="subname">Foodflatters</p>
             </div>
           </div>
@@ -109,7 +109,7 @@ const Tweet = () => {
                 <FaStar />
                 <FaStar />{" "}
               </p>
-              <h5 className="name">Tanya Roy</h5>
+              <h5 className="name">BD Macculum</h5>
               <p className="subname">Foodflatters</p>
             </div>
           </div>
@@ -157,7 +157,7 @@ const Tweet = () => {
                 <FaStar />
                 <FaStar />{" "}
               </p>
-              <h5 className="name">Tanya Roy</h5>
+              <h5 className="name">Trent Bault</h5>
               <p className="subname">Foodflatters</p>
             </div>
           </div>

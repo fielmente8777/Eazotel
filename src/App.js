@@ -25,7 +25,7 @@ import Imageupload from "./components/Imageupload";
 
 function App() {
   // Context-> Auth Provider.js
-  const {baseUrl, auth, setAuth, setHaveDashboardPassword,setClientWebsite,setClientengine } =
+  const { baseUrl, auth, setAuth, setHaveDashboardPassword, setClientWebsite, setClientengine } =
     useContext(AuthContext);
   const location = useLocation();
 

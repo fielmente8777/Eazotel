@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/EAZOTEL LOGO-09.png";
 import AuthContext from "../context/AuthProvider";
 import "../style/Navbar.css";
-import { VscThreeBars } from "react-icons/vsc";
+import { FaUserAlt } from "react-icons/fa";
 
 const Navbar = () => {
   const [navbarExpanded, setNavbarExpanded] = useState(false);
@@ -68,17 +68,19 @@ const Navbar = () => {
 
         <div className="authbutton">
 
-
+          <div className="demo-button me-3">
+            <Link to="/demo" ><button className='demobutton'>Book Demo</button></Link>
+          </div>
           {!auth ? (
-            <>
-              <Link to="/login" className="login" onClick={handleToggleButton}>
-                Login
+            <div className="demo-button me-0">
+              <Link to="/login" onClick={handleToggleButton}>
+                <button className='demobutton'>Login</button>
               </Link>
-            </>
+            </div>
           ) : (
             <div className="dropdown-container">
-              <VscThreeBars
-                size={40}
+              <FaUserAlt
+                size={30}
                 className="profile"
                 // style={{ color: " #193971" }}
                 onClick={handleProfileClick}

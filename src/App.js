@@ -25,13 +25,13 @@ import Imageupload from "./components/Imageupload";
 
 function App() {
   // Context-> Auth Provider.js
-  const { auth, setAuth, setHaveDashboardPassword,setClientWebsite,setClientengine } =
+  const {baseUrl, auth, setAuth, setHaveDashboardPassword,setClientWebsite,setClientengine } =
     useContext(AuthContext);
   const location = useLocation();
 
   async function CheckDashboardAPI() {
     const dashboard = await fetch(
-      `https://eazotel.eazotel.com/api/getDashboardStatus?id=${localStorage.getItem('Token')}`,
+      `${baseUrl}/api/getDashboardStatus?id=${localStorage.getItem('Token')}`,
       {
         method: "GET",
         headers: {
@@ -147,7 +147,7 @@ function App() {
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/templates" element={<Template />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/img" element={<Imageupload />} /> 
+        {/* <Route path="/img" element={<Imageupload />} />  */}
       </Routes>
       {location.pathname !== "/login" && location.pathname !== "/signup" && (
         <Footer />

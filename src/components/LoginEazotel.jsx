@@ -12,11 +12,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const newLoginAPI = "https://eazotel.eazotel.com/api/login"
-
 const LoginEazotel = () => {
-  const { setAuth, setHaveDashboardPassword,setClientWebsite,setClientengine  } =
+  const {baseUrl, setAuth, setHaveDashboardPassword,setClientWebsite,setClientengine  } =
     useContext(AuthContext);
+  const newLoginAPI = `${baseUrl}/api/login`
   const {
     register,
     handleSubmit,
@@ -28,7 +27,7 @@ const LoginEazotel = () => {
 
   async function CheckDashboardAPI() {
     const dashboard = await fetch(
-      `https://eazotel.eazotel.com/api/getDashboardStatus?id=${localStorage.getItem('Token')}`,
+      `${baseUrl}/api/getDashboardStatus?id=${localStorage.getItem('Token')}`,
       {
         method: "GET",
         headers: {
@@ -81,7 +80,7 @@ const LoginEazotel = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("https://eazotel.eazotel.com/api/login", {
+      const response = await fetch(`${baseUrl}/api/login`, {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",

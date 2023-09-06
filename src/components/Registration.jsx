@@ -12,12 +12,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { GrClose } from "react-icons/gr";
 
 
-const newreghost = 'https://eazotel.eazotel.com/api/register';
+
 
 
 const Registration = ({hoteldata}) => {
-  const { setAuth, setHaveDashboardPassword, showpop, setShowpop, setSubmitForm } = useContext(AuthContext);
-  
+  const {baseUrl, setAuth, setHaveDashboardPassword, showpop, setShowpop, setSubmitForm } = useContext(AuthContext);
+  const newreghost = `${baseUrl}/api/register`;
   const {
     register,
     handleSubmit,
@@ -161,7 +161,7 @@ const Registration = ({hoteldata}) => {
         localStorage.setItem("Token", json.Token);
         toast.success("Creating website for you")
         try{
-          const response1 = await fetch("https://eazotel.eazotel.com/api/registerCreate", {
+          const response1 = await fetch(`${baseUrl}/api/registerCreate`, {
             method: "POST",
             headers: {
               Accept: "application/json, text/plain, */*",

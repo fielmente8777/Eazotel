@@ -22,7 +22,7 @@ import { GrClose } from "react-icons/gr"
 import Registration from "./Registration";
 
 const Test = () => {
-  const { auth } = useContext(AuthContext)
+  const {baseUrl, auth } = useContext(AuthContext)
   const { clientWebsite, clientengine } = useContext(AuthContext);
   const { modalShow, setModalShow } = useContext(AuthContext);
   const { load, setLoad, setClientWebsite, setClientengine } = useContext(AuthContext);
@@ -80,7 +80,7 @@ const Test = () => {
   const CreateWebsite = async () => {
     try {
       setLoad(true)
-      const response1 = await fetch("https://eazotel.eazotel.com/api/registerCreate", {
+      const response1 = await fetch(`${baseUrl}/api/registerCreate`, {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",

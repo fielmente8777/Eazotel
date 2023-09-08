@@ -197,7 +197,7 @@ const LoginEazotel = () => {
             </p>
             <div className="googleauth mt-4">
               <LoginSocialGoogle
-                client_id={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+                client_id="525278251391-g3jigd28se6a4fse2ld8pcp2spvv2jnp.apps.googleusercontent.com"
                 scope="openid profile email"
                 discoveryDocs="claims_supported"
                 access_type="offline"

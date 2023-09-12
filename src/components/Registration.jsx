@@ -25,7 +25,7 @@ const Registration = ({ hoteldata }) => {
   } = useForm();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  const { load, setLoad, modalShow, setModalShow, setClientWebsite, setClientengine } = useContext(AuthContext);
+  const { load, setLoad, modalShow, setModalShow,clientWebsite, setClientWebsite,clientengine, setClientengine } = useContext(AuthContext);
 
   // const onSubmit = async (data) => {
   //   setLoading(true);
@@ -62,27 +62,27 @@ const Registration = ({ hoteldata }) => {
   //   }
   // };
 
-  function Dinabite(token) {
-    const url = 'https://www.dinabitedev.com/auth/account-google';
+  const Dinabite = async(token)=> {
+    const url = `${baseUrl}/api/dinabite/check`;
     const payload = {
-      tokenId: token
+      token: token
     };
 
     const headers = new Headers();
     headers.append('accept', 'application/json');
     headers.append('Content-Type', 'application/json');
-    headers.append('x-api-key', process.env.REACT_APP_DINABITE_API_KEY); // Use the x-api-key header
 
-    fetch(url, {
+    await fetch(url, {
       method: 'POST',
       headers: headers,
       body: JSON.stringify(payload)
     })
       .then(response => response.json())
       .then(data => {
-        // console.log(data); // Process the response data here
-        if (data.access_token) {
-          localStorage.setItem("dinabiteToken", data.access_token)
+        console.log(data); // Process the response data here
+        if (data.Message!=="register") {
+          alert("registering token to storage")
+          localStorage.setItem("dinabiteToken", data.Message)
         }
       })
       .catch(error => {
@@ -91,29 +91,24 @@ const Registration = ({ hoteldata }) => {
   }
 
   const DinabiteRegister = async (data) => {
-    const url = 'https://www.dinabitedev.com/companies/company-user';
+    const url = `${baseUrl}/api/dinabite/create`;
     const info = {
-      name: hoteldata.HotelName,
-      phone: hoteldata.Hotelnumber,
-      phoneCode: "+91",
-      country: hoteldata.Country,
-      address: hoteldata.Address,
-      city: hoteldata.City,
-      zipCode: hoteldata.pincode,
-      webLink: "www.dinabite.ai",
-      facebookAdId: "string",
+      HotelName: hoteldata.HotelName,
+      phoneCode: hoteldata.Hotelnumber,
+      Hotelnumber: "+91",
+      Country: hoteldata.Country,
+      Address: hoteldata.Address,
+      City: hoteldata.City,
+      pincode: hoteldata.pincode,
       email: data.email,
-      firstName: data.name,
-      lastName: data.name,
-      accountType: "SOCIAL"
+      name: data.name
     };
 
     const headers = new Headers();
     headers.append('accept', 'application/json');
     headers.append('Content-Type', 'application/json');
-    headers.append('x-api-key', process.env.REACT_APP_DINABITE_API_KEY);
 
-    fetch(url, {
+    await fetch(url, {
       method: 'POST',
       headers: headers,
       body: JSON.stringify(info)
@@ -121,9 +116,8 @@ const Registration = ({ hoteldata }) => {
       .then(response => response.json())
       .then(data => {
         // console.log(data); // Process the response data here
-        if (data.access_token) {
-          localStorage.setItem("dinabiteToken", data.access_token)
-        }
+        console.log(data)
+
       })
       .catch(error => {
         console.error('Error:', error);
@@ -153,7 +147,7 @@ const Registration = ({ hoteldata }) => {
       const json = await response.json();
       if (json.Status === true) {
         Dinabite(data.access_token)
-        if (!localStorage.getItem("dinabiteToken")) {
+        if(localStorage.getItem('dinabiteToken')=== null){
           DinabiteRegister(data)
           Dinabite(data.access_token)
         }
@@ -225,9 +219,9 @@ const Registration = ({ hoteldata }) => {
 
     // Close the website tab after a delay
     setTimeout(() => {
-      const websiteTab = window.open(`https://clientwebsite.com`, '_blank');
-      const dashboardTab = window.open(`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
-      const bookingTab = window.open(`https://bookingengine.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
+      const websiteTab = window.open(clientWebsite, '_blank');
+      const dashboardTab = window.open(clientengine, '_blank');
+      const bookingTab = window.open(`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
 
     }, 4000); // Adjust the delay if needed
   };

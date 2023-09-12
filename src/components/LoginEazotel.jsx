@@ -56,7 +56,7 @@ const LoginEazotel = () => {
     const headers = new Headers();
       headers.append('accept', 'application/json');
       headers.append('Content-Type', 'application/json');
-      headers.append('x-api-key', process.env.REACT_APP_GOOGLE_CLIENT_ID); // Use the x-api-key header
+      headers.append('x-api-key', process.env.REACT_APP_DINABITE_API_KEY); // Use the x-api-key header
 
     fetch(url, {
       method: 'POST',
@@ -65,7 +65,7 @@ const LoginEazotel = () => {
     })
     .then(response => response.json())
     .then(data => {
-      // console.log(data); // Process the response data here
+      console.log(data); // Process the response data here
       if(data.access_token){
         localStorage.setItem("dinabiteToken",data.access_token)
       }      

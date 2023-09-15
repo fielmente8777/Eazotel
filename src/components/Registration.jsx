@@ -79,9 +79,9 @@ const Registration = ({ hoteldata }) => {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data); // Process the response data here
+        // console.log(data); // Process the response data here
         if (data.Message!=="register") {
-          alert("registering token to storage")
+          // alert("registering token to storage")
           localStorage.setItem("dinabiteToken", data.Message)
         }
       })
@@ -116,7 +116,7 @@ const Registration = ({ hoteldata }) => {
       .then(response => response.json())
       .then(data => {
         // console.log(data); // Process the response data here
-        console.log(data)
+        // console.log(data)
 
       })
       .catch(error => {
@@ -185,7 +185,9 @@ const Registration = ({ hoteldata }) => {
             setModalShow(true)
             setHaveDashboardPassword(true)
             //redirections
-            redirectToDashboard();
+            const websiteTab = window.open(json1.Website, '_blank');
+            const dashboardTab = window.open(json1.BookingEngine, '_blank');
+            const bookingTab = window.open(`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
           }
           else {
             setLoad(false)
@@ -212,12 +214,6 @@ const Registration = ({ hoteldata }) => {
   // Redirection function
 
   const redirectToDashboard = () => {
-    // Open client's website, dashboard, and booking engine in new tabs
-    // const websiteTab = window.open(`https://clientwebsite.com`, '_blank');
-    // const dashboardTab = window.open(`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
-    // const bookingTab = window.open(`https://bookingengine.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
-
-    // Close the website tab after a delay
     setTimeout(() => {
       const websiteTab = window.open(clientWebsite, '_blank');
       const dashboardTab = window.open(clientengine, '_blank');
@@ -247,49 +243,7 @@ const Registration = ({ hoteldata }) => {
             {" "}
             <img className="login-image" src={Logo} alt="loginImg" />
           </Link>
-          {/* <div className="input mb-3 w-100">
-            <input
-              style={{ width: "100%" }}
-              id="myInput"
-              type="text"
-              {...register("username", {
-                required: "Username is required!",
-              })}
-              placeholder="Username"
-            />
-            <span className='error'>{errors.email?.message}</span>
-          </div>
-          <div className="input mb-3 w-100">
-            <input
-              style={{ width: "100%" }}
-              id="myInput"
-              type="email"
-              {...register("email", {
-                required: "Email is required!",
-              })}
-              placeholder="Email"
-            />
-            <span className='error'>{errors.email?.message}</span>
-          </div>
-          <div className="input mb-3 w-100">
-            <input
-              id="myInput"
-              type="password"
-              style={{ width: "100%" }}
-              {...register("password", {
-                required: "Password is required!",
-              })}
-              placeholder="Password"
-            />
-            <span className='error'>{errors.password?.message}</span>
-          </div>
-
-          <button type="submit" className="btn btn-primary mt-3 w-100">
-            Signup
-          </button>
-          <p className=" mt-3" style={{ color: "#193971" }}>
-            OR
-          </p> */}
+          
           <div className="googleauth mt-1 w-100">
             <LoginSocialGoogle
               client_id="525278251391-g3jigd28se6a4fse2ld8pcp2spvv2jnp.apps.googleusercontent.com"

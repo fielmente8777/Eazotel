@@ -47,33 +47,7 @@ const LoginEazotel = () => {
     }
   }
 
-  function Dinabite(token){
-    const url = 'https://www.dinabitedev.com/auth/account-google';
-    const payload = {
-      tokenId:token
-    };
-
-    const headers = new Headers();
-      headers.append('accept', 'application/json');
-      headers.append('Content-Type', 'application/json');
-      headers.append('x-api-key', process.env.REACT_APP_DINABITE_API_KEY); // Use the x-api-key header
-
-    fetch(url, {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify(payload)
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data); // Process the response data here
-      if(data.access_token){
-        localStorage.setItem("dinabiteToken",data.access_token)
-      }      
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-  }
+ 
 
 
   const onSubmit = async (data) => {
@@ -106,6 +80,35 @@ const LoginEazotel = () => {
       toast.error("Server Error")
     }
   };
+
+  const Dinabite = async(token)=> {
+    const url = `${baseUrl}/api/dinabite/check`;
+    const payload = {
+      token: token
+    };
+
+    const headers = new Headers();
+    headers.append('accept', 'application/json');
+    headers.append('Content-Type', 'application/json');
+
+    await fetch(url, {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(payload)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); // Process the response data here
+        if (data.Message!=="register") {
+          // alert("registering token to storage")
+          localStorage.setItem("dinabiteToken", data.Message)
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+
 
   const handleGoogleLogin = async (provider, data) => {
     const email = data.email;

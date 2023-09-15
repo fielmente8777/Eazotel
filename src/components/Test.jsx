@@ -107,7 +107,12 @@ const Test = () => {
         setClientWebsite(json1.Website)
         setClientengine(json1.BookingEngine)
         setModalShow(true)
-        // redirections
+        setTimeout(() => {
+          const websiteTab = window.open(clientWebsite, '_blank');
+          const dashboardTab = window.open(clientengine, '_blank');
+          const bookingTab = window.open(`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
+
+        }, 4000); // Adjust the delay if needed
       }
       else {
         setLoad(false)
@@ -368,7 +373,7 @@ const Test = () => {
 
       {/* Spinner Code */}
 
-      {load ? <Spinner /> : undefined}
+      {load ? <Spinner /> : <div>
 
 
 
@@ -376,7 +381,7 @@ const Test = () => {
       <Partner />
       <AboutDashboard />
       <AboutBookingEngine />
-      <BrowsMore />
+      <BrowsMore /> </div>}
     </>
   );
 };

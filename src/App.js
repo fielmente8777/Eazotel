@@ -54,7 +54,9 @@ function App() {
       sessionStorage.getItem("Token") !== null
     ) {
       CheckDashboardAPI();
-      setAuth(true);
+    }
+    else{
+      setAuth(false)
     }
   }, [auth, setAuth]);
 

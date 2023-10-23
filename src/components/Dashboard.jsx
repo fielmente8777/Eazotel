@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import "../style/Dashboard.css"
 import DashboardImage from "../assets/dashboard1.png"
-import { useLocation } from 'react-router-dom'
+import { useLocation,Link } from 'react-router-dom'
 const Dashboard = () => {
 
     const { pathname } = useLocation()
@@ -66,7 +66,7 @@ const Dashboard = () => {
                 </div>
                 <p className='para'>{data.para}</p>
                 <h3>{data.subtitle}</h3>
-                <button className='createwebsitebutton'>Login</button>
+                <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link>
             </div>
 
             <div className='dashboard-content-list1'>
@@ -134,7 +134,7 @@ const Dashboard = () => {
                     <div className='col-md-9'>
                         <p className='para'>{list_Data5.para}</p>
                         <h3>{list_Data5.subtitle}</h3>
-                        <button className='createwebsitebutton'>Login</button>
+                        <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link>
                     </div>
                 </div>
             </div>

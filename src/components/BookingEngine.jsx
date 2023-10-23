@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import "../style/BookingEngine.css"
 import BookingEngineImage from "../assets/BookingEngine.png"
-import { useLocation } from 'react-router-dom'
+import { useLocation,Link } from 'react-router-dom'
 const BookingEngine = () => {
   const { pathname } = useLocation()
   useEffect(() => {
@@ -45,7 +45,7 @@ const BookingEngine = () => {
             <img src={BookingEngineImage} alt='createwebsiteimage' />
             <p>{data.description}</p>
             <h3>{data.subtitle}</h3>
-            <button className='createwebsitebutton'>Login</button>
+            <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link>
           </div>
         </div>
       </div>
@@ -79,7 +79,8 @@ const BookingEngine = () => {
 
             </ul>
           </div>
-          <button className='createwebsitebutton'>Login</button>
+          {/* <button className='createwebsitebutton'>Login</button> */}
+          <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link>
         </div>
       </div>
     </>

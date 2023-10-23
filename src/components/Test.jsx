@@ -78,6 +78,7 @@ const Test = () => {
 
 
   const CreateWebsite = async () => {
+    console.log(FormdatawithLocation)
     try {
       setLoad(true)
       const response1 = await fetch(`${baseUrl}/api/registerCreate`, {

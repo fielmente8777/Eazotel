@@ -9,8 +9,9 @@ const Service = () => {
 
       <div className='service-data row '>
         <div className='heading'>
-          <span ><strong>Ease</strong> your Hospitality bussiness with our <strong>one stop solutions</strong> </span>
+          <h2 ><strong>Ease</strong> your Hospitality bussiness with our <strong>one stop solutions</strong> </h2>
         </div>
+
         <div className='s-service d-flex'>
 
           <div className='left col-md-5'>

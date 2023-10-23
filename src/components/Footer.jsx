@@ -85,7 +85,7 @@ const Footer = () => {
           <div className="social">
             <div className="social-icon">
               {/* <Link to="/" ><img className="socialimage " src={Facebook} alt='instagram' /></Link> */}
-              <Link to="/https://www.instagram.com/eazotel/ " target="_blank" ><img className="socialimage" src={Instagram} alt='facebook' /></Link>
+              <Link to="https://instagram.com/eazotel?igshid=MzRlODBiNWFlZA== " target="_blank" ><img className="socialimage" src={Instagram} alt='facebook' /></Link>
               {/* <Link to="/" ><img className="socialimage" src={Twitter} alt='youtube'/></Link> */}
               <Link to="https://www.linkedin.com/company/eazotel/mycompany/" target="_blank" ><img className="socialimage" src={Linkedin} alt='linkedin' /></Link>
             </div>

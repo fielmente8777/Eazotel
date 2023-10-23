@@ -123,15 +123,22 @@
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   align-items: center;
+
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 .social .socialimage {
-  width: 50%;
+  width: 30%;
 }
 
 .social .socialimage:hover {
-  width: 60%;
-  transition: .3s ease-in-out;
+  /* width: 60%; */
+  /* transition: .3s ease-in-out; */
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 
 }
 

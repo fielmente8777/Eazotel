@@ -2,14 +2,16 @@
     display: flex;
     justify-content: center;
     color: #193971;
-    font-size: 2.6rem;
+    /* font-size: 2.6rem; */
     font-weight: 500;
-    line-height: 30px;
-    word-spacing: 10px;
+    /* line-height: 30px; */
+    /* word-spacing: 10px; */
     letter-spacing: 1px;
     width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
+
+
 
 .s-service {
     width: 100%;

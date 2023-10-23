@@ -5,11 +5,11 @@
 .tweet .heading {
   display: flex;
   justify-content: center;
-  color: #193971;
-  font-size: 2.6rem;
+  color:#193971;
+  /* font-size: 2.6rem; */
   font-weight: 500;
-  line-height: 40px;
-  word-spacing: 10px;
+  /* line-height: 50px;
+  word-spacing: 10px; */
   letter-spacing: 1px;
   width: 100%;
 

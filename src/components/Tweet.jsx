@@ -35,9 +35,9 @@ const Tweet = () => {
   return (
     <div className="container tweet">
       <div className="heading">
-        <span>
+        <h3>
           <strong>Client Testimonials</strong> that speak for themselves
-        </span>
+        </h3>
       </div>
       <div className="row tweet-section">
         <Slider {...settings}>

@@ -8,9 +8,9 @@ import Fiel from "../assets/Fiel.png"
 
 const Partner = () => {
   return (
-    <div className='container mt-5 partner'>
+    <div className='container partner'>
         <div className='heading'>
-         <span>Our <strong>incredible partners</strong> who make it <strong>Easy</strong></span>
+         <h2>Our <strong>incredible partners</strong> who make it <strong>Easy</strong></h2>
         </div>
         <div className='row card-section'>
             <div className='partner-card col-md-2'>

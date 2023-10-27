@@ -62,13 +62,15 @@ const Navbar = () => {
   return (
     <div className="header fixed-top">
       <div className="container header-item">
-        <Link to="/">
-          <img src={Logo} className="logo" alt="Ez Logo" loading="lazy" />
-        </Link>
+        <div>
+          <Link to="/">
+            <img src={Logo} className="logo" alt="Ez Logo" loading="lazy" />
+          </Link>
+        </div>
 
         <div className="authbutton">
 
-          <div className="demo-button me-3">
+          <div className="demo-button bookDemoBtn me-3">
             <Link to="/demo" ><button className='demobutton'>Book Demo</button></Link>
           </div>
           {!auth ? (

@@ -10,16 +10,15 @@
     text-align: center;
 }
 
-.template h1 {
+.template h2 {
     margin-bottom: 1rem;
-    font-size: 3rem;
     font-weight: 700;
     letter-spacing: 3px;
     word-spacing: 10px;
     color: #193971;
 }
 
-.template h3 {
+.template h4 {
     margin-bottom: 1rem;
     /* word-spacing: 5px; */
     color: #FD5C01;
@@ -29,7 +28,7 @@
 
 .template p {
     padding: 0 3rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     word-spacing: 2px;
     color: #193971;
@@ -54,9 +53,24 @@
 
     }
 
+    .template .template-content {
+        padding: 1rem 0;
+
+    }
+
+    .template h2 {
+        letter-spacing: normal;
+        word-spacing: normal;
+    }
+
     .template p {
         padding: 0 .5rem;
         font-size: 1rem;
         word-spacing: 0;
+    }
+
+    .template h4 {
+        line-height: 1.5;
+        word-spacing: 5px;
     }
 }

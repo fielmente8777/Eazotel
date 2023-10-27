@@ -16,7 +16,7 @@
 }
 
 .tweet .tweet-section {
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 .tweet .card2 {
@@ -36,18 +36,18 @@
   max-width: 300px;
   /* color: #1A1A1A; */
   background: #fff;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.223), 24px 24px 0px rgba(0, 0, 0, 0.233);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.223), 15px 15px 0px rgba(0, 0, 0, 0.233);
   border-radius: 5px;
   border: 2px solid transparent;
   cursor: pointer;
 
 }
 
-.tweet .card-content:hover {
+/* .tweet .card-content:hover {
   transition: .2s ease-in-out;
   background: lightgray;
 
-}
+} */
 
 .tweet .card-content img {
   width: 50px;
@@ -63,7 +63,7 @@
 }
 
 .tweet .data {
-  padding: 0;
+  padding: 0 15px;
   font-size: .9rem;
   line-height: 1.3rem;
   display: flex;
@@ -83,7 +83,6 @@
 
 .tweet h5 {
   font-weight: 700;
-  font: 1.7rem;
   margin-bottom: 0;
 }
 
@@ -134,8 +133,18 @@
 }
 
 @media screen and (max-width: 480px) {
+
+  .tweet .card-content {
+    box-shadow: none;
+    border: 2px solid rgba(0, 0, 0, 0.223);
+  margin-left: 2rem;
+  }
+  .tweet h5 {
+    font-size: 1rem;
+  }
+
   .tweet {
-    margin-top: 2rem;
+    margin-top: 0;
     /* display: block; */
   }
 
@@ -175,10 +184,10 @@
     white-space: wrap;
   }
 
-  .card-content {
+  /* .card-content {
     width: 50%;
 
-  }
+  } */
 
   .tweet .tweet-section {
     margin-top: 0;

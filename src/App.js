@@ -1,4 +1,5 @@
 import "./App.css";
+// import "./style/Main.css"
 import React, { useEffect, useContext } from "react";
 import { Outlet, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./components/Home";

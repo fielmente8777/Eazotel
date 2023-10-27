@@ -47,9 +47,9 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-md-6 col-lg-3 col-xl-3 service">
-              <h6 className="product-heading">PRODUCTS & SERVICES</h6>
+              <h4 className="product-heading">PRODUCTS & SERVICES</h4>
               <ul className="product-list">
-                <li><Link to={'/createwebsite'} className="productlist">Hotel Website</Link></li>
+                {/* <li><Link to={'/createwebsite'} className="productlist">Hotel Website</Link></li> */}
                 <li><Link to={'/bookingengine'} className="productlist">Booking Engine</Link></li>
                 <li><Link to={'/dashboard'} className="productlist">Interactive Dashboard</Link></li>
                 <li><Link to={'/socialmedia'} className="productlist">Social Media Manager</Link></li>
@@ -60,20 +60,21 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-md-6 col-lg-3 col-xl-2 careers ">
-              <h6 className="careers-heading">CAREERS</h6>
+              <h4 className="careers-heading">CAREERS</h4>
               <ul className="careers-list">
                 <li><Link to={'/'} className="careerslist">Job opening</Link></li>
                 <li><Link to={'/'} className="careerslist">Hiring</Link></li>
                 <li><Link to={'/'} className="careerslist">Employee Success</Link></li>
-                <li><Link to={'/'} className="careerslist">Benifits</Link></li>
+                <li><Link to={'/'} className="careerslist">Benefits</Link></li>
 
 
               </ul>
 
             </div>
             <div className="col-md-6 col-lg-3 col-xl-2 company">
-              <h6 className="company-heading">COMPANY</h6>
+              <h4 className="company-heading">COMPANY</h4>
               <ul className="company-list">
+                <li><Link to={'/aboutus'} className="companylist">About Us</Link></li>
                 <li><Link to={'/'} className="companylist">Our story</Link></li>
                 <li><Link to={'/'} className="companylist">Team</Link></li>
                 <li><Link to={'/'} className="companylist">Legacy</Link></li>

@@ -7,7 +7,7 @@ const Hand = () => {
     <div className="container handcont">
       <div className="row hand">
         <div className="col-md-7 data">
-          <h1>OUR MISSION</h1>
+          <h3>OUR MISSION</h3>
           <p>
             Eazotel's mission is to revolutionize the hospitality industry
             through innovative technology solutions, exceptional customer

@@ -68,7 +68,7 @@ const BookingEngine = () => {
       </div>
       <div className='container booking-content-list2'>
         <div className='row content'>
-          <div className='col-md-9'>
+          <div className='col-md-12'>
             <h2>{booking_Data.heading}</h2>
             <ul>
 
@@ -80,7 +80,7 @@ const BookingEngine = () => {
             </ul>
           </div>
           {/* <button className='createwebsitebutton'>Login</button> */}
-          <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link>
+          {/* <Link to="/login" className='cont-login' ><button className='createwebsitebutton'>Login</button></Link> */}
         </div>
       </div>
     </>

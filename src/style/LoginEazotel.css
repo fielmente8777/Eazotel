@@ -1,30 +1,42 @@
 .logineazotel {
   background: solid white;
+  height: 690px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
-.login-content {
-  border-radius: 5px;
-  height: 95vh;
-}
+
 
 .login-content .login-body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* border: 2px solid #FD5C01; */
+  border: 2px solid #0A3A75;
+  width: 500px;
+  row-gap: 10px;
+  padding: 30px 55px;
+  border-radius: 15px;
+
 }
 
 .logineazotel .createwebsitebutton {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #FFFFFF;
   box-sizing: border-box;
-  margin-top: 2rem;
-  width: 200px;
-  height: 50px;
+  width: 100%;
+  height: 45px;
   background: #193971;
   border: 0;
-  border-radius: 104.823px;
-  box-shadow: 0;
+  border-radius: 12px;
+}
+
+.logineazotel .createwebsitebutton:hover{
+  background: #FD5C01;
+
 }
 
 .logineazotel .button:hover {
@@ -37,11 +49,12 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-
+  padding: 6px 0;
+  position: relative;
 }
 
 .logineazotel input {
-  width: 30%;
+  width: 100%;
   height: 2.5rem;
   font-weight: 600;
   border-radius: 10px;
@@ -58,35 +71,34 @@
 
 }
 
-.logineazotel .input {
-  position: relative;
-}
+
 
 .logineazotel .eye-icon {
   position: absolute;
   top: 50%;
-  left: 62%;
+  left: 90%;
   transform: translateY(-50%);
   color: #aaa;
+  cursor: pointer;
 }
 
 
 
 .logineazotel img {
-  width: 18%;
-  margin-bottom: 6rem;
+  width: 50%;
 
 }
 
 .logineazotel .sub {
   display: flex;
-  justify-content: space-between;
-  width: 30%;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .logineazotel .dont {
-  color: #193971;
-  text-decoration: none;
+  color: #0A3A75;
+    text-decoration: none;
+    font-weight: 500;
 
 }
 
@@ -105,7 +117,7 @@
 
 .logineazotel .remember {
   font-size: 1rem;
-  color: #7E8EA6;
+  color: #0A3A75;
   font-weight: 600;
   letter-spacing: 1px;
   display: flex;
@@ -115,16 +127,17 @@
 }
 
 .logineazotel .forget {
-  font-size: 1rem;
-  color: #7E8EA6;
+  font-size: 13px;
+  color: #0A3A75;
   font-weight: 600;
   letter-spacing: 1.5px;
   cursor: pointer;
   text-decoration: underline;
+  margin: 0;
 }
 
 .logineazotel .abs {
-  font-size: .6rem;
+  font-size: .7rem;
   color: #193971;
   font-weight: 700;
   letter-spacing: 1px;
@@ -133,15 +146,15 @@
 }
 
 .logineazotel .googleauth {
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid #193971;
-  border-bottom: 3px solid #193971;
-  border-left: 3px solid #193971;
+  border-bottom: 2px solid #193971;
+  border-left: 2px solid #193971;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 30%;
+  width: 100%;
   height: 2.5rem;
   padding: 1rem;
   background: solid white;
@@ -161,12 +174,11 @@
 
 }
 
-.logineazotel input::placeholder {
-  /* background-color: transparent; */
+/* .logineazotel input::placeholder {
   font-weight: 700;
   color: #193971;
 
-}
+} */
 
 .logineazotel span {
   display: flex;
@@ -178,91 +190,21 @@
 }
 
 @media screen and (max-width: 768px) {
-  .logineazotel {
-    margin-top: 0;
-  }
-
-  .logineazotel img {
-    width: 30%;
-  }
-
-  .logineazotel .input {
-    width: 60%;
-  }
-
-  .logineazotel input {
-    width: 90%;
-  }
-
-  .logineazotel .sub {
-    width: 50%;
-  }
-
-  .logineazotel button {
-    width: 55%;
-  }
-
-  .logineazotel .googleauth {
-    width: 55%;
-  }
-
-  .logineazotel .glb {
-    font-size: 1.1rem;
-  }
-
-  .logineazotel .eye-icon {
-
-    left: 86%;
-
-  }
+  
 }
 
 @media screen and (max-width: 480px) {
-  .logineazotel {
-    margin-top: 0;
-  }
 
-  .logineazotel img {
-    width: 60%;
+  .logineazotel{
+    height: 580px;
   }
-
-  .logineazotel .input {
+  .login-content .login-body {
     width: 100%;
+    padding:15px 35px;
   }
 
-  .logineazotel input {
-    width: 90%;
+  .logineazotel .glb{
+    font-size: 14px;
   }
-
-  .logineazotel .sub {
-    width: 90%;
-  }
-
-  .logineazotel .googleauth {
-    width: 90%;
-  }
-
-  .logineazotel .glb {
-    font-size: 1.1rem;
-  }
-
-  .logineazotel button {
-    width: 90%;
-  }
-
-  .logineazotel .eye-icon {
-
-    left: 82%;
-
-  }
-
-  .logineazotel .remember {
-    font-size: .7rem;
-
-  }
-
-  .logineazotel .forget {
-    font-size: .7rem;
-
-  }
+  
 }

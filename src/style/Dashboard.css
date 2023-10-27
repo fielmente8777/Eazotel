@@ -1,32 +1,36 @@
 .dashboard {
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
     text-align: center;
 }
 
+.dashmain {
+    padding-top: 3rem;
+
+}
+
 .dashboard .heading {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     color: #193971;
     font-weight: 700;
 }
 
 .dashboard .subheading {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     color: #FD5C01;
     font-weight: 700;
-    padding-bottom: 3rem;
+    /* padding-bottom: 3rem; */
 }
 
 .dashboard .para {
-    margin-top: 3rem;
     padding: 0 3rem;
     color: #193971;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     word-spacing: 2px;
 }
 
 .dashboard h3 {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     font-weight: 600;
     color: #FD5C01;
 }
@@ -39,41 +43,46 @@
 }
 
 .dashboard button {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 0 4rem;
     width: auto;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .dashboard-content-list1 {
-    margin-top: 3rem;
-    padding-bottom: 2rem;
+    /* margin-top: 2rem; */
+    /* padding-bottom: 2rem; */
     color: #ffffff;
     background-color: #193971;
 }
 
 .dashboard-content-list1 h2,
 .dashboard-content-list2 h2 {
-    font-size: 2.5rem;
-    padding-bottom: 2rem;
+    font-size: 1.4rem;
+    padding-bottom: 1.5rem;
 
 }
 
 .dashboard-content-list1 li,
 .dashboard-content-list2 li {
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
     font-weight: 500;
     text-align: justify;
+    line-height: 2;
 }
 
 .dashboard-content-list2 {
-    margin-top: 3rem;
-    padding-bottom: 2rem;
+    /* margin-top: 2rem; */
+    /* padding-bottom: 2rem; */
     color: #193971;
 }
 
+.dashboard-content-list1 .content,
+.dashboard-content-list2 .content {
+    padding: 20px;
+}
+
 .box .but {
-    margin: 4rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,15 +105,13 @@
     box-shadow: 8.125151634216309px 8.125151634216309px 3.6932506561279297px 0px rgba(25, 57, 113, 0.09) inset, 0.7386501431465149px 4.431900978088379px 5.17055082321167px 0px rgba(25, 57, 113, 0.49);
 }
 
-.box h1 {
-    font-size: 3rem;
+.box h3 {
+    /* font-size: 3rem; */
     font-weight: 600;
     color: #FD5C01;
 }
 
 .box p {
-    margin-top: 1rem;
-    font-size: 1.8rem;
     font-weight: 600;
     color: #193971;
 }
@@ -116,17 +123,10 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    .dashboard .heading {
-        font-size: 2rem;
-
+    
+    .dashboard{
+        padding-top: 3rem;
     }
-
-    .dashboard .subheading {
-        font-size: 2rem;
-        padding: 0;
-
-    }
-
     .dashboard .para {
         margin-top: 0;
         padding: 1rem 0;
@@ -134,34 +134,13 @@
 
     }
 
-    .dashboard h3 {
-        font-size: 2.5rem;
-        font-weight: 600;
-        color: #FD5C01;
+
+
+    .dashboard-foot{
+        margin: 0;
+        padding: 0;
     }
 
-    .dashboard-content-list1 h2,
-    .dashboard-content-list2 h2 {
-        font-size: 2rem;
-        padding-bottom: 2rem;
-        font-weight: 600;
-    }
-
-    .dashboard-content-list1 li,
-    .dashboard-content-list2 li {
-        font-size: 15px;
-        font-weight: 500;
-        text-align: start;
-    }
-
-    .box .but {
-        margin: 2rem 0;
-
-    }
-
-    .box h1 {
-        font-size: 2rem;
-    }
 
     .box p {
         font-size: .8rem;
@@ -169,15 +148,24 @@
 }
 
 @media screen and (max-width:480px) {
-    .dashboard .heading {
+    /* .dashboard .heading {
         font-size: 2rem;
 
-    }
+    } */
 
-    .dashboard .subheading {
+    /* .dashboard .subheading {
         font-size: 2rem;
         padding: 0;
 
+    } */
+
+
+    .dashboard{
+        padding-top: 3rem;
+    }
+
+    .dashboard .content {
+        padding: 2rem 0;
     }
 
     .dashboard .para {
@@ -188,34 +176,34 @@
     }
 
     .dashboard h3 {
-        font-size: 2rem;
         font-weight: 600;
         color: #FD5C01;
     }
 
-    .dashboard-content-list1 h2,
-    .dashboard-content-list2 h2 {
-        font-size: 2rem;
-        padding-bottom: 2rem;
-        font-weight: 600;
+    .dashboard-content-list1 h2, .dashboard-content-list2 h2 {
+        padding-bottom: .5rem;
     }
 
     .dashboard-content-list1 li,
     .dashboard-content-list2 li {
-        font-size: 1rem;
-        font-weight: 500;
-        text-align: start;
+        font-size: 13px;
     }
 
     .box .free {
-        padding: 2rem;
+        /* padding: 2rem; */
         margin-right: 0;
+        width: 295px;
     }
 
     .box .pick {
-        padding: 2rem;
-        margin-top: 4rem;
+        padding: 1rem;
+        margin-top: 2rem;
         margin-left: 0;
+        width: 295px;
+    }
+    .dashboard-foot{
+        margin: 0;
+        padding: 0;
     }
 
     .box h1 {

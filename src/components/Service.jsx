@@ -15,11 +15,11 @@ const Service = () => {
         <div className='s-service d-flex'>
 
           <div className='left col-md-5'>
-            <img src={DashboardCircle} alt='booking' style={{ marginLeft: "2rem" }} />
+            <img src={DashboardCircle} alt='booking' />
           </div>
           <div className='right col-md-5 '>
 
-            <img src={BookingImage} alt='booking' style={{ marginLeft: "1rem" }} />
+            <img src={BookingImage} alt='booking'/>
           </div>
 
         </div>

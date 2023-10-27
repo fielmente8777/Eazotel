@@ -8,7 +8,7 @@ const AboutOwn = () => {
         <div className="col-md-7 data">
 
           <h3>Meet the visionary <br/>behind Eazotel:</h3>
-          <h1 className="title">Sachin Kapoor</h1>
+          <h2 className="title">Sachin Kapoor</h2>
           <p className="para">
             Behind every successful idea, lies a dedicated leader. Get to know
             the CEO of Eazotel and their commitment to empowering hotels with

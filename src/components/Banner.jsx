@@ -105,7 +105,7 @@ const Banner = () => {
           </div>
 
         </div>
-        <div className="authbutton">
+        {/* <div className="authbutton">
           {!auth ? (
             <>
               <Link
@@ -141,7 +141,7 @@ const Banner = () => {
               )}
             </div>
           )}
-        </div>
+        </div> */}
 
       </div>
     </>

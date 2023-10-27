@@ -46,51 +46,23 @@
   margin-top: 2rem;
 }
 
-.footer .product-heading {
-  color: #193971;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
-.footer .productlist {
-  color: #193971;
-  text-decoration: none;
-  font-size: 15px;
-}
 
 .footer h4 {
   color: #193971;
-  font-size: 1.9rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 
-.footer .company-heading {
-  color: #193971;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
-.footer .companylist {
+.footer li a {
   color: #193971;
   text-decoration: none;
-  font-size: 15px;
 }
 
-
-.footer .careers-heading {
-  color: #193971;
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-left: 2.5rem;
+.footer ul {
+  padding-left: 0;
 }
 
-.footer .careerslist {
-  color: #193971;
-  text-decoration: none;
-  font-size: 15px;
-  margin-left: 2.5rem;
-}
 
 .footer li {
   font-size: .8rem;
@@ -100,7 +72,7 @@
   display: flex;
   gap: 7px;
   align-items: center;
-  line-height: 2.5;
+  line-height: 2;
 }
 
 .footer a:hover {
@@ -112,9 +84,10 @@
 .social {
   display: flex;
   justify-content: space-between;
+  padding-left: 15px;
 }
 
-.social-icon {
+/* .social-icon {
   margin: 0;
   margin-left: .6rem;
 
@@ -128,19 +101,35 @@
   transform: scale(1);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
+} */
+
+.social-icon {
+  display: flex;
+  width: auto;
+  /* border: 2px solid; */
+  gap: 10px;
 }
 
-.social .socialimage {
+.social-icon a {
+  width: 35px;
+  height: 35px;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .social .socialimage {
   width: 30%;
-}
+} */
 
-.social .socialimage:hover {
-  /* width: 60%; */
-  /* transition: .3s ease-in-out; */
+/* .social .socialimage:hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 
-}
+} */
 
 .copywrite-section {
   display: flex;
@@ -157,7 +146,7 @@
 .privacy-link {
   padding-left: 0.5rem;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #193971;
 }
@@ -169,7 +158,7 @@
 
 .reserved {
   margin-top: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #193971;
   font-weight: 700;
 }
@@ -189,18 +178,13 @@
     margin-top: 0;
   }
 
-  .social-icon {
+  /* .social-icon {
     max-width: 40%;
     margin-left: .6rem;
-  }
+  } */
 
-  .social .socialimage {
-    width: 60%;
-  }
 
-  .social .socialimage:hover {
-    width: 70%;
-  }
+
 
   .footer .careers-heading {
 
@@ -225,7 +209,7 @@
   }
 
   .footer h4 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
   .footer p {
@@ -236,15 +220,20 @@
     word-spacing: .1px;
   }
 
-  .footer l1 {
+  /* .footer l1 {
     font-size: 1rem;
-  }
+  } */
 
   .footer .social {
     order: 4;
-    margin-top: 1rem;
     display: flex;
     margin-left: 0;
+  }
+
+
+  .social-icon a {
+    width: 30px;
+    height: 30px;
   }
 
   .footer .footer-logo {
@@ -252,36 +241,16 @@
     margin-top: 1rem;
   }
 
-  .footer ul {
-    padding-left: 0;
-  }
 
-  .footer .product-heading {
-    font-size: 1rem;
-    font-weight: 700;
-  }
-
-  .footer .company-heading {
-    font-size: 1rem;
-    font-weight: 700;
-  }
-
-  .footer .careers-heading {
-    font-size: 1rem;
-    font-weight: 700;
-  }
-
-  .productlist,
-  .companylist,
-  .careerslist {
-    font-size: .8rem;
-    /* line-height: 28px; */
-    font-weight: 600;
-  }
 
   .footer li {
-
     line-height: 28px;
+    font-size: 13px;
+
+  }
+
+  .footer li a {
+    font-size: 13px;
   }
 
   .footer .privacy-link {
@@ -312,20 +281,6 @@
     width: 12px;
   }
 
-  .social-icon {
-    max-width: 50%;
-    margin-left: .6rem;
-  }
-
-  .social .socialimage {
-    width: 75%;
-  }
-
-  .social .socialimage:hover {
-    width: 85%;
-
-  }
-
   .address,
   .contact {
     padding-left: 0;
@@ -337,5 +292,10 @@
 
   .footer .careerslist {
     margin-left: 0;
+  }
+
+
+  .copywrite-section {
+    flex-direction: column;
   }
 }

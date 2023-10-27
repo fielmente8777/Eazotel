@@ -9,9 +9,9 @@ import { Link } from 'react-router-dom'
 const FindOwn = () => {
   return (
     <div className=' container findown'>
-        <h1>
+        <h3>
             FIND US ON
-        </h1>
+        </h3>
 
         <div className='socialicon'>
             <Link to="/" ><img className="socialimage " src={Facebook} alt='instagram' /></Link>

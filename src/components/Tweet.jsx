@@ -11,21 +11,21 @@ const Tweet = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    speed: 500,
+    speed: 700,
     autoplay: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
-          speed: 500,
-          slidesToShow: 3, // Show 2 cards in tablet mode
+          speed: 700,
+          slidesToShow: 2, // Show 2 cards in tablet mode
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          speed: 500,
+          speed: 700,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -49,10 +49,7 @@ const Tweet = () => {
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
                 lorem id lorem iaculis, sit amet gravida diam porttitor. Proin
                 vitae est consectetur, sollicitudin tortor ac, tincidunt risus.
-                Aliquam laoreet sed magna vel consequat. Donec at urna semper,
-                pharetra sapien vitae, egestas sapien. Donec dignissim ac purus
-                sit amet dignissim. Praesent sagittis enim elementum lectus
-                maximus tempor.
+                Aliquam laoreet sed magna vel consequat.
               </p>
               <p className="star" style={{ color: "#FD5C01" }}>
                 <FaStar />
@@ -73,10 +70,7 @@ const Tweet = () => {
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
                 lorem id lorem iaculis, sit amet gravida diam porttitor. Proin
                 vitae est consectetur, sollicitudin tortor ac, tincidunt risus.
-                Aliquam laoreet sed magna vel consequat. Donec at urna semper,
-                pharetra sapien vitae, egestas sapien. Donec dignissim ac purus
-                sit amet dignissim. Praesent sagittis enim elementum lectus
-                maximus tempor.
+                Aliquam laoreet sed magna vel consequat.
               </p>
               <p className="star" style={{ color: "#FD5C01" }}>
                 <FaStar />
@@ -97,10 +91,7 @@ const Tweet = () => {
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
                 lorem id lorem iaculis, sit amet gravida diam porttitor. Proin
                 vitae est consectetur, sollicitudin tortor ac, tincidunt risus.
-                Aliquam laoreet sed magna vel consequat. Donec at urna semper,
-                pharetra sapien vitae, egestas sapien. Donec dignissim ac purus
-                sit amet dignissim. Praesent sagittis enim elementum lectus
-                maximus tempor.
+                Aliquam laoreet sed magna vel consequat.
               </p>
               <p className="star" style={{ color: "#FD5C01" }}>
                 <FaStar />
@@ -121,10 +112,7 @@ const Tweet = () => {
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
                 lorem id lorem iaculis, sit amet gravida diam porttitor. Proin
                 vitae est consectetur, sollicitudin tortor ac, tincidunt risus.
-                Aliquam laoreet sed magna vel consequat. Donec at urna semper,
-                pharetra sapien vitae, egestas sapien. Donec dignissim ac purus
-                sit amet dignissim. Praesent sagittis enim elementum lectus
-                maximus tempor.
+                Aliquam laoreet sed magna vel consequat.
               </p>
               <p className="star" style={{ color: "#FD5C01" }}>
                 <FaStar />
@@ -145,10 +133,7 @@ const Tweet = () => {
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
                 lorem id lorem iaculis, sit amet gravida diam porttitor. Proin
                 vitae est consectetur, sollicitudin tortor ac, tincidunt risus.
-                Aliquam laoreet sed magna vel consequat. Donec at urna semper,
-                pharetra sapien vitae, egestas sapien. Donec dignissim ac purus
-                sit amet dignissim. Praesent sagittis enim elementum lectus
-                maximus tempor.
+                Aliquam laoreet sed magna vel consequat.
               </p>
               <p className="star" style={{ color: "#FD5C01" }}>
                 <FaStar />

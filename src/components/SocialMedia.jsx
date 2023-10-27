@@ -5,6 +5,8 @@ import TemplateHeader from './TemplateHeader'
 import TemplateFooter from './TemplateFooter'
 import SocialMediaImgae from '../assets/SocialMediaManager1.png'
 import Underline from "../components/Underline"
+import { Link } from 'react-router-dom'
+
 const SocialMedia = () => {
 
   const { pathname } = useLocation()
@@ -57,9 +59,11 @@ const SocialMedia = () => {
         <div className='col-md-3 col-three'>Messaging</div>
       </div>
       <Underline />
-      <div className='socialfooter mt-5'>
-        <h1>Don’t let social media control you.<br /> Manage it with us instead!</h1>
-        <button className='createwebsitebutton'>Login</button>
+      <div className='socialfooter'>
+        <h3>Don’t let social media control you.<br /> Manage it with us instead!</h3>
+        {/* <button className='createwebsitebutton'>Login</button> */}
+        <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link>
+
       </div>
     </>
   )

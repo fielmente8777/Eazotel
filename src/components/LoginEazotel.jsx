@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const LoginEazotel = () => {
-  const {baseUrl, setAuth, setHaveDashboardPassword,setClientWebsite,setClientengine  } =
+  const { baseUrl, setAuth, setHaveDashboardPassword, setClientWebsite, setClientengine } =
     useContext(AuthContext);
   const newLoginAPI = `${baseUrl}/api/login`
   const {
@@ -47,7 +47,7 @@ const LoginEazotel = () => {
     }
   }
 
- 
+
 
 
   const onSubmit = async (data) => {
@@ -81,7 +81,7 @@ const LoginEazotel = () => {
     }
   };
 
-  const Dinabite = async(token)=> {
+  const Dinabite = async (token) => {
     const url = `${baseUrl}/api/dinabite/check`;
     const payload = {
       token: token
@@ -99,7 +99,7 @@ const LoginEazotel = () => {
       .then(response => response.json())
       .then(data => {
         console.log(data); // Process the response data here
-        if (data.Message!=="register") {
+        if (data.Message !== "register") {
           // alert("registering token to storage")
           localStorage.setItem("dinabiteToken", data.Message)
         }
@@ -140,96 +140,99 @@ const LoginEazotel = () => {
       toast.error("server error");
     }
   };
-  
+
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
 
   return (
-    <div className="logineazotel">
+    <div className="container logineazotel">
       <ToastContainer />
-      <div className="container">
-        <div className="row  login-content">
-          <form className="login-body" onSubmit={handleSubmit(onSubmit)}>
+      {/* <div className="container"> */}
+      <div className="row  login-content">
+        <form className="login-body" onSubmit={handleSubmit(onSubmit)}>
 
-            <Link to="/" className="image">
-              {" "}
-              <img className="login-image" src={Logo} alt="loginImg" />
+          <Link to="/" className="image">
+            {" "}
+            <img className="login-image" src={Logo} alt="loginImg" />
+          </Link>
+
+          <div className="input ">
+            <input
+              type="email"
+              {...register("email", {
+                required: "Email is required!",
+              })}
+              placeholder="Email"
+            />
+            <span className="error">{errors.email?.message}</span>
+          </div>
+          <div className="input input-field">
+            <input
+              id="myInput"
+              type={showPassword ? "text" : "password"}
+              {...register("password", {
+                required: "Password is required!",
+              })}
+              placeholder="Password"
+            />
+            <span className="error">{errors.password?.message}</span>
+            {showPassword ? (
+              <BsEyeSlash
+                className="eye-icon"
+                onClick={toggleShowPassword}
+              />
+            ) : (
+              <BsEye className="eye-icon" onClick={toggleShowPassword} />
+            )}
+          </div>
+          <div className="sub">
+            {/* <p className="remember">Remember me</p> */}
+            <Link to="" ><p className="forget">Forget Password</p></Link>
+          </div>
+          <button type="submit" className="createwebsitebutton ">
+            Login
+          </button>
+          <span className="dont">
+            OR
+          </span>
+          {/* <p className="forget  text-light">
+            <Link className="dont">
+              OR
             </Link>
-
-            <div className="input mb-4">
-              <input
-                type="email"
-                {...register("email", {
-                  required: "Email is required!",
-                })}
-                placeholder="Email"
-              />
-              <span className="error">{errors.email?.message}</span>
-            </div>
-            <div className="input mb-4 input-field">
-              <input
-                id="myInput"
-                type={showPassword ? "text" : "password"}
-                {...register("password", {
-                  required: "Password is required!",
-                })}
-                placeholder="Password"
-              />
-              <span className="error">{errors.password?.message}</span>
-              {showPassword ? (
-                <BsEyeSlash
-                  className="eye-icon"
-                  onClick={toggleShowPassword}
-                />
-              ) : (
-                <BsEye className="eye-icon" onClick={toggleShowPassword} />
-              )}
-            </div>
-            <div className="sub">
-              <p className="remember">Remember me</p>
-              <Link to="" ><p className="forget">Forget Password</p></Link>
-            </div>
-            <button type="submit" className="createwebsitebutton mt-4">
-              login
-            </button>
-            <p className="forget mt-4 text-light">
-              <Link className="dont">
-                OR
-              </Link>
-            </p>
-            <div className="googleauth mt-4">
-              <LoginSocialGoogle
-                client_id="525278251391-g3jigd28se6a4fse2ld8pcp2spvv2jnp.apps.googleusercontent.com"
-                scope="openid profile email"
-                discoveryDocs="claims_supported"
-                access_type="offline"
-                onResolve={({ provider, data }) => {
-                  handleGoogleLogin(provider, data);
-                }}
-                onReject={(err) => {
-                  console.log(err);
-                }}
-              >
-                <div className="google">
-                  <FcGoogle size={30} style={{ marginRight: "1rem" }} />
-                  <h1 className="glb">Continue with Google</h1>
-                </div>
-              </LoginSocialGoogle>
-            </div>
-            <p className="abs mt-4">
-              *By filling this information you’re agreeing to our terms and
-              conditions{" "}
-            </p>
-          </form>
+          </p> */}
+          <div className="googleauth">
+            <LoginSocialGoogle
+              client_id="525278251391-g3jigd28se6a4fse2ld8pcp2spvv2jnp.apps.googleusercontent.com"
+              scope="openid profile email"
+              discoveryDocs="claims_supported"
+              access_type="offline"
+              onResolve={({ provider, data }) => {
+                handleGoogleLogin(provider, data);
+              }}
+              onReject={(err) => {
+                console.log(err);
+              }}
+            >
+              <div className="google">
+                <FcGoogle size={30} style={{ marginRight: "1rem" }} />
+                <h1 className="glb">Continue with Google</h1>
+              </div>
+            </LoginSocialGoogle>
+          </div>
+          <p className="abs">
+            *By filling this information you’re agreeing to our terms and
+            conditions.{" "}
+          </p>
+        </form>
 
 
-          {loading ? <Spinner /> : undefined}
+        {loading ? <Spinner /> : undefined}
 
 
-        </div>
       </div>
     </div>
+    // </div>
   );
 };
 

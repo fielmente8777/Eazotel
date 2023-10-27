@@ -33,7 +33,7 @@ const Footer = () => {
                 </li>
               </ul>
 
-              <h4>Contact Datails</h4>
+              <h4>Contact Details</h4>
               <ul className="contact">
                 <li className="address-list">
                   <FaPhoneAlt /> <Link to="tel:9501868775" style={{ textDecoration: "none", color: " #193971" }} >+91 9501868775</Link>

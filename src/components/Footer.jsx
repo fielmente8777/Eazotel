@@ -104,9 +104,9 @@ const Footer = () => {
 
             <h6 className="reserved"><FaRegCopyright className="reserved-icon" /> 2020 Eazotel </h6>
             <div className="privacy">
-              <a className="privacy-link" href="/privacypolicy">Privacy Policy |</a>
-              <a className="privacy-link" href="/terms&condition">Terms and Conditions |</a>
-              <a className="privacy-link" href="/">Cookies</a>
+              <Link className="privacy-link" to="/privacypolicy">Privacy Policy |</Link>
+              <Link className="privacy-link" to="/terms&condition">Terms and Conditions |</Link>
+              <Link className="privacy-link" to="/">Cookies</Link>
             </div>
           </div>
         </div>

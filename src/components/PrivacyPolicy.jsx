@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
 
 
 function PrivacyPolicy() {
+    const { pathname } = useLocation()
+    useEffect(() => {
+        if (pathname === '/privacypolicy') {
+        window.scroll(0, 0);
+        }
+    }, [pathname])
     return (
         <>
             <div className='PrivacyMain'>

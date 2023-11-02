@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import TermsBanner from '../assets/TermsBanner.png'
+import { useLocation } from 'react-router-dom';
 
 
 function TermsCondition() {
+    const { pathname } = useLocation()
+    useEffect(() => {
+        if (pathname === '/terms&condition') {
+        window.scroll(0, 0);
+        }
+    }, [pathname])
     return (
         <>
             <div className='tcMain'>

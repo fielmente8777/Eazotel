@@ -32,31 +32,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const token = localStorage.getItem("Token");
-        const response = await fetch(
-          "https://backend.eazotel.com/api/dashboard/Get_user_dash/",
-          {
-            method: "POST",
-            headers: {
-              Accept: "application/json, text/plain, */*",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ Token: token }),
-          }
-        );
-        const data = await response.json();
-        if (data.Status === false) {
-          setGetDashboard(true);
-        } else {
-          setGetDashboard(false);
-        }
-      } catch (error) {
-        console.log("Failed to fetch Data :", error);
-      }
-    };
-    fetchData();
+    
   }, [setGetDashboard]);
 
   return (

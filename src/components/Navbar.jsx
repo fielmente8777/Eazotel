@@ -123,13 +123,13 @@ const Navbar = () => {
                     {" "}
                     <li className="drop-item">Social Media Manager</li>
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/templates"
                     onClick={handleProfileClick}
                   >
                     {" "}
                     <li className="drop-item">Template</li>
-                  </Link>
+                  </Link> */}
                   <Link
                     to="/aboutus"
                     onClick={handleProfileClick}

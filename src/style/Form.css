@@ -62,9 +62,9 @@
 }
 
 @media screen and (max-width: 480px) {
-  .form {
+  /* .form {
     margin-top: 2rem !important;
-  }
+  } */
 
 
   .body .text {

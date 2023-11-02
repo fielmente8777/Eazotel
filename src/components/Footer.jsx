@@ -49,7 +49,7 @@ const Footer = () => {
             <div className="col-md-6 col-lg-3 col-xl-3 service">
               <h4 className="product-heading">PRODUCTS & SERVICES</h4>
               <ul className="product-list">
-                {/* <li><Link to={'/createwebsite'} className="productlist">Hotel Website</Link></li> */}
+                <li><Link to={'/createhotelwebsite'} className="productlist">Create Website</Link></li>
                 <li><Link to={'/bookingengine'} className="productlist">Booking Engine</Link></li>
                 <li><Link to={'/dashboard'} className="productlist">Interactive Dashboard</Link></li>
                 <li><Link to={'/socialmedia'} className="productlist">Social Media Manager</Link></li>
@@ -76,7 +76,7 @@ const Footer = () => {
               <ul className="company-list">
                 <li><Link to={'/aboutus'} className="companylist">About Us</Link></li>
                 <li><Link to={'/'} className="companylist">Our story</Link></li>
-                <li><Link to={'/'} className="companylist">Team</Link></li>
+                <li><Link to={'/team'} className="companylist">Team</Link></li>
                 <li><Link to={'/'} className="companylist">Legacy</Link></li>
 
 
@@ -104,9 +104,9 @@ const Footer = () => {
 
             <h6 className="reserved"><FaRegCopyright className="reserved-icon" /> 2020 Eazotel </h6>
             <div className="privacy">
-              <a className="privacy-link" href="/" target="_blank">Privacy Policy |</a>
-              <a className="privacy-link" href="/" target="_blank">Terms and Conditions |</a>
-              <a className="privacy-link" href="/" target="_blank">Cookies</a>
+              <a className="privacy-link" href="/privacypolicy">Privacy Policy |</a>
+              <a className="privacy-link" href="/terms&condition">Terms and Conditions |</a>
+              <a className="privacy-link" href="/">Cookies</a>
             </div>
           </div>
         </div>

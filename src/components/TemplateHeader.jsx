@@ -5,7 +5,7 @@ const TemplateHeader = () => {
 
 
     const data = {
-        "subheading": "Perfect templates to get the right attention",
+        "subheading": "AN Affordable SOCIAL MEDIA MANAGING SYSTEM FOR ALL HOSPITALITY BUSINESSES",
         "heading": "FOR ALL HOSPITALITY BUSINESSES",
         "details": "With our simple-to-use website templates for both mobile and desktop versions, designed specifically for the hospitality industry, Eazotel helps you save time and attract more consumers!"
     }

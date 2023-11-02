@@ -1,5 +1,5 @@
 import "./App.css";
-// import "./style/Main.css"
+import "./style/Main.css"
 import React, { useEffect, useContext } from "react";
 import { Outlet, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./components/Home";
@@ -22,6 +22,9 @@ import Aboutus from "./components/Aboutus";
 import Template from "./pages/Template";
 import Dashboard from "./components/Dashboard";
 import Imageupload from "./components/Imageupload";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsCondition from "./components/TermsCondition";
+import Team from "./components/Team";
 
 
 function App() {
@@ -56,7 +59,7 @@ function App() {
     ) {
       CheckDashboardAPI();
     }
-    else{
+    else {
       setAuth(false)
     }
   }, [auth, setAuth]);
@@ -150,6 +153,13 @@ function App() {
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/templates" element={<Template />} />
         <Route path="/dashboard" element={<Dashboard />} />
+
+
+        {/* Saurabh Routes */}
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/terms&condition" element={<TermsCondition />} />
+        <Route path="/team" element={<Team/>} />
+
         {/* <Route path="/img" element={<Imageupload />} />  */}
       </Routes>
       {location.pathname !== "/login" && location.pathname !== "/signup" && (

@@ -10,7 +10,7 @@ const Partner = () => {
     return (
         <div className='container partner'>
             <div className='heading'>
-                <h2>Our <strong>incredible partners</strong> who make it <strong>Easy</strong></h2>
+                <h2>Our <strong>Incredible Partners</strong> who make it <strong>Easy</strong></h2>
             </div>
             <div className='card-section'>
 

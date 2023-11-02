@@ -1,25 +1,79 @@
 .logineazotel {
-  background: solid white;
-  height: 690px;
+
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 96vh;
+  padding: 4rem 8rem;
+}
+
+.loginmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  /* border: 1px solid #0A3A75; */
+  /* border-radius: 15px; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #0A3A75;
+  /* padding: 4rem; */
+  overflow: hidden;
+  /* box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.75); */
+}
+
+.loginLeft {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 5rem;
+  /* color: #0A3A75; */
+  text-align: center;
+  height: 100%;
+  background-color: #F1F1F1;
 
 }
 
+.loginmain h1 {
+  font-weight: 700;
+  /* color: #0A3A75; */
+  /* color: #FFFFFF; */
+  /* font-size: 25px; */
+}
+
+
+.loginmain p {
+  font-weight: 500;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+
+.loginRight {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6rem;
+  background-color: #FD5C01;
+
+}
 
 
 .login-content .login-body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 2px solid #FD5C01; */
-  border: 2px solid #0A3A75;
-  width: 500px;
   row-gap: 10px;
-  padding: 30px 55px;
+  padding: 30px 45px;
   border-radius: 15px;
-
+  height: 100%;
+  width: 100%;
 }
 
 .logineazotel .createwebsitebutton {
@@ -34,9 +88,11 @@
   border-radius: 12px;
 }
 
-.logineazotel .createwebsitebutton:hover{
-  background: #FD5C01;
-
+.logineazotel .createwebsitebutton:hover {
+  /* background: #FD5C01; */
+  background: #FFFFFF;
+  border: 1px solid #193971;
+  color: #193971;
 }
 
 .logineazotel .button:hover {
@@ -68,10 +124,7 @@
 
 .logineazotel .image {
   display: contents;
-
 }
-
-
 
 .logineazotel .eye-icon {
   position: absolute;
@@ -85,7 +138,7 @@
 
 
 .logineazotel img {
-  width: 50%;
+  width: 60%;
 
 }
 
@@ -97,8 +150,8 @@
 
 .logineazotel .dont {
   color: #0A3A75;
-    text-decoration: none;
-    font-weight: 500;
+  text-decoration: none;
+  font-weight: 500;
 
 }
 
@@ -148,8 +201,8 @@
 .logineazotel .googleauth {
   border-radius: 8px;
   border: 1px solid #193971;
-  border-bottom: 2px solid #193971;
-  border-left: 2px solid #193971;
+  /* border-bottom: 2px solid #193971; */
+  /* border-left: 2px solid #193971; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,8 +210,14 @@
   width: 100%;
   height: 2.5rem;
   padding: 1rem;
-  background: solid white;
+  background: white;
 }
+
+/* .logineazotel .googleauth:hover {
+  background-color: #F1F1F1;
+  background-color: #193971;
+  color: #F1F1F1;
+} */
 
 .logineazotel .google {
   display: flex;
@@ -169,16 +228,10 @@
 .logineazotel .glb {
   margin-top: .4rem;
   font-size: 1.2rem;
-  color: #193971;
-  font-weight: 700;
-
+  /* color: #193971; */
+  font-weight: 500;
 }
 
-/* .logineazotel input::placeholder {
-  font-weight: 700;
-  color: #193971;
-
-} */
 
 .logineazotel span {
   display: flex;
@@ -190,21 +243,74 @@
 }
 
 @media screen and (max-width: 768px) {
-  
+
+  .logineazotel {
+    height: 100%;
+    padding: 0;
+  }
+
+  .loginLeft {
+    padding: 0 1rem;
+  }
+
+
+  .loginmain p {
+    font-size: 17px;
+}
+
+  .loginRight {
+    padding: 0;
+
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .logineazotel {
+    height: 100%;
+    padding: 0;
+  }
+
+  .loginLeft {
+    padding: 0 1rem;
+  }
+
+
+  .loginmain p {
+    font-size: 17px;
+}
+
+  .loginRight {
+    padding: 0;
+
+  }
 }
 
 @media screen and (max-width: 480px) {
 
-  .logineazotel{
-    height: 580px;
-  }
-  .login-content .login-body {
-    width: 100%;
-    padding:15px 35px;
+  .logineazotel {
+    height: 100%;
+    padding: 0;
   }
 
-  .logineazotel .glb{
+  .loginmain p {
+    font-size: 15px;
+  }
+
+  .loginLeft {
+    display: none;
+  }
+
+  .loginRight {
+    width: 100%;
+    padding: 0;
+    background-color: #F1F1F1;
+
+  }
+
+  .logineazotel .glb {
     font-size: 14px;
   }
-  
+
+
 }

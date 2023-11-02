@@ -6,6 +6,7 @@ import TemplateFooter from './TemplateFooter'
 import SocialMediaImgae from '../assets/SocialMediaManager1.png'
 import Underline from "../components/Underline"
 import { Link } from 'react-router-dom'
+import socialmedia from '../assets/socialmedia.png'
 
 const SocialMedia = () => {
 
@@ -28,7 +29,7 @@ const SocialMedia = () => {
       <div className='container socialmedia'>
         <div className='row content'>
           <div className='col-xl-6 col-md-9 col-sm-8 col-content'>
-            <img src={SocialMediaImgae} alt='SocialMedia' />
+            <img src={socialmedia} alt='SocialMedia' />
           </div>
         </div>
       </div>

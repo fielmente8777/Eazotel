@@ -146,93 +146,111 @@ const LoginEazotel = () => {
   };
 
   return (
-    <div className="container logineazotel">
+
+
+    <div className="logineazotel">
       <ToastContainer />
       {/* <div className="container"> */}
-      <div className="row  login-content">
-        <form className="login-body" onSubmit={handleSubmit(onSubmit)}>
 
-          <Link to="/" className="image">
+
+      <div className="loginmain">
+        <div className="loginLeft">
+          {/* <Link to="/" className="image">
             {" "}
             <img className="login-image" src={Logo} alt="loginImg" />
-          </Link>
+          </Link> */}
+          <h1>Welcome to the Eazotel</h1>
+          <p>Build Your Hotel Website In Just 1 Minute!</p>
+          <p>The best booking and hospitality management service platform to cater to all your needs.</p>
+        </div>
+        <div className="loginRight">
+          <div className="row  login-content">
+            <form className="login-body" onSubmit={handleSubmit(onSubmit)}>
 
-          <div className="input ">
-            <input
-              type="email"
-              {...register("email", {
-                required: "Email is required!",
-              })}
-              placeholder="Email"
-            />
-            <span className="error">{errors.email?.message}</span>
-          </div>
-          <div className="input input-field">
-            <input
-              id="myInput"
-              type={showPassword ? "text" : "password"}
-              {...register("password", {
-                required: "Password is required!",
-              })}
-              placeholder="Password"
-            />
-            <span className="error">{errors.password?.message}</span>
-            {showPassword ? (
-              <BsEyeSlash
-                className="eye-icon"
-                onClick={toggleShowPassword}
-              />
-            ) : (
-              <BsEye className="eye-icon" onClick={toggleShowPassword} />
-            )}
-          </div>
-          <div className="sub">
-            {/* <p className="remember">Remember me</p> */}
-            <Link to="" ><p className="forget">Forget Password</p></Link>
-          </div>
-          <button type="submit" className="createwebsitebutton ">
-            Login
-          </button>
-          <span className="dont">
-            OR
-          </span>
-          {/* <p className="forget  text-light">
+              {/* <Link to="/" className="image">
+                {" "}
+                <img className="login-image" src={Logo} alt="loginImg" />
+              </Link> */}
+              <h1>Login</h1>
+              <p>Enter your credentials to access your account.</p>
+
+              <div className="input ">
+                <input
+                  type="email"
+                  {...register("email", {
+                    required: "Email is required!",
+                  })}
+                  placeholder="Email"
+                />
+                <span className="error">{errors.email?.message}</span>
+              </div>
+              <div className="input input-field">
+                <input
+                  id="myInput"
+                  type={showPassword ? "text" : "password"}
+                  {...register("password", {
+                    required: "Password is required!",
+                  })}
+                  placeholder="Password"
+                />
+                <span className="error">{errors.password?.message}</span>
+                {showPassword ? (
+                  <BsEyeSlash
+                    className="eye-icon"
+                    onClick={toggleShowPassword}
+                  />
+                ) : (
+                  <BsEye className="eye-icon" onClick={toggleShowPassword} />
+                )}
+              </div>
+              <div className="sub">
+                {/* <p className="remember">Remember me</p> */}
+                <Link to="" ><p className="forget">Forget Password</p></Link>
+              </div>
+              <button type="submit" className="createwebsitebutton ">
+                Login
+              </button>
+              <span className="dont">
+                OR
+              </span>
+              {/* <p className="forget  text-light">
             <Link className="dont">
               OR
             </Link>
           </p> */}
-          <div className="googleauth">
-            <LoginSocialGoogle
-              client_id="525278251391-g3jigd28se6a4fse2ld8pcp2spvv2jnp.apps.googleusercontent.com"
-              scope="openid profile email"
-              discoveryDocs="claims_supported"
-              access_type="offline"
-              onResolve={({ provider, data }) => {
-                handleGoogleLogin(provider, data);
-              }}
-              onReject={(err) => {
-                console.log(err);
-              }}
-            >
-              <div className="google">
-                <FcGoogle size={30} style={{ marginRight: "1rem" }} />
-                <h1 className="glb">Continue with Google</h1>
+              <div className="googleauth">
+                <LoginSocialGoogle
+                  client_id="525278251391-g3jigd28se6a4fse2ld8pcp2spvv2jnp.apps.googleusercontent.com"
+                  scope="openid profile email"
+                  discoveryDocs="claims_supported"
+                  access_type="offline"
+                  onResolve={({ provider, data }) => {
+                    handleGoogleLogin(provider, data);
+                  }}
+                  onReject={(err) => {
+                    console.log(err);
+                  }}
+                >
+                  <div className="google">
+                    <FcGoogle size={30} style={{ marginRight: "5px" }} />
+                    <h1 className="glb">Continue with Google</h1>
+                  </div>
+                </LoginSocialGoogle>
               </div>
-            </LoginSocialGoogle>
+              <p className="abs">
+                *By filling this information you’re agreeing to our terms and
+                conditions.{" "}
+              </p>
+            </form>
+
+
+            {loading ? <Spinner /> : undefined}
+
+
           </div>
-          <p className="abs">
-            *By filling this information you’re agreeing to our terms and
-            conditions.{" "}
-          </p>
-        </form>
-
-
-        {loading ? <Spinner /> : undefined}
-
-
+        </div>
       </div>
     </div>
-    // </div>
   );
 };
 

@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom'
 const CreateWebsite = () => {
   const { pathname } = useLocation()
   useEffect(() => {
-    if (pathname === '/createwebsite') {
+    if (pathname === '/createhotelwebsite') {
       window.scroll(0, 0);
     }
   }, [pathname])

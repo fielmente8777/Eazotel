@@ -49,10 +49,10 @@ const Footer = () => {
             <div className="col-md-6 col-lg-3 col-xl-3 service">
               <h4 className="product-heading">PRODUCTS & SERVICES</h4>
               <ul className="product-list">
-                <li><Link to={'/createhotelwebsite'} className="productlist">Create Website</Link></li>
-                <li><Link to={'/bookingengine'} className="productlist">Booking Engine</Link></li>
+                <li><Link to={'/create-hotel-website'} className="productlist">Create Website</Link></li>
+                <li><Link to={'/booking-engine'} className="productlist">Booking Engine</Link></li>
                 <li><Link to={'/dashboard'} className="productlist">Interactive Dashboard</Link></li>
-                <li><Link to={'/socialmedia'} className="productlist">Social Media Manager</Link></li>
+                <li><Link to={'/social-media-manager'} className="productlist">Social Media Manager</Link></li>
                 <li><Link to={'/'} className="productlist">Channel Manager</Link></li>
                 <li><Link to={'/'} className="productlist">SEO Manager</Link></li>
 

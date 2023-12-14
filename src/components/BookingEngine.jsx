@@ -5,7 +5,7 @@ import { useLocation,Link } from 'react-router-dom'
 const BookingEngine = () => {
   const { pathname } = useLocation()
   useEffect(() => {
-    if (pathname === '/bookingengine') {
+    if (pathname === '/booking-engine') {
       window.scroll(0, 0);
     }
   }, [pathname])

@@ -12,7 +12,7 @@ const SocialMedia = () => {
 
   const { pathname } = useLocation()
   useEffect(() => {
-    if (pathname === '/socialmedia') {
+    if (pathname === '/social-media-manager') {
       window.scroll(0, 0);
     }
   }, [pathname])

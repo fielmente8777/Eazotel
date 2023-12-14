@@ -146,9 +146,9 @@ function App() {
         <Route path="/login" element={<LoginEazotel />} />
         <Route path="/navbar" element={<Navbar />} />
         <Route path="/signup" element={<Registration />} />
-        <Route path="/createhotelwebsite" element={<CreateWebsite />} />
-        <Route path="/bookingengine" element={<BookingEngine />} />
-        <Route path="/socialmedia" element={<SocialMedia />} />
+        <Route path="/create-hotel-website" element={<CreateWebsite />} />
+        <Route path="/booking-engine" element={<BookingEngine />} />
+        <Route path="/social-media-manager" element={<SocialMedia />} />
         <Route path="/demo" element={<Form />} />
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/templates" element={<Template />} />

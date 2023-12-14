@@ -75,12 +75,12 @@ const Navbar = () => {
                       <li className="drop-item" >My dashboard</li>
                     </Link>
                   ) : null}
-                  <Link to="/createhotelwebsite" onClick={handleProfileClick}>
+                  <Link to="/create-hotel-website" onClick={handleProfileClick}>
                     <li className="drop-item" >Create Website </li>
                   </Link>
 
                   <Link
-                    to="/bookingengine"
+                    to="/booking-engine"
                     onClick={handleProfileClick}
                   >
                     <li className="drop-item">Booking Engine</li>
@@ -93,7 +93,7 @@ const Navbar = () => {
                     <li className="drop-item">Interactive Dashboard</li>
                   </Link>
                   <Link
-                    to="/socialmedia"
+                    to="/social-media-manager"
                     onClick={handleProfileClick}
                   >
                     {" "}

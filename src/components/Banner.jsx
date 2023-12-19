@@ -78,11 +78,17 @@ const Banner = () => {
 
                   />
                 </span>
-                <br />In Just
+                {/* task to remove */}
+                {/* <br />In Just */}
+
               </h2>
+                {/* task to remove */}
               {/* <h2 className='heading'>In Just</h2> */}
             </div>
-            <h1 class="minute">1 Minute</h1>
+                {/* task to remove */}
+            {/* <h1 class="minute">1 Minute</h1> */}
+            <br/>
+            <br/>
 
             <p >
 

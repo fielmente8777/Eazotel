@@ -76,7 +76,7 @@ const Footer = () => {
               <ul className="company-list">
                 <li><Link to={'/aboutus'} className="companylist">About Us</Link></li>
                 <li><Link to={'/'} className="companylist">Our story</Link></li>
-                <li><Link to={'/our-wok'} className="companylist">Our work</Link></li>
+                <li><Link to={'/our-work'} className="companylist">Our work</Link></li>
                 <li><Link to={'/team'} className="companylist">Team</Link></li>
                 <li><Link to={'/'} className="companylist">Legacy</Link></li>
 

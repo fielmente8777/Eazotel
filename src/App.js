@@ -25,6 +25,7 @@ import Imageupload from "./components/Imageupload";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsCondition from "./components/TermsCondition";
 import Team from "./components/Team";
+import OurWork from "./components/OurWork.jsx";
 
 
 function App() {
@@ -158,6 +159,7 @@ function App() {
         {/* Saurabh Routes */}
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/terms&condition" element={<TermsCondition />} />
+        <Route path="/our-work" element={<OurWork />}/>
         <Route path="/team" element={<Team/>} />
 
         {/* <Route path="/img" element={<Imageupload />} />  */}

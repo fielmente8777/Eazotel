@@ -31,9 +31,7 @@ const Navbar = () => {
     }
   };
 
-  useEffect(() => {
-    
-  }, [setGetDashboard]);
+  useEffect(() => {}, [setGetDashboard]);
 
   return (
     <div className="header fixed-top">
@@ -45,14 +43,20 @@ const Navbar = () => {
         </div>
 
         <div className="authbutton">
-
           <div className="demo-button bookDemoBtn me-3">
-            <Link to="/demo" ><button className='demobutton'>Book Demo</button></Link>
+            <Link to="/demo">
+              <button className="demobutton">Our Work</button>
+            </Link>
+          </div>
+          <div className="demo-button bookDemoBtn me-3">
+            <Link to="/demo">
+              <button className="demobutton">Book Demo</button>
+            </Link>
           </div>
           {!auth ? (
             <div className="demo-button me-0">
               <Link to="/login" onClick={handleToggleButton}>
-                <button className='demobutton'>Login</button>
+                <button className="demobutton">Login</button>
               </Link>
             </div>
           ) : (
@@ -67,35 +71,28 @@ const Navbar = () => {
                 <ul className="dropdown-menu">
                   {haveDashboardPassword ? (
                     <Link
-                      to={`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`}
+                      to={`https://dashboard.eazotel.com/?id=${localStorage.getItem(
+                        "Token"
+                      )}`}
                       target="_blank"
                       onClick={handleProfileClick}
                     >
                       {" "}
-                      <li className="drop-item" >My dashboard</li>
+                      <li className="drop-item">My dashboard</li>
                     </Link>
                   ) : null}
                   <Link to="/create-hotel-website" onClick={handleProfileClick}>
-                    <li className="drop-item" >Create Website </li>
+                    <li className="drop-item">Create Website </li>
                   </Link>
 
-                  <Link
-                    to="/booking-engine"
-                    onClick={handleProfileClick}
-                  >
+                  <Link to="/booking-engine" onClick={handleProfileClick}>
                     <li className="drop-item">Booking Engine</li>
                   </Link>
-                  <Link
-                    to="/dashboard"
-                    onClick={handleProfileClick}
-                  >
+                  <Link to="/dashboard" onClick={handleProfileClick}>
                     {" "}
                     <li className="drop-item">Interactive Dashboard</li>
                   </Link>
-                  <Link
-                    to="/social-media-manager"
-                    onClick={handleProfileClick}
-                  >
+                  <Link to="/social-media-manager" onClick={handleProfileClick}>
                     {" "}
                     <li className="drop-item">Social Media Manager</li>
                   </Link>
@@ -106,10 +103,7 @@ const Navbar = () => {
                     {" "}
                     <li className="drop-item">Template</li>
                   </Link> */}
-                  <Link
-                    to="/aboutus"
-                    onClick={handleProfileClick}
-                  >
+                  <Link to="/aboutus" onClick={handleProfileClick}>
                     {" "}
                     <li className="drop-item">About Us</li>
                   </Link>

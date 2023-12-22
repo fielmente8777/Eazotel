@@ -10,7 +10,7 @@ import { FcGoogle } from "react-icons/fc";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { RxArrowLeft } from "react-icons/rx";
 
 const LoginEazotel = () => {
   const { baseUrl, setAuth, setHaveDashboardPassword, setClientWebsite, setClientengine } =
@@ -154,7 +154,10 @@ const LoginEazotel = () => {
 
 
       <div className="loginmain">
-        <div className="loginLeft">
+        <div className="loginLeft position-relative">
+          <Link to='/' className="back-btn">
+          <RxArrowLeft  className="fs-3 fw-bold"/>
+          </Link>
           {/* <Link to="/" className="image">
             {" "}
             <img className="login-image" src={Logo} alt="loginImg" />

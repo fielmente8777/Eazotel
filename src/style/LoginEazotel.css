@@ -233,6 +233,27 @@
 }
 
 
+/* back button */
+
+.back-btn{
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  padding: .1rem 1.5rem;
+  background-color: transparent;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+}
+ .back-btn:hover{
+  background-color: #193971;
+  color: #F1F1F1;
+  border: #193971;
+  transform: scale(1);
+ }
+
 .logineazotel span {
   display: flex;
   align-items: flex-start;

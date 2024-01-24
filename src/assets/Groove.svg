@@ -1,0 +1,14 @@
+<svg width="104" height="5" viewBox="0 0 104 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Groove">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.828857 0.357056C1.18285 2.662 -0.533946 4.48459 4.93382 4.48459H99.1791C104.647 4.48459 102.93 2.662 103.284 0.357056H0.828857Z" fill="#96A1A8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.828857 0.357056C1.18285 2.662 -0.533946 4.48459 4.93382 4.48459H99.1791C104.647 4.48459 102.93 2.662 103.284 0.357056H0.828857Z" fill="url(#paint0_linear_15_167)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_15_167" x1="5.96577" y1="2.86305" x2="100.211" y2="2.86305" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3C3C3C"/>
+<stop offset="0.317518" stop-color="#3C3C3C" stop-opacity="0"/>
+<stop offset="0.660584" stop-color="#3C3C3C" stop-opacity="0"/>
+<stop offset="1" stop-color="#444444"/>
+</linearGradient>
+</defs>
+</svg>

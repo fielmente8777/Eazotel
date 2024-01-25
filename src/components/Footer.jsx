@@ -33,7 +33,7 @@ const Footer = () => {
                 </li>
               </ul>
 
-              <h4>Contact Datails</h4>
+              <h4>Contact Details</h4>
               <ul className="contact">
                 <li className="address-list">
                   <FaPhoneAlt /> <Link to="tel:9501868775" style={{ textDecoration: "none", color: " #193971" }} >+91 9501868775</Link>
@@ -47,12 +47,12 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-md-6 col-lg-3 col-xl-3 service">
-              <h6 className="product-heading">PRODUCTS & SERVICES</h6>
+              <h4 className="product-heading">PRODUCTS & SERVICES</h4>
               <ul className="product-list">
-                <li><Link to={'/createwebsite'} className="productlist">Hotel Website</Link></li>
-                <li><Link to={'/bookingengine'} className="productlist">Booking Engine</Link></li>
+                <li><Link to={'/create-hotel-website'} className="productlist">Create Website</Link></li>
+                <li><Link to={'/booking-engine'} className="productlist">Booking Engine</Link></li>
                 <li><Link to={'/dashboard'} className="productlist">Interactive Dashboard</Link></li>
-                <li><Link to={'/socialmedia'} className="productlist">Social Media Manager</Link></li>
+                <li><Link to={'/social-media-manager'} className="productlist">Social Media Manager</Link></li>
                 <li><Link to={'/'} className="productlist">Channel Manager</Link></li>
                 <li><Link to={'/'} className="productlist">SEO Manager</Link></li>
 
@@ -60,22 +60,24 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-md-6 col-lg-3 col-xl-2 careers ">
-              <h6 className="careers-heading">CAREERS</h6>
+              <h4 className="careers-heading">CAREERS</h4>
               <ul className="careers-list">
                 <li><Link to={'/'} className="careerslist">Job opening</Link></li>
                 <li><Link to={'/'} className="careerslist">Hiring</Link></li>
                 <li><Link to={'/'} className="careerslist">Employee Success</Link></li>
-                <li><Link to={'/'} className="careerslist">Benifits</Link></li>
+                <li><Link to={'/'} className="careerslist">Benefits</Link></li>
 
 
               </ul>
 
             </div>
             <div className="col-md-6 col-lg-3 col-xl-2 company">
-              <h6 className="company-heading">COMPANY</h6>
+              <h4 className="company-heading">COMPANY</h4>
               <ul className="company-list">
+                <li><Link to={'/aboutus'} className="companylist">About Us</Link></li>
                 <li><Link to={'/'} className="companylist">Our story</Link></li>
-                <li><Link to={'/'} className="companylist">Team</Link></li>
+                <li><Link to={'/our-work'} className="companylist">Our work</Link></li>
+                <li><Link to={'/team'} className="companylist">Team</Link></li>
                 <li><Link to={'/'} className="companylist">Legacy</Link></li>
 
 
@@ -85,7 +87,7 @@ const Footer = () => {
           <div className="social">
             <div className="social-icon">
               {/* <Link to="/" ><img className="socialimage " src={Facebook} alt='instagram' /></Link> */}
-              <Link to="/https://www.instagram.com/eazotel/ " target="_blank" ><img className="socialimage" src={Instagram} alt='facebook' /></Link>
+              <Link to="https://instagram.com/eazotel?igshid=MzRlODBiNWFlZA== " target="_blank" ><img className="socialimage" src={Instagram} alt='facebook' /></Link>
               {/* <Link to="/" ><img className="socialimage" src={Twitter} alt='youtube'/></Link> */}
               <Link to="https://www.linkedin.com/company/eazotel/mycompany/" target="_blank" ><img className="socialimage" src={Linkedin} alt='linkedin' /></Link>
             </div>
@@ -103,9 +105,9 @@ const Footer = () => {
 
             <h6 className="reserved"><FaRegCopyright className="reserved-icon" /> 2020 Eazotel </h6>
             <div className="privacy">
-              <a className="privacy-link" href="/" target="_blank">Privacy Policy |</a>
-              <a className="privacy-link" href="/" target="_blank">Terms and Conditions |</a>
-              <a className="privacy-link" href="/" target="_blank">Cookies</a>
+              <Link className="privacy-link" to="/privacypolicy">Privacy Policy |</Link>
+              <Link className="privacy-link" to="/terms&condition">Terms and Conditions |</Link>
+              <Link className="privacy-link" to="/">Cookies</Link>
             </div>
           </div>
         </div>

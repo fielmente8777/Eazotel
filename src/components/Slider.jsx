@@ -30,10 +30,10 @@ const SliderCard = () => {
   return (
     <div className="container slider">
       <div className="heading">
-        <span>
+        <h2>
           Enabling <strong>our clients</strong> to get <strong>Easy</strong>{" "}
           with their businesses
-        </span>
+        </h2>
       </div>
       <div className="row slider-section">
         <Slider {...settings}>

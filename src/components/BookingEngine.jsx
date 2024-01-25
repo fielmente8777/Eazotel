@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import "../style/BookingEngine.css"
 import BookingEngineImage from "../assets/BookingEngine.png"
-import { useLocation } from 'react-router-dom'
+import { useLocation,Link } from 'react-router-dom'
 const BookingEngine = () => {
   const { pathname } = useLocation()
   useEffect(() => {
-    if (pathname === '/bookingengine') {
+    if (pathname === '/booking-engine') {
       window.scroll(0, 0);
     }
   }, [pathname])
@@ -45,7 +45,7 @@ const BookingEngine = () => {
             <img src={BookingEngineImage} alt='createwebsiteimage' />
             <p>{data.description}</p>
             <h3>{data.subtitle}</h3>
-            <button className='createwebsitebutton'>Login</button>
+            <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link>
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ const BookingEngine = () => {
       </div>
       <div className='container booking-content-list2'>
         <div className='row content'>
-          <div className='col-md-9'>
+          <div className='col-md-12'>
             <h2>{booking_Data.heading}</h2>
             <ul>
 
@@ -79,7 +79,8 @@ const BookingEngine = () => {
 
             </ul>
           </div>
-          <button className='createwebsitebutton'>Login</button>
+          {/* <button className='createwebsitebutton'>Login</button> */}
+          {/* <Link to="/login" className='cont-login' ><button className='createwebsitebutton'>Login</button></Link> */}
         </div>
       </div>
     </>

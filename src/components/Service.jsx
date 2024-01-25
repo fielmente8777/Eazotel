@@ -9,16 +9,17 @@ const Service = () => {
 
       <div className='service-data row '>
         <div className='heading'>
-          <span ><strong>Ease</strong> your Hospitality bussiness with our <strong>one stop solutions</strong> </span>
+          <h2 ><strong>Ease</strong> your Hospitality bussiness with our <strong>one stop solutions</strong> </h2>
         </div>
+
         <div className='s-service d-flex'>
 
           <div className='left col-md-5'>
-            <img src={DashboardCircle} alt='booking' style={{ marginLeft: "2rem" }} />
+            <img src={DashboardCircle} alt='booking' />
           </div>
           <div className='right col-md-5 '>
 
-            <img src={BookingImage} alt='booking' style={{ marginLeft: "1rem" }} />
+            <img src={BookingImage} alt='booking'/>
           </div>
 
         </div>

@@ -1,20 +1,20 @@
 /* First row css */
 .headcont {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .head .data {
-    margin-top: 2rem;
-    padding-right: 3rem;
+    /* margin-top: 2rem; */
+    /* padding-right: 3rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-.head h1 {
-    font-size: 2.5rem;
+.head h3 {
+    /* font-size: 2.5rem; */
     color: #193971;
     font-weight: 700;
     text-align: start;
@@ -22,11 +22,13 @@
 }
 
 .head p {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     color: #193971;
-    font-size: 1.5rem;
+    font-size: 20px;
+    /* font-size: 1.5rem; */
     font-weight: 600;
     text-align: start;
+    text-align: justify;
     line-height: 35px;
 }
 
@@ -34,7 +36,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    max-height: 60vh;
+    max-height: 20vh;
 }
 
 .head img {
@@ -66,13 +68,13 @@
     }
 
     .head p {
-        font-size: 1rem;
+        font-size: 14px;
         line-height: 20px;
         margin-bottom: 1rem;
 
     }
 
     .head .img {
-        margin-top: 2rem;
+        height: 15vh;
     }
 }

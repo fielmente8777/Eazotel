@@ -1,0 +1,108 @@
+.teamprofiles-container{
+    margin-top: 5vh;
+    width: 80vw;
+}
+
+.teamprofiles-grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-left: 3rem;
+}
+
+
+.profilescontainer{
+    flex-shrink: 0;
+    gap: 0.00063rem;
+    width: 23.74875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 360px;
+    width: 320px;
+}
+
+.profile-img{
+
+}
+
+.profile-name{
+    font-size: 22px;
+    font-weight: 700;  
+    line-height: 33px; 
+    color: #110d3c;
+    margin: 1rem 0;
+}
+
+.profile-description{
+    font-size: 16px;
+    font-weight: 400;  
+    line-height: 24px; 
+    color:#666666;
+}
+
+@media only screen and (max-width: 1125px) and (min-width: 990px) {
+    .teamprofiles-container{
+        margin-top: 10vh;
+    }
+}
+@media (max-width: 1100px) {
+    .teamprofiles-grid-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 768px) {
+    .teamprofiles-grid-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 0;
+    }
+    .profilescontainer{
+        /* align-items: flex-start; */
+        flex-shrink: 0;
+        gap: 0.00063rem;
+        padding: 1.875rem 1.875rem 0;
+        width: 23.74875rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 260px;
+        margin: auto
+    }
+    .profile-img{
+        height: 200px;
+        width: 160px;
+    }
+}
+@media (max-width: 508px) {
+    
+    .teamprofiles-grid-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding:0;
+    }
+
+    .teamprofiles-container{
+        margin-top:10vh;
+        padding: 0;
+    }
+    .profilescontainer{
+        flex-shrink: 0;
+        gap: 0.00063rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 340px !important;
+        width: 300px !important;
+        /* padding: 0; */
+    }
+    .profile-img{
+        height: 225px;
+        width: 225px;
+    }
+}
+

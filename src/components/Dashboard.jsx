@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import "../style/Dashboard.css"
 import DashboardImage from "../assets/dashboard1.png"
-import { useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 const Dashboard = () => {
 
     const { pathname } = useLocation()
@@ -55,18 +55,18 @@ const Dashboard = () => {
 
     return (
         <div className='container'>
-            <div className=' dashboard'>
+            <div className='dashboard dashmain'>
 
-                <h1 className='heading'>{data.heading}</h1>
-                <h1 className='subheading'>{data.subheading}</h1>
+                <h2 className='heading'>{data.heading}</h2>
+                <h2 className='subheading'>{data.subheading}</h2>
                 <div className='content'>
                     <div className='col-xl-6 col-md-6 col-sm-8 col-content'>
                         <img src={DashboardImage} alt='dashboard' />
                     </div>
                 </div>
                 <p className='para'>{data.para}</p>
-                <h3>{data.subtitle}</h3>
-                <button className='createwebsitebutton'>Login</button>
+                {/* <h3>{data.subtitle}</h3> */}
+                {/* <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link> */}
             </div>
 
             <div className='dashboard-content-list1'>
@@ -118,23 +118,23 @@ const Dashboard = () => {
             <div className='box'>
                 <div className=' row but'>
                     <div className='col-md-4  col-sm-8 free'>
-                        <h1>Free trial:</h1>
+                        <h3>Free trial:</h3>
                         <p>Get started with a 30-day free trial!</p>
 
                     </div>
                     <div className='col-md-4 col-sm-8 pick'>
-                        <h1>Pick a Plan:</h1>
+                        <h3>Pick a Plan:</h3>
                         <p>Choose the right fit for your hotel management needs!</p>
                     </div>
                 </div>
             </div>
 
-            <div className=' dashboard'>
+            <div className=' dashboard dashboard-foot'>
                 <div className='row footdata mb-5'>
                     <div className='col-md-9'>
                         <p className='para'>{list_Data5.para}</p>
                         <h3>{list_Data5.subtitle}</h3>
-                        <button className='createwebsitebutton'>Login</button>
+                        <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link>
                     </div>
                 </div>
             </div>

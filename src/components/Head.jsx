@@ -8,7 +8,7 @@ const Head = () => {
     <div className='container headcont'>
         <div className="row head">
           <div className="col-md-7 data">
-            <h1>OUR VISION</h1>
+            <h3>OUR VISION</h3>
             <p>
               Eazotel's vision is to be the leading provider of cutting- edge
               technology solutions for the hospitality industry, empowering

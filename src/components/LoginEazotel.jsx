@@ -10,13 +10,12 @@ import { FcGoogle } from "react-icons/fc";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
-const newLoginAPI = "https://eazotel.eazotel.com/api/login"
+import { RxArrowLeft } from "react-icons/rx";
 
 const LoginEazotel = () => {
-  const { setAuth, setHaveDashboardPassword,setClientWebsite,setClientengine  } =
+  const { baseUrl, setAuth, setHaveDashboardPassword, setClientWebsite, setClientengine } =
     useContext(AuthContext);
+  const newLoginAPI = `${baseUrl}/api/login`
   const {
     register,
     handleSubmit,
@@ -28,7 +27,7 @@ const LoginEazotel = () => {
 
   async function CheckDashboardAPI() {
     const dashboard = await fetch(
-      `https://eazotel.eazotel.com/api/getDashboardStatus?id=${localStorage.getItem('Token')}`,
+      `${baseUrl}/api/getDashboardStatus?id=${localStorage.getItem('Token')}`,
       {
         method: "GET",
         headers: {
@@ -48,40 +47,14 @@ const LoginEazotel = () => {
     }
   }
 
-  function Dinabite(token){
-    const url = 'https://www.dinabitedev.com/auth/account-google';
-    const payload = {
-      tokenId:token
-    };
 
-    const headers = new Headers();
-      headers.append('accept', 'application/json');
-      headers.append('Content-Type', 'application/json');
-      headers.append('x-api-key', process.env.REACT_APP_GOOGLE_CLIENT_ID); // Use the x-api-key header
-
-    fetch(url, {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify(payload)
-    })
-    .then(response => response.json())
-    .then(data => {
-      // console.log(data); // Process the response data here
-      if(data.access_token){
-        localStorage.setItem("dinabiteToken",data.access_token)
-      }      
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-  }
 
 
   const onSubmit = async (data) => {
     setLoading(true);
 
     try {
-      const response = await fetch("https://eazotel.eazotel.com/api/login", {
+      const response = await fetch(`${baseUrl}/api/login`, {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",
@@ -107,6 +80,35 @@ const LoginEazotel = () => {
       toast.error("Server Error")
     }
   };
+
+  const Dinabite = async (token) => {
+    const url = `${baseUrl}/api/dinabite/check`;
+    const payload = {
+      token: token
+    };
+
+    const headers = new Headers();
+    headers.append('accept', 'application/json');
+    headers.append('Content-Type', 'application/json');
+
+    await fetch(url, {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(payload)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); // Process the response data here
+        if (data.Message !== "register") {
+          // alert("registering token to storage")
+          localStorage.setItem("dinabiteToken", data.Message)
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+
 
   const handleGoogleLogin = async (provider, data) => {
     const email = data.email;
@@ -138,93 +140,117 @@ const LoginEazotel = () => {
       toast.error("server error");
     }
   };
-  
+
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
 
   return (
+
+
     <div className="logineazotel">
       <ToastContainer />
-      <div className="container">
-        <div className="row  login-content">
-          <form className="login-body" onSubmit={handleSubmit(onSubmit)}>
+      {/* <div className="container"> */}
 
-            <Link to="/" className="image">
-              {" "}
-              <img className="login-image" src={Logo} alt="loginImg" />
-            </Link>
 
-            <div className="input mb-4">
-              <input
-                type="email"
-                {...register("email", {
-                  required: "Email is required!",
-                })}
-                placeholder="Email"
-              />
-              <span className="error">{errors.email?.message}</span>
-            </div>
-            <div className="input mb-4 input-field">
-              <input
-                id="myInput"
-                type={showPassword ? "text" : "password"}
-                {...register("password", {
-                  required: "Password is required!",
-                })}
-                placeholder="Password"
-              />
-              <span className="error">{errors.password?.message}</span>
-              {showPassword ? (
-                <BsEyeSlash
-                  className="eye-icon"
-                  onClick={toggleShowPassword}
+      <div className="loginmain">
+        <div className="loginLeft position-relative">
+          <Link to='/' className="back-btn">
+          <RxArrowLeft  className="fs-3 fw-bold"/>
+          </Link>
+          {/* <Link to="/" className="image">
+            {" "}
+            <img className="login-image" src={Logo} alt="loginImg" />
+          </Link> */}
+          <h1>Welcome to the Eazotel</h1>
+          <p>Build Your Hotel Website In Just 1 Minute!</p>
+          <p>The best booking and hospitality management service platform to cater to all your needs.</p>
+        </div>
+        <div className="loginRight">
+          <div className="row  login-content">
+            <form className="login-body" onSubmit={handleSubmit(onSubmit)}>
+
+              {/* <Link to="/" className="image">
+                {" "}
+                <img className="login-image" src={Logo} alt="loginImg" />
+              </Link> */}
+              <h1>Login</h1>
+              <p>Enter your credentials to access your account.</p>
+
+              <div className="input ">
+                <input
+                  type="email"
+                  {...register("email", {
+                    required: "Email is required!",
+                  })}
+                  placeholder="Email"
                 />
-              ) : (
-                <BsEye className="eye-icon" onClick={toggleShowPassword} />
-              )}
-            </div>
-            <div className="sub">
-              <p className="remember">Remember me</p>
-              <Link to="" ><p className="forget">Forget Password</p></Link>
-            </div>
-            <button type="submit" className="createwebsitebutton mt-4">
-              login
-            </button>
-            <p className="forget mt-4 text-light">
-              <Link className="dont">
+                <span className="error">{errors.email?.message}</span>
+              </div>
+              <div className="input input-field">
+                <input
+                  id="myInput"
+                  type={showPassword ? "text" : "password"}
+                  {...register("password", {
+                    required: "Password is required!",
+                  })}
+                  placeholder="Password"
+                />
+                <span className="error">{errors.password?.message}</span>
+                {showPassword ? (
+                  <BsEyeSlash
+                    className="eye-icon"
+                    onClick={toggleShowPassword}
+                  />
+                ) : (
+                  <BsEye className="eye-icon" onClick={toggleShowPassword} />
+                )}
+              </div>
+              <div className="sub">
+                {/* <p className="remember">Remember me</p> */}
+                <Link to="" ><p className="forget">Forget Password</p></Link>
+              </div>
+              <button type="submit" className="createwebsitebutton ">
+                Login
+              </button>
+              <span className="dont">
                 OR
-              </Link>
-            </p>
-            <div className="googleauth mt-4">
-              <LoginSocialGoogle
-                client_id={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-                scope="openid profile email"
-                discoveryDocs="claims_supported"
-                access_type="offline"
-                onResolve={({ provider, data }) => {
-                  handleGoogleLogin(provider, data);
-                }}
-                onReject={(err) => {
-                  console.log(err);
-                }}
-              >
-                <div className="google">
-                  <FcGoogle size={30} style={{ marginRight: "1rem" }} />
-                  <h1 className="glb">Continue with Google</h1>
-                </div>
-              </LoginSocialGoogle>
-            </div>
-            <p className="abs mt-4">
-              *By filling this information you’re agreeing to our terms and
-              conditions{" "}
-            </p>
-          </form>
+              </span>
+              {/* <p className="forget  text-light">
+            <Link className="dont">
+              OR
+            </Link>
+          </p> */}
+              <div className="googleauth">
+                <LoginSocialGoogle
+                  client_id="525278251391-g3jigd28se6a4fse2ld8pcp2spvv2jnp.apps.googleusercontent.com"
+                  scope="openid profile email"
+                  discoveryDocs="claims_supported"
+                  access_type="offline"
+                  onResolve={({ provider, data }) => {
+                    handleGoogleLogin(provider, data);
+                  }}
+                  onReject={(err) => {
+                    console.log(err);
+                  }}
+                >
+                  <div className="google">
+                    <FcGoogle size={30} style={{ marginRight: "5px" }} />
+                    <h1 className="glb">Continue with Google</h1>
+                  </div>
+                </LoginSocialGoogle>
+              </div>
+              <p className="abs">
+                *By filling this information you’re agreeing to our terms and
+                conditions.{" "}
+              </p>
+            </form>
 
 
-          {loading ? <Spinner /> : undefined}
+            {loading ? <Spinner /> : undefined}
 
 
+          </div>
         </div>
       </div>
     </div>

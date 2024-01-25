@@ -3,6 +3,8 @@ import { createContext, useState } from 'react'
 const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
+    // const baseUrl = "http://127.0.0.1:8000"
+    const baseUrl = "https://api.eazotel.com"
     const [auth, setAuth] = useState(false);
     const [webCards, setWebCards] = useState([{}])
     const [step, Setstep] = useState(0)
@@ -18,7 +20,7 @@ export const AuthProvider = ({ children }) => {
     const [load, setLoad] = useState(false)
 
     return (
-        <AuthContext.Provider value={{
+        <AuthContext.Provider value={{baseUrl,
             auth, setAuth, step, Setstep, webCards, setWebCards, clientWebsite,
             setClientWebsite, clientDashboardUserName, setClientDashboardUserName, clientDashboardPassword, setClientDashboardPassword,
             clientDashboard, setClientDashboard, haveDashboardPassword, setHaveDashboardPassword, modalShow, setModalShow, showpop, setShowpop, submitFrom, setSubmitForm

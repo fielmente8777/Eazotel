@@ -31,10 +31,11 @@ const Home = () => {
       <Partner />
       <Country />
       <Slider />
-      <Tweet />
-      <BrowsMore />
+      {/* <Tweet /> */}
+      {/* <BrowsMore /> */}
       <Form />
       <Loader />
+
     </div>
   )
 }

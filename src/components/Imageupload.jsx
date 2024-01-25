@@ -25,17 +25,17 @@ function Imageupload() {
     function UploadingImageS3Nearby(base64String) {
         // Replace 'YOUR_BACKEND_API_URL' with the actual URL of your backend API
         
-        fetch('http://127.0.0.1:8000/api/uploadImage', {
+        fetch('http://127.0.0.1:8000/api/uploadVideo', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({Token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImRpdnlhbnNodUBlYXpvdGVsLmNvbSJ9.5Px03BniCXH4tJA8JNt5dkaf1skSSa2-KnfS4T9XvJU", Image: base64String }),
+          body: JSON.stringify({Token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImRpdnlhbnNodUBlYXpvdGVsLmNvbSJ9.5Px03BniCXH4tJA8JNt5dkaf1skSSa2-KnfS4T9XvJU", Video: base64String }),
         })
           .then(response => response.json())
           .then(data => {
             console.log('Response from backend:', data);
-            setImage(data.Image)
+            setImage(data.Video)
             // Handle the backend response as needed
 
           })
@@ -47,7 +47,7 @@ function Imageupload() {
     <>
         <label htmlFor="">Upload Image:</label>
         <input type="file" id="file1" onChange={uploadImage} />
-        <img src={Image} alt="alternative" />
+        <video src={Image} alt="alternative" />
     </>
   )
 }

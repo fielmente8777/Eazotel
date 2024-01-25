@@ -2,14 +2,16 @@
     display: flex;
     justify-content: center;
     color: #193971;
-    font-size: 2.6rem;
+    /* font-size: 2.6rem; */
     font-weight: 500;
-    line-height: 30px;
-    word-spacing: 10px;
+    /* line-height: 30px; */
+    /* word-spacing: 10px; */
     letter-spacing: 1px;
     width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
+
+
 
 .s-service {
     width: 100%;
@@ -38,8 +40,10 @@
 }
 
 .service img {
-    width: 100%;
+    width: 85%;
 }
+
+
 
 .service .demo-heading {
     order: 3;
@@ -68,6 +72,7 @@
         justify-content: center;
         margin: 2rem 0;
     }
+    
 
 }
 
@@ -90,9 +95,17 @@
         margin: 2rem 0
     }
 
+    .service img {
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
+
+    .service img {
+        width: 100%;
+    }
 
     .s-service {
         display: flex !important;

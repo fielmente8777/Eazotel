@@ -5,7 +5,7 @@ const TemplateHeader = () => {
 
 
     const data = {
-        "subheading": "Perfect templates to get the right attention",
+        "subheading": "AN Affordable SOCIAL MEDIA MANAGING SYSTEM FOR ALL HOSPITALITY BUSINESSES",
         "heading": "FOR ALL HOSPITALITY BUSINESSES",
         "details": "With our simple-to-use website templates for both mobile and desktop versions, designed specifically for the hospitality industry, Eazotel helps you save time and attract more consumers!"
     }
@@ -14,13 +14,13 @@ const TemplateHeader = () => {
         <div className='container template'>
             <div className='row template-content'>
 
-                <h3>{data.subheading}</h3>
+                <h4>{data.subheading}</h4>
 
-                <h1>{data.heading}</h1>
+                <h2>{data.heading}</h2>
 
                 <p>{data.details}</p>
 
-                <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link>
+                {/* <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link> */}
             </div>
 
 

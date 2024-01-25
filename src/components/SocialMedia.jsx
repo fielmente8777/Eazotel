@@ -5,11 +5,14 @@ import TemplateHeader from './TemplateHeader'
 import TemplateFooter from './TemplateFooter'
 import SocialMediaImgae from '../assets/SocialMediaManager1.png'
 import Underline from "../components/Underline"
+import { Link } from 'react-router-dom'
+import socialmedia from '../assets/socialmedia.png'
+
 const SocialMedia = () => {
 
   const { pathname } = useLocation()
   useEffect(() => {
-    if (pathname === '/socialmedia') {
+    if (pathname === '/social-media-manager') {
       window.scroll(0, 0);
     }
   }, [pathname])
@@ -26,7 +29,7 @@ const SocialMedia = () => {
       <div className='container socialmedia'>
         <div className='row content'>
           <div className='col-xl-6 col-md-9 col-sm-8 col-content'>
-            <img src={SocialMediaImgae} alt='SocialMedia' />
+            <img src={socialmedia} alt='SocialMedia' />
           </div>
         </div>
       </div>
@@ -57,9 +60,11 @@ const SocialMedia = () => {
         <div className='col-md-3 col-three'>Messaging</div>
       </div>
       <Underline />
-      <div className='socialfooter mt-5'>
-        <h1>Don’t let social media control you.<br /> Manage it with us instead!</h1>
-        <button className='createwebsitebutton'>Login</button>
+      <div className='socialfooter'>
+        <h3>Don’t let social media control you.<br /> Manage it with us instead!</h3>
+        {/* <button className='createwebsitebutton'>Login</button> */}
+        <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link>
+
       </div>
     </>
   )

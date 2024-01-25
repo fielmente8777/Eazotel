@@ -1,5 +1,5 @@
 .createwebsite{
-    margin-top: 10rem;
+    margin-top: 7rem;
     margin-bottom: 4rem;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -7,9 +7,9 @@
 
 .createwebsite .content{
     width: 100%;
-    text-align: end;
+    /* text-align: end; */
     display: flex;
-    align-items: flex-end;
+    /* align-items: flex-end; */
 }
 .createwebsite .createwebsite-heading {
     color: #193971;
@@ -21,10 +21,10 @@
 
 .createwebsite .createwebsite-para {
     display: flex;
-    text-align: end;
+    text-align: justify;
     color: #193971;
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.9rem;
     word-spacing: 5px;
 
@@ -43,7 +43,7 @@
     .createwebsite .createwebsite-heading {
         padding-top: 0;
         font-size: 1.4rem;
-        line-height: 1.6rem;
+        /* line-height: 1.6rem; */
     
     }
     .createwebsite .createwebsite-para {
@@ -95,7 +95,7 @@
         align-items: center;
     }
     .createwebsite .createwebsite-heading {
-        font-size: 2rem;
+        font-size: 1.7rem;
         word-spacing: 2px;
         line-height: 2rem;
     

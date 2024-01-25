@@ -1,111 +1,132 @@
-.partner{
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+.partner {
+  padding-top: 4rem;
+  /* padding-bottom: 2rem; */
 }
 
-.partner .heading{
-    display: flex;
-    justify-content: center;
-    color: #193971;
-    font-size: 2.6rem;
-    font-weight: 500;
-    line-height: 30px;
-    word-spacing: 10px;
-    letter-spacing: 1px;
-    width: 100%;
-    margin-bottom: 4rem;
+.partner .heading {
+  display: flex;
+  justify-content: center;
+  color: #193971;
+  /* font-size: 2.6rem; */
+  font-weight: 500;
+  /* line-height: 30px; */
+  /* word-spacing: 10px; */
+  letter-spacing: 1px;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
-.card-section{
-    margin: 4rem 0;
-    justify-content: center;
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 4rem 0;
+  /* border: 2px solid; */
+  width: 100%;
 }
 
-.partner-card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.partner-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 160px;
 }
-.partner-card img{
-    width: 100%;
-    height: 100%;
-    padding:0 1rem;
+
+.partner-card img {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
-.partner-card img:hover{
+
+/* .partner-card img:hover{
     width: 110%;
     height: 110%;
     transition-duration: 1s;
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .card-section{
-        margin: 2rem 0;
-    }
-    .partner{
-        padding-top: 0;
-        padding-bottom: 1rem;
-    }
-    .partner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .partner .heading {
-      padding:0 0rem;
-      font-size: 1.8rem;
-      line-height: 36px;
-      word-spacing: 1px;
-      margin-bottom: 2rem;
-    }
-  
-    .partner-card img {
-        width: 150%;
-        height: auto;
-        margin-bottom: .5rem;
-        padding: 0 1rem;
-      } 
+} */
 
-      .partner-card img:hover{
-        width: 170%;
-        height: 110%;
-        transition-duration: 1s;
-    }
+.partner-card:hover img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .card-section {
+    margin: 2rem 0;
   }
-  
+
+  .partner {
+    padding-top: 0;
+    padding-bottom: 1rem;
+  }
+
+  .partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .partner .heading {
+    padding: 0 0rem;
+    font-size: 1.8rem;
+    line-height: 36px;
+    word-spacing: 1px;
+    margin-bottom: 2rem;
+  }
+
+  .partner-card{
+    width: 135px;
+  }
+  .partner-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: .5rem;
+    padding: 0 1rem;
+  }
+}
+
 @media only screen and (max-width: 480px) {
-    .card-section{
-        margin: 2rem 0;
-    }
-    .partner{
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    .partner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .partner .heading {
-      padding:0 0rem;
-      font-size: 1.3rem;
-      line-height: 36px;
-      word-spacing: 1px;
-      margin-bottom: 2rem;
-    }
-  
-    .partner-card img {
-        width: 50%;
-        height: auto;
-        margin-bottom: .5rem;
-      } 
-      .partner-card img:hover{
-        width: 75%;
-        height: auto;
-        transition-duration: 1s;
-    }
-      
+  .card-section {
+    margin: 1rem 0;
   }
-  
+
+  .partner {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .partner .heading {
+    padding: 0 0rem;
+    font-size: 1.3rem;
+    line-height: 36px;
+    word-spacing: 1px;
+    margin-top: 2rem;
+    margin-bottom: 0;  }
+
+  .partner-card{
+    width: 130px;
+  }
+
+  .partner-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: .5rem;
+  }
+
+
+
+}

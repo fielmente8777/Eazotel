@@ -22,7 +22,7 @@ import { GrClose } from "react-icons/gr"
 import Registration from "./Registration";
 
 const Test = () => {
-  const { auth } = useContext(AuthContext)
+  const {baseUrl, auth } = useContext(AuthContext)
   const { clientWebsite, clientengine } = useContext(AuthContext);
   const { modalShow, setModalShow } = useContext(AuthContext);
   const { load, setLoad, setClientWebsite, setClientengine } = useContext(AuthContext);
@@ -78,9 +78,10 @@ const Test = () => {
 
 
   const CreateWebsite = async () => {
+    console.log(FormdatawithLocation)
     try {
       setLoad(true)
-      const response1 = await fetch("https://eazotel.eazotel.com/api/registerCreate", {
+      const response1 = await fetch(`${baseUrl}/api/registerCreate`, {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",
@@ -107,7 +108,12 @@ const Test = () => {
         setClientWebsite(json1.Website)
         setClientengine(json1.BookingEngine)
         setModalShow(true)
-        // redirections
+        setTimeout(() => {
+          const websiteTab = window.open(clientWebsite, '_blank');
+          const dashboardTab = window.open(clientengine, '_blank');
+          const bookingTab = window.open(`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
+
+        }, 4000); // Adjust the delay if needed
       }
       else {
         setLoad(false)
@@ -368,7 +374,7 @@ const Test = () => {
 
       {/* Spinner Code */}
 
-      {load ? <Spinner /> : undefined}
+      {load ? <Spinner /> : <div>
 
 
 
@@ -376,7 +382,7 @@ const Test = () => {
       <Partner />
       <AboutDashboard />
       <AboutBookingEngine />
-      <BrowsMore />
+      <BrowsMore /> </div>}
     </>
   );
 };

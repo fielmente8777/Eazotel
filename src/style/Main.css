@@ -1,0 +1,77 @@
+/* Privacy Policy start  */
+
+.PrivacyMain {
+    display: block;
+    min-height: 100vh;
+    padding-top: 4rem;
+}
+
+
+.policyImgdiv {
+    width: 100%;
+    height: 400px;
+
+}
+
+.policyImgdiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.privacyh4 {
+    position: absolute;
+    z-index: 111;
+    color: aliceblue;
+    top: 50%;
+    font-weight: 500;
+}
+
+.policyContent{
+    padding: 30px 0;
+}
+
+
+/* Terms & Condition start  */
+
+.tcMain {
+    display: block;
+    min-height: 100vh;
+    padding-top: 4rem;
+
+}
+
+
+.tcImgdiv {
+    width: 100%;
+    height: 400px;
+
+}
+
+.tcImgdiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.ptch4 {
+    position: absolute;
+    z-index: 111;
+    color: aliceblue;
+    top: 50%;
+    font-weight: 500;
+}
+
+.tcContent{
+    padding: 30px 0;
+}
+
+
+/* Eazotel Team start  */
+
+.team_main{
+    padding: 6rem;
+    min-height: 100vh;
+}

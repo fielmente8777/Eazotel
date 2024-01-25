@@ -11,21 +11,21 @@ const Tweet = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    speed: 200,
+    speed: 700,
     autoplay: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
-          speed: 200,
-          slidesToShow: 3, // Show 2 cards in tablet mode
+          speed: 700,
+          slidesToShow: 2, // Show 2 cards in tablet mode
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          speed: 200,
+          speed: 700,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -35,9 +35,9 @@ const Tweet = () => {
   return (
     <div className="container tweet">
       <div className="heading">
-        <span>
+        <h3>
           <strong>Client Testimonials</strong> that speak for themselves
-        </span>
+        </h3>
       </div>
       <div className="row tweet-section">
         <Slider {...settings}>
@@ -49,10 +49,7 @@ const Tweet = () => {
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
                 lorem id lorem iaculis, sit amet gravida diam porttitor. Proin
                 vitae est consectetur, sollicitudin tortor ac, tincidunt risus.
-                Aliquam laoreet sed magna vel consequat. Donec at urna semper,
-                pharetra sapien vitae, egestas sapien. Donec dignissim ac purus
-                sit amet dignissim. Praesent sagittis enim elementum lectus
-                maximus tempor.
+                Aliquam laoreet sed magna vel consequat.
               </p>
               <p className="star" style={{ color: "#FD5C01" }}>
                 <FaStar />
@@ -73,10 +70,7 @@ const Tweet = () => {
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
                 lorem id lorem iaculis, sit amet gravida diam porttitor. Proin
                 vitae est consectetur, sollicitudin tortor ac, tincidunt risus.
-                Aliquam laoreet sed magna vel consequat. Donec at urna semper,
-                pharetra sapien vitae, egestas sapien. Donec dignissim ac purus
-                sit amet dignissim. Praesent sagittis enim elementum lectus
-                maximus tempor.
+                Aliquam laoreet sed magna vel consequat.
               </p>
               <p className="star" style={{ color: "#FD5C01" }}>
                 <FaStar />
@@ -85,7 +79,7 @@ const Tweet = () => {
                 <FaStar />
                 <FaStar />{" "}
               </p>
-              <h5 className="name">Tanya Roy</h5>
+              <h5 className="name">Mark Henry</h5>
               <p className="subname">Foodflatters</p>
             </div>
           </div>
@@ -97,10 +91,7 @@ const Tweet = () => {
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
                 lorem id lorem iaculis, sit amet gravida diam porttitor. Proin
                 vitae est consectetur, sollicitudin tortor ac, tincidunt risus.
-                Aliquam laoreet sed magna vel consequat. Donec at urna semper,
-                pharetra sapien vitae, egestas sapien. Donec dignissim ac purus
-                sit amet dignissim. Praesent sagittis enim elementum lectus
-                maximus tempor.
+                Aliquam laoreet sed magna vel consequat.
               </p>
               <p className="star" style={{ color: "#FD5C01" }}>
                 <FaStar />
@@ -109,7 +100,7 @@ const Tweet = () => {
                 <FaStar />
                 <FaStar />{" "}
               </p>
-              <h5 className="name">Tanya Roy</h5>
+              <h5 className="name">BD Macculum</h5>
               <p className="subname">Foodflatters</p>
             </div>
           </div>
@@ -121,10 +112,7 @@ const Tweet = () => {
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
                 lorem id lorem iaculis, sit amet gravida diam porttitor. Proin
                 vitae est consectetur, sollicitudin tortor ac, tincidunt risus.
-                Aliquam laoreet sed magna vel consequat. Donec at urna semper,
-                pharetra sapien vitae, egestas sapien. Donec dignissim ac purus
-                sit amet dignissim. Praesent sagittis enim elementum lectus
-                maximus tempor.
+                Aliquam laoreet sed magna vel consequat.
               </p>
               <p className="star" style={{ color: "#FD5C01" }}>
                 <FaStar />
@@ -145,10 +133,7 @@ const Tweet = () => {
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
                 lorem id lorem iaculis, sit amet gravida diam porttitor. Proin
                 vitae est consectetur, sollicitudin tortor ac, tincidunt risus.
-                Aliquam laoreet sed magna vel consequat. Donec at urna semper,
-                pharetra sapien vitae, egestas sapien. Donec dignissim ac purus
-                sit amet dignissim. Praesent sagittis enim elementum lectus
-                maximus tempor.
+                Aliquam laoreet sed magna vel consequat.
               </p>
               <p className="star" style={{ color: "#FD5C01" }}>
                 <FaStar />
@@ -157,7 +142,7 @@ const Tweet = () => {
                 <FaStar />
                 <FaStar />{" "}
               </p>
-              <h5 className="name">Tanya Roy</h5>
+              <h5 className="name">Trent Bault</h5>
               <p className="subname">Foodflatters</p>
             </div>
           </div>

@@ -23,7 +23,7 @@ const Aboutus = () => {
         <div className="container ">
           <div className="row aboutcontent">
             <div className="col-md-8 data">
-              <h1>ONE CLICK SOLUTION TO YOUR HOSPITALITY MANAGEMENT NEEDS</h1>
+              <h3>ONE CLICK SOLUTION TO YOUR HOSPITALITY MANAGEMENT NEEDS</h3>
               <p>
                 At Eazotel, we understand the importance of seamless travel
                 experiences, and we are here to provide you with a hassle-free
@@ -41,8 +41,8 @@ const Aboutus = () => {
       </div>
       <div className="container">
         <div className="row second mt-5">
-          <div className="col-md-9 second-data">
-            <h1>ABOUT US</h1>
+          <div className="col-md-12 second-data">
+            <h3>ABOUT US</h3>
             <p>
               Eazotel is a technology company that provides cloud based software
               solutions for the hospitality industry, helping hotels manage
@@ -54,12 +54,12 @@ const Aboutus = () => {
         </div>
         
       </div>
-      <Underline/>
+      {/* <Underline/> */}
       <Head/>
       <Hand/>
-      <Underline/>
+      {/* <Underline/> */}
       <AboutOwn/>
-      <Underline/>
+      {/* <Underline/> */}
       <FindOwn/>
     </>
   );

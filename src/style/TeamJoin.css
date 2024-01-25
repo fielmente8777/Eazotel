@@ -1,0 +1,181 @@
+.teamjoin-container{
+    width: 100vw;
+    background-color: #110D3C;
+    height: 50vh;
+    background-image: url('../assets/teamjoinbg.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: contain; 
+    background-position: 90% top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row; 
+}
+
+.teamjoin-left-container{
+    height: 50vh;
+    width: 40vw;
+    margin-left: 10vw;
+    padding: 5vh 0;
+}
+
+.teamjoin-left-title{
+    color: #ffffff;
+    font-size: 56px;
+    line-height: 62px;
+    font-weight: 600;
+    width: 40vw;
+    margin-top: 5vh;
+    
+}
+
+.teamjoin-left-description{
+    width: 40vw;
+    color: #8b8b8b;
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: 400;
+    margin-top: 5vh;
+}
+
+.teamjoin-right-container{
+    height: 50vh;
+    width: 40vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.teamjoin-right-btn{
+    background-color: #F26633;
+    color: #ffffff;
+    width: 150px;
+    height: 44px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: underline;
+}
+
+.teamjoin-right-icon-btn{
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
+    .teamjoin-container{
+        width: 100vw;
+        background-color: #110D3C;
+        height: 55vh;
+        background-image: url('../assets/teamjoinbg.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+        background-size: contain; 
+        background-position: 90% top;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row; 
+    }
+}
+
+@media (max-width: 768px) {
+    .teamjoin-container{
+        width: 100vw;
+        background-color: #110D3C;
+        background-image: url('../assets/teamjoinbg.png'); 
+        background-size: contain; 
+        background-position: 90% top;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        height: 50vh; 
+    }
+    .teamjoin-left-container{
+        height: 30vh;
+        width: 100vw;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 2vw;
+    }
+
+    .teamjoin-right-container{
+        height: 10vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .teamjoin-left-title{
+        color: #ffffff;
+        font-size: 40px;
+        line-height: 45px;
+        font-weight: 600;
+        width: 100vw;
+        /* margin-top: 5vh; */
+        padding: 0 25vw ;
+        
+    }
+    
+    .teamjoin-left-description{
+        /* width: 40vw; */
+        color: #8b8b8b;
+        font-size: 18px;
+        line-height: 34px;
+        font-weight: 400;
+        margin-top: 5vh;
+        width: 100vw;
+        padding:0 10vw ;
+    }
+}
+
+@media (max-width: 500px) {
+    .teamjoin-container{
+        width: 100vw;
+        background-color: #110D3C;
+        background-image: url('../assets/teamjoinbg.png'); 
+        background-size: contain; 
+        background-position: 90% top;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        height: 50vh; 
+    }
+    .teamjoin-left-container{
+        height: 30vh;
+        width: 100vw;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 2vw;
+    }
+
+    .teamjoin-right-container{
+        height: 10vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .teamjoin-left-title{
+        color: #ffffff;
+        font-size: 40px;
+        line-height: 45px;
+        font-weight: 600;
+        width: 100vw;
+        /* margin-top: 5vh; */
+        padding-left:15vw ;
+        
+    }
+    
+    .teamjoin-left-description{
+        /* width: 40vw; */
+        color: #8b8b8b;
+        font-size: 18px;
+        line-height: 34px;
+        font-weight: 400;
+        margin-top: 5vh;
+        width: 100vw;
+        padding:0 10vw ;
+    }
+}

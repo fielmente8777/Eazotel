@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/EAZOTEL LOGO-09.png";
 import AuthContext from "../context/AuthProvider";
 import "../style/Navbar.css";
-import { VscThreeBars } from "react-icons/vsc";
+import { FaUserAlt } from "react-icons/fa";
 
 const Navbar = () => {
   const [navbarExpanded, setNavbarExpanded] = useState(false);
@@ -31,54 +31,38 @@ const Navbar = () => {
     }
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const token = localStorage.getItem("Token");
-        const response = await fetch(
-          "https://backend.eazotel.com/api/dashboard/Get_user_dash/",
-          {
-            method: "POST",
-            headers: {
-              Accept: "application/json, text/plain, */*",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ Token: token }),
-          }
-        );
-        const data = await response.json();
-        if (data.Status === false) {
-          setGetDashboard(true);
-        } else {
-          setGetDashboard(false);
-        }
-      } catch (error) {
-        console.log("Failed to fetch Data :", error);
-      }
-    };
-    fetchData();
-  }, [setGetDashboard]);
+  useEffect(() => {}, [setGetDashboard]);
 
   return (
     <div className="header fixed-top">
       <div className="container header-item">
-        <Link to="/">
-          <img src={Logo} className="logo" alt="Ez Logo" loading="lazy" />
-        </Link>
+        <div>
+          <Link to="/">
+            <img src={Logo} className="logo" alt="Ez Logo" loading="lazy" />
+          </Link>
+        </div>
 
         <div className="authbutton">
-
-
+          {/* <div className="demo-button bookDemoBtn me-3">
+            <Link to="/our-work">
+              <button className="demobutton">Our Work</button>
+            </Link>
+          </div> */}
+          <div className="demo-button bookDemoBtn me-3">
+            <Link to="/demo">
+              <button className="demobutton">Book Demo</button>
+            </Link>
+          </div>
           {!auth ? (
-            <>
-              <Link to="/login" className="login" onClick={handleToggleButton}>
-                Login
+            <div className="demo-button me-0">
+              <Link to="/login" onClick={handleToggleButton}>
+                <button className="demobutton">Login</button>
               </Link>
-            </>
+            </div>
           ) : (
             <div className="dropdown-container">
-              <VscThreeBars
-                size={40}
+              <FaUserAlt
+                size={30}
                 className="profile"
                 // style={{ color: " #193971" }}
                 onClick={handleProfileClick}
@@ -87,49 +71,39 @@ const Navbar = () => {
                 <ul className="dropdown-menu">
                   {haveDashboardPassword ? (
                     <Link
-                      to={`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`}
+                      to={`https://dashboard.eazotel.com/?id=${localStorage.getItem(
+                        "Token"
+                      )}`}
                       target="_blank"
                       onClick={handleProfileClick}
                     >
                       {" "}
-                      <li className="drop-item" >My dashboard</li>
+                      <li className="drop-item">My dashboard</li>
                     </Link>
                   ) : null}
-                  <Link to="/createhotelwebsite" onClick={handleProfileClick}>
-                    <li className="drop-item" >Create Website </li>
+                  <Link to="/create-hotel-website" onClick={handleProfileClick}>
+                    <li className="drop-item">Create Website </li>
                   </Link>
 
-                  <Link
-                    to="/bookingengine"
-                    onClick={handleProfileClick}
-                  >
+                  <Link to="/booking-engine" onClick={handleProfileClick}>
                     <li className="drop-item">Booking Engine</li>
                   </Link>
-                  <Link
-                    to="/dashboard"
-                    onClick={handleProfileClick}
-                  >
+                  <Link to="/dashboard" onClick={handleProfileClick}>
                     {" "}
                     <li className="drop-item">Interactive Dashboard</li>
                   </Link>
-                  <Link
-                    to="/socialmedia"
-                    onClick={handleProfileClick}
-                  >
+                  <Link to="/social-media-manager" onClick={handleProfileClick}>
                     {" "}
                     <li className="drop-item">Social Media Manager</li>
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/templates"
                     onClick={handleProfileClick}
                   >
                     {" "}
                     <li className="drop-item">Template</li>
-                  </Link>
-                  <Link
-                    to="/aboutus"
-                    onClick={handleProfileClick}
-                  >
+                  </Link> */}
+                  <Link to="/aboutus" onClick={handleProfileClick}>
                     {" "}
                     <li className="drop-item">About Us</li>
                   </Link>

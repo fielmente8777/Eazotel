@@ -6,7 +6,9 @@ const AboutDashboard = () => {
     <div className='container dashboard'>
       <div className='row dashboard-content'>
         <div className='col-md-7 dashboard-image'>
-          <img className="image"src={Dashboard} alt='dashboard' />
+          <img loading="lazy"
+  decoding="async"
+ className="image"src={Dashboard} alt='dashboard' />
         </div>
         <div className='col-md-5 dashboard-about'>
           <h1 className='dashboard-heading'>An integrated Dashboard for all your needs</h1>

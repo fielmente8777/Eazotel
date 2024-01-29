@@ -18,7 +18,9 @@ const Contact = () => {
                 <textarea  rows={5} type='textarea' placeholder="Message" className='form-control'/>
             </div>
             <div className='col-md-6 col-sm-6 mt-4'>
-                <img src={ContactImg} alt='contact'
+                <img loading="lazy"
+  decoding="async"
+ src={ContactImg} alt='contact'
                     style={{width:'100%', height:'100%' , objectFit:"cover"}} />
                 
             </div>

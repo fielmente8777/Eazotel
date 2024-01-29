@@ -61,7 +61,9 @@ const Dashboard = () => {
                 <h2 className='subheading'>{data.subheading}</h2>
                 <div className='content'>
                     <div className='col-xl-6 col-md-6 col-sm-8 col-content'>
-                        <img src={DashboardImage} alt='dashboard' />
+                        <img loading="lazy"
+  decoding="async"
+ src={DashboardImage} alt='dashboard' />
                     </div>
                 </div>
                 <p className='para'>{data.para}</p>

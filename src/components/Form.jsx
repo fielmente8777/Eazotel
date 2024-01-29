@@ -114,7 +114,9 @@ const Form = () => {
           <button type='submit' className='demobutton mt-4 border '>Submit</button>
         </form>
         <div className='col-md-4 form-img'>
-          <img src={FormImg} alt="formImg" />
+          <img loading="lazy"
+  decoding="async"
+ src={FormImg} alt="formImg" />
         </div>
       </div>
     </div>

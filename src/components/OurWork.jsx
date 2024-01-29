@@ -54,16 +54,32 @@ const OurWork = () => {
                   <div className="d-flex flex-column align-items-center justify-contant-center">
                     <div className="img-desktop d-flex align-items-center justify-content-center ">
                       <img
+                        loading="lazy"
+                        decoding="async"
                         src={Bhairahawagardenresortdesktop}
                         alt=""
                         className="imgdesktopview"
                       />
                     </div>
-                    <img src={Groove} className="img-fluid" alt="" />
-                    <img src={BottomCurve} className="img-fluid" alt="" />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={Groove}
+                      className="img-fluid"
+                      alt=""
+                    />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={BottomCurve}
+                      className="img-fluid"
+                      alt=""
+                    />
                   </div>
                   <div className="img-tab d-md-none d-lg-flex d-xl-flex d-xxl-flex align-items-center justify-content-center">
                     <img
+                      loading="lazy"
+                      decoding="async"
                       src={Bhairahawagardenresorttablet}
                       alt=""
                       className="d-md-none d-lg-block d-xl-block  d-xxl-block imgtabview"
@@ -71,7 +87,9 @@ const OurWork = () => {
                   </div>
                 </div>
                 <div className="cardContent col-lg-4 col-md-12 ">
-                  <h5 className="cardtitle my-md-4">Bhairahawa Garden Resort</h5>
+                  <h5 className="cardtitle my-md-4">
+                    Bhairahawa Garden Resort
+                  </h5>
                   <p className="cardtext fontfamily-fm-b ">
                     {aboutText.Bhairahawa.substring(0, 300)}...
                   </p>
@@ -105,16 +123,36 @@ const OurWork = () => {
                   <div className="d-flex flex-column align-items-center justify-contant-center">
                     <div className="img-desktop d-flex align-items-center justify-content-center">
                       <img
+                        loading="lazy"
+                        decoding="async"
                         src={Peaceatpeakdesktop}
                         alt=""
                         className="imgdesktopview"
                       />
                     </div>
-                    <img src={Groove} className="img-fluid" alt="" />
-                    <img src={BottomCurve} className="img-fluid" alt="" />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={Groove}
+                      className="img-fluid"
+                      alt=""
+                    />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={BottomCurve}
+                      className="img-fluid"
+                      alt=""
+                    />
                   </div>
                   <div className="img-tab d-md-none d-lg-flex d-xl-flex d-xxl-flex align-items-center justify-content-center">
-                    <img src={Peaceatpeaktablet} alt="" className="d-md-none d-lg-block d-xl-block d-xxl-block imgtabview" />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={Peaceatpeaktablet}
+                      alt=""
+                      className="d-md-none d-lg-block d-xl-block d-xxl-block imgtabview"
+                    />
                   </div>
                 </div>
               </div>
@@ -128,16 +166,36 @@ const OurWork = () => {
                   <div className="d-flex flex-column align-items-center justify-contant-center">
                     <div className="img-desktop d-flex align-items-center justify-content-center">
                       <img
+                        loading="lazy"
+                        decoding="async"
                         src={Peaceatpeakdesktop}
                         alt=""
                         className="imgdesktopview"
                       />
                     </div>
-                    <img src={Groove} className="img-fluid" alt="" />
-                    <img src={BottomCurve} className="img-fluid" alt="" />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={Groove}
+                      className="img-fluid"
+                      alt=""
+                    />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={BottomCurve}
+                      className="img-fluid"
+                      alt=""
+                    />
                   </div>
                   <div className="img-tab d-md-none d-lg-flex d-xl-flex d-xxl-flex align-items-center justify-content-center">
-                    <img src={Peaceatpeaktablet} alt="" className="d-md-none d-lg-block d-xl-block d-xxl-block imgtabview" />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={Peaceatpeaktablet}
+                      alt=""
+                      className="d-md-none d-lg-block d-xl-block d-xxl-block imgtabview"
+                    />
                   </div>
                 </div>
                 <div className="cardContent col-md-12">
@@ -156,23 +214,38 @@ const OurWork = () => {
               </div>
             </div>
 
-
             <div className="custom-container col-12">
               <div className="row m-0 p-0">
                 <div className="img-frame col-lg-8 col-md-12 d-flex justify-content-end">
                   <div className="d-flex flex-column align-items-center justify-contant-center">
                     <div className="img-desktop d-flex align-items-center justify-content-center">
                       <img
+                        loading="lazy"
+                        decoding="async"
                         src={Sparvhospitalitydesktop}
                         alt=""
                         className="imgdesktopview"
                       />
                     </div>
-                    <img src={Groove} className="img-fluid" alt="" />
-                    <img src={BottomCurve} className="img-fluid" alt="" />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={Groove}
+                      className="img-fluid"
+                      alt=""
+                    />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={BottomCurve}
+                      className="img-fluid"
+                      alt=""
+                    />
                   </div>
                   <div className="img-tab d-md-none d-lg-flex d-xl-flex d-xxl-flex align-items-center justify-content-center">
                     <img
+                      loading="lazy"
+                      decoding="async"
                       src={Sparvhospitalitytablet}
                       alt=""
                       className="d-md-none d-lg-block d-xl-block d-xxl-block imgtabview"
@@ -205,16 +278,32 @@ const OurWork = () => {
                   <div className="d-flex flex-column align-items-center justify-contant-center">
                     <div className="img-desktop d-flex align-items-center justify-content-center">
                       <img
+                        loading="lazy"
+                        decoding="async"
                         src={Bhairahawagardenresortdesktop}
                         alt=""
                         className="imgdesktopview"
                       />
                     </div>
-                    <img src={Groove} className="img-fluid" alt="" />
-                    <img src={BottomCurve} className="img-fluid " alt="" />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={Groove}
+                      className="img-fluid"
+                      alt=""
+                    />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={BottomCurve}
+                      className="img-fluid "
+                      alt=""
+                    />
                   </div>
                   {/* <div className="img-tab d-flex align-items-center justify-content-center">
-                    <img
+                    <img loading="lazy"
+  decoding="async"
+
                       src={Bhairahawagardenresorttablet}
                       alt=""
                       className="d-block "
@@ -242,16 +331,32 @@ const OurWork = () => {
                   <div className="d-flex flex-column align-items-center justify-contant-center">
                     <div className="img-desktop d-flex align-items-center justify-content-center">
                       <img
+                        loading="lazy"
+                        decoding="async"
                         src={Peaceatpeakdesktop}
                         alt=""
                         className="imgdesktopview"
                       />
                     </div>
-                    <img src={Groove} className="img-fluid" alt="" />
-                    <img src={BottomCurve} className="img-fluid imgtabview" alt="" />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={Groove}
+                      className="img-fluid"
+                      alt=""
+                    />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={BottomCurve}
+                      className="img-fluid imgtabview"
+                      alt=""
+                    />
                   </div>
                   {/* <div className="img-tab d-flex align-items-center justify-content-center">
-                    <img src={Peaceatpeaktablet} alt="" className="d-block " />
+                    <img loading="lazy"
+  decoding="async"
+ src={Peaceatpeaktablet} alt="" className="d-block " />
                   </div> */}
                 </div>
                 <div className="cardContent col-12 col-md-6">
@@ -275,16 +380,32 @@ const OurWork = () => {
                   <div className="d-flex flex-column align-items-center justify-contant-center">
                     <div className="img-desktop d-flex align-items-center justify-content-center">
                       <img
+                        loading="lazy"
+                        decoding="async"
                         src={Sparvhospitalitydesktop}
                         alt=""
                         className="imgdesktopview"
                       />
                     </div>
-                    <img src={Groove} className="img-fluid" alt="" />
-                    <img src={BottomCurve} className="img-fluid" alt="" />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={Groove}
+                      className="img-fluid"
+                      alt=""
+                    />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={BottomCurve}
+                      className="img-fluid"
+                      alt=""
+                    />
                   </div>
                   {/* <div className="img-tab d-flex align-items-center justify-content-center">
-                    <img
+                    <img loading="lazy"
+  decoding="async"
+
                       src={Sparvhospitalitytablet}
                       alt=""
                       className="d-block "

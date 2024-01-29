@@ -10,12 +10,24 @@ const Template = () => {
 
     return (
         <div className='row template-image'>
-            <img src={template1} alt='template' />
-            <img src={template2} alt='template' />
-            <img src={template3} alt='template' />
-            <img src={template4} alt='template' />
-            <img src={template5} alt='template' />
-            <img src={template6} alt='template' />
+            <img loading="lazy"
+  decoding="async"
+ src={template1} alt='template' />
+            <img loading="lazy"
+  decoding="async"
+ src={template2} alt='template' />
+            <img loading="lazy"
+  decoding="async"
+ src={template3} alt='template' />
+            <img loading="lazy"
+  decoding="async"
+ src={template4} alt='template' />
+            <img loading="lazy"
+  decoding="async"
+ src={template5} alt='template' />
+            <img loading="lazy"
+  decoding="async"
+ src={template6} alt='template' />
         </div>
 
     )

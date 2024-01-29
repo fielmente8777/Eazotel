@@ -33,17 +33,23 @@ const BlogCard = () => {
         <Slider {...settings}>
           <div className="blog-card">
             <div className="card-content">
-              <img src={Card1} alt="blog" />
+              <img loading="lazy"
+  decoding="async"
+ src={Card1} alt="blog" />
             </div>
           </div>
           <div className="blog-card">
             <div className="card-content">
-              <img src={Card2} alt="blog" />
+              <img loading="lazy"
+  decoding="async"
+ src={Card2} alt="blog" />
             </div>
           </div>
           <div className="blog-card">
             <div className="card-content">
-              <img src={Card3} alt="blog" />
+              <img loading="lazy"
+  decoding="async"
+ src={Card3} alt="blog" />
             </div>
           </div>
         </Slider>

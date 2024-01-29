@@ -19,7 +19,9 @@ function TermsCondition() {
 
                 <div className="tcImgdiv">
 
-                    <img src={TermsBanner} />
+                    <img loading="lazy"
+  decoding="async"
+ src={TermsBanner} />
 
                 </div>
                 <div className="container tcContent">

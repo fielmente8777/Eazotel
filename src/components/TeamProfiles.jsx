@@ -28,7 +28,9 @@ const TeamProfiles = () => {
       {profileDetails.map((profile,index)=>(
         <>
         <div className="profilescontainer">
-          <img className="profile-img" src={profile} alt="" />
+          <img loading="lazy"
+  decoding="async"
+ className="profile-img" src={profile} alt="" />
           <h5 className="profile-name">Lorem ipsum</h5>
           <p className="profile-description">Lorem ipsum</p>
         </div>

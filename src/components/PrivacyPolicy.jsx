@@ -17,7 +17,9 @@ function PrivacyPolicy() {
                 </div>
 
                 <div className="policyImgdiv">
-                    <img src="https://www.shutterstock.com/image-photo/privacy-policy-concept-businessman-protective-260nw-369815300.jpg" alt="Privacy policy banneer image" />
+                    <img loading="lazy"
+  decoding="async"
+ src="https://www.shutterstock.com/image-photo/privacy-policy-concept-businessman-protective-260nw-369815300.jpg" alt="Privacy policy banneer image" />
                 </div>
                 <div className="container policyContent">
                     <div className='mb-4 d-flex' style={{ gap: '5px' }}>

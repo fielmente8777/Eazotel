@@ -241,7 +241,9 @@ const Registration = ({ hoteldata }) => {
         <form className="login-body" > {/* onSubmit={handleSubmit(onSubmit)} */}
           <Link to="/" className="image">
             {" "}
-            <img className="login-image" src={Logo} alt="loginImg" />
+            <img loading="lazy"
+  decoding="async"
+ className="login-image" src={Logo} alt="loginImg" />
           </Link>
           
           <div className="googleauth mt-1 w-100">

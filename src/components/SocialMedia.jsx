@@ -29,7 +29,9 @@ const SocialMedia = () => {
       <div className='container socialmedia'>
         <div className='row content'>
           <div className='col-xl-6 col-md-9 col-sm-8 col-content'>
-            <img src={socialmedia} alt='SocialMedia' />
+            <img loading="lazy"
+  decoding="async"
+ src={socialmedia} alt='SocialMedia' />
           </div>
         </div>
       </div>
@@ -42,7 +44,9 @@ const SocialMedia = () => {
           <p>{data.details}</p>
           <div className='row content'>
             <div className='col-xl-6 col-md-9 col-sm-8 col-content'>
-              <img src={SocialMediaImgae} alt='SocialMedia' />
+              <img loading="lazy"
+  decoding="async"
+ src={SocialMediaImgae} alt='SocialMedia' />
             </div>
           </div>
 

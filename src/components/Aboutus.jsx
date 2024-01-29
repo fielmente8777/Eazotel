@@ -34,7 +34,9 @@ const Aboutus = () => {
               </p>
             </div>
             <div className="col-md-4 img ">
-              <img src={EZ} alt="ez" />
+              <img loading="lazy"
+  decoding="async"
+ src={EZ} alt="ez" />
             </div>
           </div>
         </div>

@@ -16,7 +16,9 @@ const AboutBookingEngine = () => {
           </p>
         </div>
         <div className='booking-image'>
-          <img src={Booking} alt='booking'/>
+          <img loading="lazy"
+  decoding="async"
+ src={Booking} alt='booking'/>
         </div>
       </div>
     </div>

@@ -42,7 +42,9 @@ const BookingEngine = () => {
         <div className='row content'>
           <div className='col-xl-6 col-md-9 col-sm-8 col-content'>
             <h1 ><span>Tired </span>{data.title}</h1>
-            <img src={BookingEngineImage} alt='createwebsiteimage' />
+            <img loading="lazy"
+  decoding="async"
+ src={BookingEngineImage} alt='createwebsiteimage' />
             <p>{data.description}</p>
             <h3>{data.subtitle}</h3>
             <Link to="/login" ><button className='createwebsitebutton'>Login</button></Link>

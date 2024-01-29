@@ -15,7 +15,7 @@ function Team() {
   return (
     <>
       <div className="team_main">
-        <div className="container p-md-0 m-md-0">
+        <div className="">
           <TeamHeroSection />
           <TeamProfiles />
         </div>

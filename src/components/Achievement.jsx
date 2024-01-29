@@ -40,22 +40,30 @@ const Achievement = () => {
           <Slider {...settings}>
           <div className='award-card'>
             <div className='card-content'>
-              <img src={Award1} alt='award' />
+              <img loading="lazy"
+  decoding="async"
+ src={Award1} alt='award' />
             </div>
           </div>
           <div className='award-card'>
             <div className='card-content'>
-              <img src={Award2} alt='award' />
+              <img loading="lazy"
+  decoding="async"
+ src={Award2} alt='award' />
             </div>
           </div>
           <div className='award-card'>
             <div className='card-content'>
-              <img src={Award3} alt='awrad' />
+              <img loading="lazy"
+  decoding="async"
+ src={Award3} alt='awrad' />
             </div>
           </div>
           <div className='award-card'>
             <div className='card-content'>
-              <img src={Award4} alt='award' />
+              <img loading="lazy"
+  decoding="async"
+ src={Award4} alt='award' />
             </div>
           </div>
           

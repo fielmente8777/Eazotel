@@ -10,7 +10,7 @@ const TeamHeroSection = () => {
   };
 
   return (
-    <motion.div className="teamherosection-container" variants={containerVariants} initial="hidden" animate="visible">
+    <motion.div className="container" variants={containerVariants} initial="hidden" animate="visible">
       <div className="teamherosection-left-container">
         <h1 className="teamherosection-left-title">OUR TEAM</h1>
         <h2 className="teamherosection-left-subtitle">

@@ -84,6 +84,7 @@ const OurWork = () => {
                       alt=""
                       className="d-md-none d-lg-block d-xl-block  d-xxl-block imgtabview"
                     />
+                    
                   </div>
                 </div>
                 <div className="cardContent col-lg-4 col-md-12 ">

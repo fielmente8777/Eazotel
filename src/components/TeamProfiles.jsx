@@ -23,7 +23,7 @@ const TeamProfiles = () => {
     profile9,
   ];
   return (
-    <div className="teamprofiles-container">
+    <div className="container">
       <div className="teamprofiles-grid-container">
       {profileDetails.map((profile,index)=>(
         <>

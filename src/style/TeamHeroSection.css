@@ -44,10 +44,7 @@
 }
 
 .teamherosection-right-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
+    
     
 }
 
@@ -127,14 +124,14 @@
 
     }
     .teamherosection-right-img{
-        position: relative;
-        left: 20vw;
+        /* position: relative;
+        left: 20vw; */
     }
 }
 
 @media (max-width: 425px) {
     .teamherosection-right-img{     
-        margin-top: 10vh;
+        /* margin-top: 10vh; */
     }
     
     .teamherosection-container{

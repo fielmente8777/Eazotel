@@ -41,7 +41,7 @@ const Footer = () => {
                 <li className="address-list">
                   <FaEnvelope /> <Link to='javascript:void(0)'
                     onClick={() => window.location = 'mailto:sachin@eazotel.com'} style={{ textDecoration: "none", color: " #193971" }}>
-                    Sachin@eazotel.com
+                    sachin@eazotel.com
                   </Link>
                 </li>
               </ul>

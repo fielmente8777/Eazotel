@@ -1,6 +1,6 @@
 .teamprofiles-container{
-    margin-top: 5vh;
-    width: 80vw;
+    /* margin-top: 5vh;
+    width: 80vw; */
 }
 
 .teamprofiles-grid-container{
@@ -43,7 +43,7 @@
 
 @media only screen and (max-width: 1125px) and (min-width: 990px) {
     .teamprofiles-container{
-        margin-top: 10vh;
+        /* margin-top: 10vh; */
     }
 }
 @media (max-width: 1100px) {
@@ -85,10 +85,10 @@
         padding:0;
     }
 
-    .teamprofiles-container{
+    /* .teamprofiles-container{
         margin-top:10vh;
         padding: 0;
-    }
+    } */
     .profilescontainer{
         flex-shrink: 0;
         gap: 0.00063rem;

@@ -38,7 +38,9 @@ const Navbar = () => {
       <div className="container header-item">
         <div>
           <Link to="/">
-            <img src={Logo} className="logo" alt="Ez Logo" loading="lazy" />
+            <img loading="lazy"
+  decoding="async"
+ src={Logo} className="logo" alt="Ez Logo" loading="lazy" />
           </Link>
         </div>
 

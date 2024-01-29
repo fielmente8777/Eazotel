@@ -17,7 +17,9 @@ const Head = () => {
             </p>
           </div>
           <div className="col-md-5 img ">
-            <img src={HeadImg} alt="head" />
+            <img loading="lazy"
+  decoding="async"
+ src={HeadImg} alt="head" />
           </div>
         </div>
     </div>

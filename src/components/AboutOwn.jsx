@@ -16,7 +16,9 @@ const AboutOwn = () => {
           </p>
         </div>
         <div className="col-md-5 img">
-          <img src={SachinImg} alt="head" />
+          <img loading="lazy"
+  decoding="async"
+ src={SachinImg} alt="head" />
         </div>
           <h1 className="titlesecond">Sachin Kapoor</h1>
           <p className="parasecond">

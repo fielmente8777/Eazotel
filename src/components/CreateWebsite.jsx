@@ -18,7 +18,9 @@ const CreateWebsite = () => {
         <Link to="/generatewebsite" ><button className='createwebsitebutton'>Create Website</button></Link>
       </div>
       <div className='img'>
-        <img src={WebsiteImage} alt='createwebsiteimage' />
+        <img loading="lazy"
+  decoding="async"
+ src={WebsiteImage} alt='createwebsiteimage' />
       </div>
     </div>
   )

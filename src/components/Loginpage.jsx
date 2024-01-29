@@ -109,7 +109,9 @@ const LoginPage = () => {
               </div>
             </MDBCol>
             <MDBCol sm='6' className='d-none d-sm-block px-0'>
-              <img
+              <img loading="lazy"
+  decoding="async"
+
                 src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp'
                 alt='Login '
                 className='w-100'

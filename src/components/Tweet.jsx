@@ -43,7 +43,9 @@ const Tweet = () => {
         <Slider {...settings}>
           <div className="tweet-card card1">
             <div className="card-content">
-              <img src={User} alt="user" />
+              <img loading="lazy"
+  decoding="async"
+ src={User} alt="user" />
               <p className="data">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
@@ -64,7 +66,9 @@ const Tweet = () => {
           </div>
           <div className="tweet-card card2">
             <div className="card-content">
-              <img src={User} alt="user" />
+              <img loading="lazy"
+  decoding="async"
+ src={User} alt="user" />
               <p className="data">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
@@ -85,7 +89,9 @@ const Tweet = () => {
           </div>
           <div className="tweet-card card3">
             <div className="card-content">
-              <img src={User} alt="user" />
+              <img loading="lazy"
+  decoding="async"
+ src={User} alt="user" />
               <p className="data">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
@@ -106,7 +112,9 @@ const Tweet = () => {
           </div>
           <div className="tweet-card card2">
             <div className="card-content">
-              <img src={User} alt="user" />
+              <img loading="lazy"
+  decoding="async"
+ src={User} alt="user" />
               <p className="data">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis
@@ -127,7 +135,9 @@ const Tweet = () => {
           </div>
           <div className="tweet-card card3">
             <div className="card-content">
-              <img src={User} alt="user" />
+              <img loading="lazy"
+  decoding="async"
+ src={User} alt="user" />
               <p className="data">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                 convallis cursus ligula sit amet fermentum. Vestibulum lobortis

@@ -15,11 +15,15 @@ const Service = () => {
         <div className='s-service d-flex'>
 
           <div className='left col-md-5'>
-            <img src={DashboardCircle} alt='booking' />
+            <img loading="lazy"
+  decoding="async"
+ src={DashboardCircle} alt='booking' />
           </div>
           <div className='right col-md-5 '>
 
-            <img src={BookingImage} alt='booking'/>
+            <img loading="lazy"
+  decoding="async"
+ src={BookingImage} alt='booking'/>
           </div>
 
         </div>

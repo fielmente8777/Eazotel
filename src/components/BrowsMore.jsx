@@ -4,7 +4,9 @@ import Vector from "../assets/Vector.png"
 const BrowsMore = () => {
   return (
     <div className='container brows'>
-        <h1 className='heading'>Browse more such happy experiences <img  className="vector" src={Vector} alt='vector'/></h1>
+        <h1 className='heading'>Browse more such happy experiences <img loading="lazy"
+  decoding="async"
+  className="vector" src={Vector} alt='vector'/></h1>
     </div>
   )
 }

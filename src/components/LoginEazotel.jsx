@@ -160,7 +160,9 @@ const LoginEazotel = () => {
           </Link>
           {/* <Link to="/" className="image">
             {" "}
-            <img className="login-image" src={Logo} alt="loginImg" />
+            <img loading="lazy"
+  decoding="async"
+ className="login-image" src={Logo} alt="loginImg" />
           </Link> */}
           <h1>Welcome to the Eazotel</h1>
           <p>Build Your Hotel Website In Just 1 Minute!</p>
@@ -172,7 +174,9 @@ const LoginEazotel = () => {
 
               {/* <Link to="/" className="image">
                 {" "}
-                <img className="login-image" src={Logo} alt="loginImg" />
+                <img loading="lazy"
+  decoding="async"
+ className="login-image" src={Logo} alt="loginImg" />
               </Link> */}
               <h1>Login</h1>
               <p>Enter your credentials to access your account.</p>

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const TeamJoin = () => {
   return (
     <div className="teamjoin-container py-lg-5 py-md-4 py-2  bg-img" style={{ backgroundImage: `url(${teamjoinbg})` }}>
-      <div className="container h-100 ">
+      <div className="container py-2  h-100 ">
 
         <div className="row h-100">
 

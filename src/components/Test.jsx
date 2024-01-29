@@ -345,7 +345,9 @@ const Test = () => {
               </form>
             </div>
             <div className="formImage">
-              <img
+              <img loading="lazy"
+  decoding="async"
+
                 src={TestImage}
                 alt="leftimg"
                 className="test-image"

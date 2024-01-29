@@ -14,7 +14,9 @@ const Footer = () => {
     <>
       <div className="foot">
         <div className="container footer">
-          <Link to="/"><img className="footer-logo" src={Logo} alt="logo" /></Link>
+          <Link to="/"><img loading="lazy"
+  decoding="async"
+ className="footer-logo" src={Logo} alt="logo" /></Link>
 
           <div className="row footer-body">
             <div className="col-md-6 col-lg-5 col-xl-5 about">
@@ -86,10 +88,18 @@ const Footer = () => {
           </div>
           <div className="social">
             <div className="social-icon">
-              {/* <Link to="/" ><img className="socialimage " src={Facebook} alt='instagram' /></Link> */}
-              <Link to="https://instagram.com/eazotel?igshid=MzRlODBiNWFlZA== " target="_blank" ><img className="socialimage" src={Instagram} alt='facebook' /></Link>
-              {/* <Link to="/" ><img className="socialimage" src={Twitter} alt='youtube'/></Link> */}
-              <Link to="https://www.linkedin.com/company/eazotel/mycompany/" target="_blank" ><img className="socialimage" src={Linkedin} alt='linkedin' /></Link>
+              {/* <Link to="/" ><img loading="lazy"
+  decoding="async"
+ className="socialimage " src={Facebook} alt='instagram' /></Link> */}
+              <Link to="https://instagram.com/eazotel?igshid=MzRlODBiNWFlZA== " target="_blank" ><img loading="lazy"
+  decoding="async"
+ className="socialimage" src={Instagram} alt='facebook' /></Link>
+              {/* <Link to="/" ><img loading="lazy"
+  decoding="async"
+ className="socialimage" src={Twitter} alt='youtube'/></Link> */}
+              <Link to="https://www.linkedin.com/company/eazotel/mycompany/" target="_blank" ><img loading="lazy"
+  decoding="async"
+ className="socialimage" src={Linkedin} alt='linkedin' /></Link>
             </div>
             <div className="demo-button">
               <Link to="/demo" ><button className='demobutton'>Book Demo</button></Link>

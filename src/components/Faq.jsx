@@ -29,7 +29,9 @@ const Faq = () => {
         </div>
         <div className='col-md-6 image-section'>
           <div className='faqimage'>
-            <img className='faq-image' src={FaqImage} alt='faq' />
+            <img loading="lazy"
+  decoding="async"
+ className='faq-image' src={FaqImage} alt='faq' />
           </div>
         </div>
       </div>

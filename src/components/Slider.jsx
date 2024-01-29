@@ -39,27 +39,37 @@ const SliderCard = () => {
         <Slider {...settings}>
           <div className='slider-card'>
             <div className='card-content'>
-              <img src={Frame1} alt='frame' />
+              <img loading="lazy"
+  decoding="async"
+ src={Frame1} alt='frame' />
             </div>
           </div>
           <div className='slider-card'>
             <div className='card-content'>
-              <img src={Frame2} alt='frame' />
+              <img loading="lazy"
+  decoding="async"
+ src={Frame2} alt='frame' />
             </div>
           </div>
           <div className='slider-card'>
             <div className='card-content'>
-              <img src={Frame3} alt='frame' />
+              <img loading="lazy"
+  decoding="async"
+ src={Frame3} alt='frame' />
             </div>
           </div>
           <div className='slider-card'>
             <div className='card-content'>
-              <img src={Frame4} alt='farme' />
+              <img loading="lazy"
+  decoding="async"
+ src={Frame4} alt='farme' />
             </div>
           </div>
           <div className='slider-card'>
             <div className='card-content'>
-              <img src={Frame5} alt='farme' />
+              <img loading="lazy"
+  decoding="async"
+ src={Frame5} alt='farme' />
             </div>
           </div>
         </Slider>

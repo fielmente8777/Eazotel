@@ -12,8 +12,9 @@
 
 .bg-img {
   background-repeat: no-repeat;
-  background-position-x: 43rem;
-  background-size: contain;
+  background-position-x: 42rem;
+  background-position-y: 3rem;
+  background-size: 26%;
 }
 
 .teamjoin-left-container {
@@ -65,26 +66,24 @@
 
 .teamjoin-right-btn:hover {
   color: #f26633;
-  background-color:#ffffff ;
-  
+  background-color: #ffffff;
 }
 .teamjoin-right-btn:active {
   transform: scale(0.9);
-  
 }
 
 .teamjoin-right-icon-btn {
   margin-left: 10px;
 }
-.teamjoin-right-btn:hover .teamjoin-right-icon-btn{
+.teamjoin-right-btn:hover .teamjoin-right-icon-btn {
   animation: faderight 0.2s 1s ease;
 }
 
 @keyframes faderight {
-    100%{
-        transform: translateX(20px);
-        opacity: 0;
-    }
+  100% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
 }
 
 @media only screen and (max-width: 1200px) and (min-width: 768px) {
@@ -154,7 +153,7 @@
   }
   .bg-img {
     background-position-x: 22rem;
-    background-position-y: 1rem ;
+    background-position-y: 1rem;
     background-size: 30%;
   }
 }

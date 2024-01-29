@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600&display=swap');
 
-.teamherosection-container{
+/* .teamherosection-container{
     height: 50vh;
     display: flex;
     flex-direction: row;
@@ -8,7 +8,7 @@
     margin-top: 10vh;
     font-family: 'Lexend Deca',
     
-}
+} */
 
 .teamherosection-left-container{
     width: 35vw;

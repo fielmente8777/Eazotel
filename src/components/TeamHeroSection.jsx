@@ -34,7 +34,7 @@ const TeamHeroSection = () => {
           </div>
 
           <div className="col-lg-6 d-flex  justify-content-lg-end justify-content-center  ">
-          <motion.img className="teamherosection-right-img" src={teamhero} alt="" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.2, ease: 'easeInOut' }} />
+          <motion.img loading="lazy" decoding="async" className="teamherosection-right-img" src={teamhero} alt="teamhero" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.2, ease: 'easeInOut' }} />
           </div>
         </div>
       </div>

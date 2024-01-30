@@ -7,6 +7,7 @@ import {
   MDBIcon,
   MDBInput
 } from 'mdb-react-ui-kit';
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -89,12 +90,12 @@ const LoginPage = () => {
                   </MDBBtn>
                 </form>
                 <p className='small mb-5 pb-lg-3 ms-5'>
-                  <a className='text-muted' href='#!'>
+                  <Link className='text-muted' to='#!'>
                     Forgot password?
-                  </a>
+                  </Link>
                 </p>
                 <p className='ms-5'>
-                  Don't have an account? <a href='#!' className='link-info'>Register here</a>
+                  Don't have an account? <Link to='#!' className='link-info'>Register here</Link>
                 </p>
                 <div className="d-flex justify-content-center">
                   <MDBBtn

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Modal from "react-bootstrap/Modal";
 import { Button } from "react-bootstrap";
@@ -419,7 +419,7 @@ function MyVerticallyCenteredModal(props) {
             <h4 style={{ color: "green" }}>Congratulations, Your Website is <span style={{ fontWeight: "bold" }}>Ready!!</span></h4>
             <div style={{ textAlign: "left" }}>
               <p className="webLink">
-                <a href={clientWebsite} target="_blank" rel="noreferrer">{clientWebsite}</a>
+                <Link to={clientWebsite} target="_blank" rel="noreferrer">{clientWebsite}</Link>
               </p>
               
             </div>

@@ -5,17 +5,18 @@ import Autiller from "../assets/Autiller.png";
 import Stripe from "../assets/Stripe.png";
 import Razorpay from "../assets/Razorpay.png";
 import Fiel from "../assets/Fiel.png";
+import { Link } from "react-router-dom";
 
 const Partner = () => {
   return (
-    <div className="container partner ">
+    <div className="container partner">
       <div className="heading">
         <h2>
           Our <strong>Incredible Partners</strong> who make it{" "}
           <strong>Easy</strong>
         </h2>
       </div>
-      <div className="card-section ">
+      <div className="card-section">
         {/* <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="10000">
@@ -51,7 +52,7 @@ const Partner = () => {
                 </div> */}
 
         <div className="partner-card">
-          <a href="https://dinabite.ai/" target="_blank">
+          <Link to="https://dinabite.ai/" target="_blank">
             <img
               loading="lazy"
               decoding="async"
@@ -60,10 +61,10 @@ const Partner = () => {
               width={100}
               height={100}
             />
-          </a>
+          </Link>
         </div>
         <div className="partner-card">
-          <a href="https://www.autiller.com/" target="_blank">
+          <Link to="https://www.autiller.com/" target="_blank">
             <img
               loading="lazy"
               decoding="async"
@@ -72,10 +73,10 @@ const Partner = () => {
               width={100}
               height={100}
             />
-          </a>
+          </Link>
         </div>
         <div className="partner-card">
-          <a href="https://stripe.com/en-in" target="_blank">
+          <Link to="https://stripe.com/en-in" target="_blank">
             <img
               loading="lazy"
               decoding="async"
@@ -84,10 +85,10 @@ const Partner = () => {
               width={100}
               height={100}
             />
-          </a>
+          </Link>
         </div>
         <div className="partner-card">
-          <a href="https://razorpay.com/" target="_blank">
+          <Link to="https://razorpay.com/" target="_blank">
             <img
               loading="lazy"
               decoding="async"
@@ -96,10 +97,10 @@ const Partner = () => {
               width={100}
               height={100}
             />
-          </a>
+          </Link>
         </div>
         <div className="partner-card">
-          <a href="https://fielmente.com/" target="_blank">
+          <Link to="https://fielmente.com/" target="_blank">
             <img
               loading="lazy"
               decoding="async"
@@ -108,7 +109,7 @@ const Partner = () => {
               width={100}
               height={100}
             />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

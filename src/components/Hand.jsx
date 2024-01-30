@@ -15,9 +15,7 @@ const Hand = () => {
           </p>
         </div>
         <div className="col-md-5 img ">
-          <img loading="lazy"
-  decoding="async"
- src={HandImg} alt="]hand" />
+          <img loading="lazy" decoding="async" src={HandImg} alt="]hand" />
         </div>
       </div>
     </div>

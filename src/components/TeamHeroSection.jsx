@@ -6,11 +6,7 @@ import teamhero from "../assets/teamhero.png";
 const TeamHeroSection = () => {
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
   };
 
   return (
@@ -50,7 +46,7 @@ const TeamHeroSection = () => {
       </div>
       <div className="teamherosection-right-container">
         <motion.img className="teamherosection-right-img" src={teamhero} alt="" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.2, ease: 'easeInOut' }} />
-      </div> */}
+  </div>*/}
     </motion.div>
   );
 };

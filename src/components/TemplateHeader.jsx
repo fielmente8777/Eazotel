@@ -14,7 +14,7 @@ const TemplateHeader = () => {
         <div className='container template'>
             <div className='row template-content'>
 
-                <h4>{data.subheading}</h4>
+                <h1>{data.subheading}</h1>
 
                 <h2>{data.heading}</h2>
 

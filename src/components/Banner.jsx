@@ -1,21 +1,20 @@
-import React, { useContext, useState } from "react";
-import AuthContext from "../context/AuthProvider";
-import { Link, useNavigate } from "react-router-dom";
-import "../style/Banner.css";
-import { FcManager } from "react-icons/fc";
-import { Typewriter } from "react-simple-typewriter";
+import React, { useContext, useState } from 'react';
+import AuthContext from '../context/AuthProvider';
+import { Link, useNavigate } from 'react-router-dom';
+import '../style/Banner.css';
+import { FcManager } from 'react-icons/fc';
+import { Typewriter } from 'react-simple-typewriter'
 import Frame1 from "../assets/Frame1.png";
 import Frame2 from "../assets/Frame2.png";
 import Frame3 from "../assets/Frame3.png";
 import Frame4 from "../assets/Frame4.png";
 import Frame5 from "../assets/Frame5.png";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Banner = () => {
-  const { auth, setAuth, haveDashboardPassword, setHaveDashboardPassword } =
-    useContext(AuthContext);
+  const { auth, setAuth, haveDashboardPassword, setHaveDashboardPassword } = useContext(AuthContext);
   const [navbarExpanded, setNavbarExpanded] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(true);
   const navigate = useNavigate();
@@ -36,7 +35,8 @@ const Banner = () => {
     }
   };
   const handleOnClick = () => {
-    navigate("/generatewebsite");
+
+    navigate('/generatewebsite');
   };
 
   const slider = {
@@ -57,59 +57,49 @@ const Banner = () => {
 
   return (
     <>
-      <div className="started"></div>
-      <div className="container banner">
+      <div className='started'></div>
+      <div className='container banner'>
+
         <div className="row banner-data">
-          <div className="col-md-6 left content ">
-            <div className="s-banner">
-              <h2 className="heading">
+          <div className='col-md-6 left  content '>
+            <div className='s-banner'>
+              <h1 className='heading'>
                 Build Your
-                <span className="typewriter" style={{ color: "#FD5C01" }}>
+                <span className='typewriter' style={{ color: '#FD5C01' }}>
                   <Typewriter
-                    words={[
-                      " Hotel Website ",
-                      " Hostel Website ",
-                      " Camping Website ",
-                      " Homestay Website ",
-                    ]}
+                    words={[' Hotel Website ', ' Hostel Website ', ' Camping Website ', ' Homestay Website ']}
                     loop={100}
                     cursor
-                    cursorStyle=""
+                    cursorStyle=''
                     typeSpeed={70}
                     deleteSpeed={50}
                     delaySpeed={1000}
+
+
                   />
                 </span>
-              </h2>
-            </div>
-            <br />
-            <br />
+                {/* task to remove */}
+                {/* <br />In Just */}
 
-            <p>
-              The best booking and hospitality management service platform to
-              cater to all your needs.
+              </h1>
+                {/* task to remove */}
+              {/* <h2 className='heading'>In Just</h2> */}
+            </div>
+                {/* task to remove */}
+            {/* <h1 class="minute">1 Minute</h1> */}
+            <br/>
+            <br/>
+
+            <p >
+
+              The best booking and hospitality management service platform to cater to all your needs.
             </p>
-            <div className="create-website">
-              {haveDashboardPassword ? (
-                <Link
-                  target="_blank"
-                  to={`https://dashboard.eazotel.com/?id=${localStorage.getItem(
-                    "Token"
-                  )}`}
-                >
-                  <button className="createwebsitebutton">
-                    Go to Dashboard
-                  </button>
-                </Link>
-              ) : (
-                <button className="createwebsitebutton" onClick={handleOnClick}>
-                  Create Website
-                </button>
-              )}
+            <div className='create-website'>
+              {haveDashboardPassword ? (<Link target='_blank' to={`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`}><button className='createwebsitebutton' >Go to Dashboard</button></Link>) : (<button className='createwebsitebutton' onClick={handleOnClick}>Create Website</button>)}
             </div>
           </div>
-          <div className="col-md-6 right">
-            <div className="sliderbanner">
+          <div className='col-md-6 right'>
+            <div className='sliderbanner'>
               <Slider {...slider}>
                 <img loading="lazy" decoding="async" src={Frame1} alt="frame" />
                 <img loading="lazy" decoding="async" src={Frame2} alt="frame" />
@@ -119,7 +109,46 @@ const Banner = () => {
               </Slider>
             </div>
           </div>
+
         </div>
+        {/* <div className="authbutton">
+          {!auth ? (
+            <>
+              <Link
+                to="/login"
+                className="login"
+                onClick={handleToggleButton}
+              >
+                Login
+              </Link>
+            </>
+          ) : (
+            <div className="dropdown-container">
+              <FcManager
+                className="profile"
+
+                onClick={handleProfileClick}
+              />
+              {!dropdownOpen && (
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link to="/profile">Profile</Link>
+                  </li>
+                  <li>
+                    <Link to="/website">My Website</Link>
+                  </li>
+                  <li>
+                    <Link to="/dashboard">My Dashboard</Link>
+                  </li>
+                  <li>
+                    <button onClick={handleLogout}>Logout</button>
+                  </li>
+                </ul>
+              )}
+            </div>
+          )}
+        </div> */}
+
       </div>
     </>
   );

@@ -19,7 +19,6 @@ function Team() {
       <TeamProfiles />
       <TeamJoin />
     </div>
-    // </>
   );
 }
 

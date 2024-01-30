@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../style/Aboutus.css";
 import EZ from "../assets/q.png";
-import Hand from "../components/Hand"
+import Hand from "../components/Hand";
 import Head from "../components/Head";
 import AboutOwn from "../components/AboutOwn";
 import { useLocation } from "react-router-dom";
@@ -9,11 +9,10 @@ import FindOwn from "./FindOwn";
 import Underline from "./Underline";
 
 const Aboutus = () => {
-
   const { pathname } = useLocation();
 
   useEffect(() => {
-    if (pathname === '/aboutus') {
+    if (pathname === "/aboutus") {
       window.scrollTo(0, 0);
     }
   }, [pathname]);
@@ -23,7 +22,7 @@ const Aboutus = () => {
         <div className="container ">
           <div className="row aboutcontent">
             <div className="col-md-8 data">
-              <h3>ONE CLICK SOLUTION TO YOUR HOSPITALITY MANAGEMENT NEEDS</h3>
+              <h1>ONE CLICK SOLUTION TO YOUR HOSPITALITY MANAGEMENT NEEDS</h1>
               <p>
                 At Eazotel, we understand the importance of seamless travel
                 experiences, and we are here to provide you with a hassle-free
@@ -34,9 +33,7 @@ const Aboutus = () => {
               </p>
             </div>
             <div className="col-md-4 img ">
-              <img loading="lazy"
-  decoding="async"
- src={EZ} alt="ez" />
+              <img loading="lazy" decoding="async" src={EZ} alt="ez" />
             </div>
           </div>
         </div>
@@ -54,15 +51,14 @@ const Aboutus = () => {
             </p>
           </div>
         </div>
-        
       </div>
       {/* <Underline/> */}
-      <Head/>
-      <Hand/>
+      <Head />
+      <Hand />
       {/* <Underline/> */}
-      <AboutOwn/>
+      <AboutOwn />
       {/* <Underline/> */}
-      <FindOwn/>
+      <FindOwn />
     </>
   );
 };

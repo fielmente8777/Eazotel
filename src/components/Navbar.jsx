@@ -38,9 +38,13 @@ const Navbar = () => {
       <div className="container header-item">
         <div>
           <Link to="/">
-            <img loading="lazy"
-  decoding="async"
- src={Logo} className="logo" alt="Ez Logo" loading="lazy" />
+            <img
+              decoding="async"
+              src={Logo}
+              className="logo"
+              alt="Ez Logo"
+              loading="lazy"
+            />
           </Link>
         </div>
 
@@ -72,32 +76,40 @@ const Navbar = () => {
               {!dropdownOpen && (
                 <ul className="dropdown-menu">
                   {haveDashboardPassword ? (
-                    <Link
-                      to={`https://dashboard.eazotel.com/?id=${localStorage.getItem(
-                        "Token"
-                      )}`}
-                      target="_blank"
-                      onClick={handleProfileClick}
-                    >
-                      {" "}
-                      <li className="drop-item">My dashboard</li>
-                    </Link>
+                    <li>
+                      <Link
+                        to={`https://dashboard.eazotel.com/?id=${localStorage.getItem(
+                          "Token"
+                        )}`}
+                        target="_blank"
+                        onClick={handleProfileClick}
+                      >
+                        {" "}
+                        <li className="drop-item">My dashboard</li>
+                      </Link>
+                    </li>
                   ) : null}
-                  <Link to="/create-hotel-website" onClick={handleProfileClick}>
-                    <li className="drop-item">Create Website </li>
-                  </Link>
+                  <li onClick={handleProfileClick}>
+                    <Link to="/create-hotel-website" className="drop-item">
+                      Create Website{" "}
+                    </Link>
+                  </li>
 
-                  <Link to="/booking-engine" onClick={handleProfileClick}>
-                    <li className="drop-item">Booking Engine</li>
-                  </Link>
-                  <Link to="/dashboard" onClick={handleProfileClick}>
-                    {" "}
-                    <li className="drop-item">Interactive Dashboard</li>
-                  </Link>
-                  <Link to="/social-media-manager" onClick={handleProfileClick}>
-                    {" "}
-                    <li className="drop-item">Social Media Manager</li>
-                  </Link>
+                  <li onClick={handleProfileClick}>
+                    <Link to="/booking-engine" className="drop-item">
+                      Booking Engine
+                    </Link>
+                  </li>
+                  <li onClick={handleProfileClick}>
+                    <Link to="/dashboard" className="drop-item">
+                      Interactive Dashboard
+                    </Link>
+                  </li>
+                  <li onClick={handleProfileClick}>
+                    <Link to="/social-media-manager" className="drop-item">
+                      Social Media Manager
+                    </Link>
+                  </li>
                   {/* <Link
                     to="/templates"
                     onClick={handleProfileClick}
@@ -105,14 +117,17 @@ const Navbar = () => {
                     {" "}
                     <li className="drop-item">Template</li>
                   </Link> */}
-                  <Link to="/aboutus" onClick={handleProfileClick}>
-                    {" "}
-                    <li className="drop-item">About Us</li>
-                  </Link>
+                  <li onClick={handleProfileClick}>
+                    <Link to="/aboutus" className="drop-item">
+                      About Us
+                    </Link>
+                  </li>
 
-                  <Link onClick={handleLogout}>
-                    <li className="drop-item">Logout</li>
-                  </Link>
+                  <li>
+                    <button onClick={handleLogout} className="drop-item">
+                      Logout
+                    </button>
+                  </li>
                 </ul>
               )}
             </div>

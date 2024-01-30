@@ -60,7 +60,7 @@ const Banner = () => {
       <div className="started"></div>
       <div className="container banner">
         <div className="row banner-data">
-          <div className="col-md-6 left  content ">
+          <div className="col-md-6 left content ">
             <div className="s-banner">
               <h2 className="heading">
                 Build Your

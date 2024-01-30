@@ -25,6 +25,14 @@
     line-height: 1.5;
 }
 
+.aboutus_h1{
+    color: #FFFFFF;
+    font-weight: 600;
+    text-align: start;
+    word-spacing: 5px;
+    line-height: 1.5;
+}
+
 .aboutus p {
     margin-top: 1rem;
     color: #F5F5F5;
@@ -120,6 +128,13 @@
     }
 
     .aboutcontent h3 {
+        /* margin-top: 2rem; */
+        /* margin-bottom: 1rem; */
+        font-size: 1.1rem;
+        text-align: center;
+        word-spacing: 2px;
+    }
+    .aboutus_h1 {
         /* margin-top: 2rem; */
         /* margin-bottom: 1rem; */
         font-size: 1.1rem;

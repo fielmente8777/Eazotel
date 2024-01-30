@@ -23,6 +23,13 @@
     text-align: start;
     word-spacing: 5px;
 }
+.name_h4{
+    /* font-size: 3rem; */
+    color: #FD5C01;
+    font-weight: 700;
+    text-align: start;
+    word-spacing: 5px;
+}
 .aboutown h3{
     /* font-size: 2rem; */
     font-weight: 700;
@@ -58,6 +65,9 @@
     .aboutown h1{
         font-size: 2.3rem;
     }
+    .name_2_h4{
+        font-size: 2.3rem;
+    }
     .aboutown h3{
         font-size: 1.2rem;
         text-align: start;
@@ -78,6 +88,14 @@
       
     }
     .aboutown h1{
+        /* font-size: 1.7rem; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #FD5C01;
+    }
+    .name_2_h4{
         /* font-size: 1.7rem; */
         display: flex;
         align-items: center;

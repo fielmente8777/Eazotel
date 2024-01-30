@@ -22,7 +22,7 @@ const Aboutus = () => {
         <div className="container ">
           <div className="row aboutcontent">
             <div className="col-md-8 data">
-              <h1>ONE CLICK SOLUTION TO YOUR HOSPITALITY MANAGEMENT NEEDS</h1>
+              <h1 className="aboutus_h1">ONE CLICK SOLUTION TO YOUR HOSPITALITY MANAGEMENT NEEDS</h1>
               <p>
                 At Eazotel, we understand the importance of seamless travel
                 experiences, and we are here to provide you with a hassle-free

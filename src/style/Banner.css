@@ -2,7 +2,6 @@
   margin-top: 50px;
 }
 
-
 .s-banner {
   height: 5rem;
   width: 100%;
@@ -10,9 +9,8 @@
 
 .banner {
   margin-top: 78px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
-
 
 .banner-data {
   display: grid;
@@ -35,21 +33,29 @@
   white-space: nowrap;
 }
 
+.banner_h1_text {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  color: #193971;
+  white-space: nowrap;
+}
+
 .content .minute {
   margin-top: 3rem;
   font-size: 5rem;
   color: #193971;
-
 }
 
 .content span {
-  color: '#FD5C01';
+  color: "#FD5C01";
   font-size: 2.7rem;
   font-weight: 700;
   line-height: 70px;
   letter-spacing: 2px;
   word-spacing: 5px;
-
 }
 
 .content p {
@@ -61,13 +67,12 @@
   display: flex;
   align-items: center;
   text-shadow: inset 7px 7px 4px rgba(217, 217, 217, 0.19);
-  color: #FD5C01;
+  color: #fd5c01;
 }
 
 .banner img {
   margin-top: 3rem;
 }
-
 
 .banner .line {
   border-bottom: 3px solid transparent;
@@ -82,8 +87,6 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-
-
   .banner-data {
     padding-top: 3rem;
   }
@@ -99,7 +102,7 @@
 
   .banner .line {
     margin-top: 1rem;
-    border-bottom: 3px solid #FD5C01;
+    border-bottom: 3px solid #fd5c01;
   }
 
   .started {
@@ -109,7 +112,6 @@
   .banner {
     padding: 0;
     margin-top: 0;
-
   }
 
   .banner .content {
@@ -120,7 +122,6 @@
 
   .content .minute {
     margin-top: 1rem;
-
   }
 
   .banner .heading {
@@ -131,7 +132,7 @@
     font-size: 3rem;
     font-weight: 700;
     color: #193971;
-    margin-bottom: .2rem;
+    margin-bottom: 0.2rem;
   }
 
   .content span {
@@ -140,7 +141,6 @@
     line-height: 40px;
     letter-spacing: 1px;
     word-spacing: 3px;
-
   }
 
   .banner .content p {
@@ -154,11 +154,9 @@
   .banner img {
     padding-top: 0;
   }
-
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-
   .banner-data {
     padding-top: 3rem;
   }
@@ -170,7 +168,6 @@
     letter-spacing: 1px;
     word-spacing: 2px;
     white-space: nowrap;
-
   }
 
   .banner .authbutton {
@@ -184,7 +181,7 @@
 
   .banner .line {
     margin-top: 1rem;
-    border-bottom: 3px solid #FD5C01;
+    border-bottom: 3px solid #fd5c01;
   }
 
   .started {
@@ -194,7 +191,6 @@
   .banner {
     padding: 0;
     margin-top: 0;
-
   }
 
   .banner .content {
@@ -204,6 +200,9 @@
   }
 
   .banner h2 {
+    white-space: wrap;
+  }
+  .banner_h1_text {
     white-space: wrap;
   }
 
@@ -216,7 +215,7 @@
   .content span {
     font-size: 1.5rem;
     font-weight: 700;
-    color: '#FD5C01';
+    color: "#FD5C01";
     line-height: 40px;
     letter-spacing: 1px;
     word-spacing: 5px;
@@ -244,7 +243,7 @@
     align-items: center;
     width: max-content;
     font-size: 20px;
-    font-family: 'Futura';
+    font-family: "Futura";
     font-style: normal;
     font-weight: 700;
   }
@@ -256,7 +255,6 @@
     line-height: 35px;
     letter-spacing: 1px;
     word-spacing: 3px;
-
   }
 
   .banner .login {
@@ -266,7 +264,7 @@
 
   .banner .line {
     margin-top: 1rem;
-    border-bottom: 3px solid #FD5C01;
+    border-bottom: 3px solid #fd5c01;
   }
 
   .started {
@@ -280,7 +278,6 @@
   .banner {
     padding: 0;
     margin-top: 0;
-
   }
 
   .banner-data {
@@ -299,7 +296,7 @@
   .content span {
     font-size: 1.5rem;
     font-weight: 700;
-    color: '#FD5C01';
+    color: "#FD5C01";
     line-height: 30px;
     letter-spacing: 1px;
     word-spacing: 5px;
@@ -314,13 +311,21 @@
     color: #193971;
     white-space: wrap;
   }
+  .banner_h1_text {
+    font-size: 2.7rem;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    color: #193971;
+    white-space: wrap;
+  }
 
   .content .minute {
     margin-top: 2rem;
     font-size: 3rem;
     font-weight: 700;
     color: #193971;
-
   }
 
   .banner .content p {
@@ -334,7 +339,6 @@
     margin-top: 0;
   }
 
-
   .createwebsitebutton {
     padding-top: 0;
     margin-bottom: 0;
@@ -344,6 +348,5 @@
     margin-top: 1rem;
   }
 }
-
 
 /* for small laptops  */

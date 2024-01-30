@@ -26,6 +26,13 @@
 
 }
 
+.template_h1{
+    margin-bottom: 1rem;
+    /* word-spacing: 5px; */
+    color: #FD5C01;
+    text-transform: uppercase;
+}
+
 .template p {
     padding: 0 3rem;
     font-size: 1.2rem;
@@ -70,6 +77,10 @@
     }
 
     .template h4 {
+        line-height: 1.5;
+        word-spacing: 5px;
+    }
+    .template_h1 {
         line-height: 1.5;
         word-spacing: 5px;
     }

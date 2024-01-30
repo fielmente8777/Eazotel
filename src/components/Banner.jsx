@@ -63,7 +63,7 @@ const Banner = () => {
         <div className="row banner-data">
           <div className='col-md-6 left  content '>
             <div className='s-banner'>
-              <h1 className='heading'>
+              <h1 className='heading banner_h1_text'>
                 Build Your
                 <span className='typewriter' style={{ color: '#FD5C01' }}>
                   <Typewriter

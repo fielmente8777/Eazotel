@@ -88,9 +88,9 @@ const OurWork = () => {
                   </div>
                 </div>
                 <div className="cardContent col-lg-4 col-md-12 ">
-                  <h5 className="cardtitle my-md-4">
+                  <h3 className="cardtitle my-md-4">
                     Bhairahawa Garden Resort
-                  </h5>
+                  </h3>
                   <p className="cardtext fontfamily-fm-b ">
                     {aboutText.Bhairahawa.substring(0, 300)}...
                   </p>
@@ -108,7 +108,7 @@ const OurWork = () => {
             <div className="custom-container d-lg-flex col-12 d-md-none">
               <div className="row m-0 p-0">
                 <div className="cardContent col-lg-4">
-                  <h5 className="cardtitle">Peace at peak</h5>
+                  <h3 className="cardtitle">Peace at peak</h3>
                   <p className="cardtext fontfamily-fm-b">
                     {aboutText.Peace.substring(0, 300)}...
                   </p>
@@ -200,7 +200,7 @@ const OurWork = () => {
                   </div>
                 </div>
                 <div className="cardContent col-md-12">
-                  <h5 className="cardtitle my-md-4">Peace at peak</h5>
+                  <h3 className="cardtitle my-md-4">Peace at peak</h3>
                   <p className="cardtext fontfamily-fm-b">
                     {aboutText.Peace.substring(0, 300)}...
                   </p>
@@ -254,7 +254,7 @@ const OurWork = () => {
                   </div>
                 </div>
                 <div className="cardContent col-lg-4 col-md-12">
-                  <h5 className="cardtitle my-md-5">SPARV Hospitality</h5>
+                  <h3 className="cardtitle my-md-5">SPARV Hospitality</h3>
                   <p className="cardtext fontfamily-fm-b">
                     {aboutText.SPARV.substring(0, 300)}...
                   </p>
@@ -312,7 +312,7 @@ const OurWork = () => {
                   </div> */}
                 </div>
                 <div className="cardContent col-12 col-md-6">
-                  <h5 className="cardtitle">Bhairahawa Garden Resort</h5>
+                  <h3 className="cardtitle">Bhairahawa Garden Resort</h3>
                   <p className="cardtext fontfamily-fm-b">
                     {aboutText.Bhairahawa.substring(0, 200)}...
                   </p>
@@ -361,7 +361,7 @@ const OurWork = () => {
                   </div> */}
                 </div>
                 <div className="cardContent col-12 col-md-6">
-                  <h5 className="cardtitle">Peace at peak</h5>
+                  <h3 className="cardtitle">Peace at peak</h3>
                   <p className="cardtext fontfamily-fm-b">
                     {aboutText.Peace.substring(0, 400)}...
                   </p>
@@ -414,7 +414,7 @@ const OurWork = () => {
                   </div> */}
                 </div>
                 <div className="cardContent col-12 col-md-6">
-                  <h5 className="cardtitle">SPARV Hospitality</h5>
+                  <h3 className="cardtitle">SPARV Hospitality</h3>
                   <p className="cardtext fontfamily-fm-b">
                     {aboutText.SPARV.substring(0, 400)}...
                   </p>

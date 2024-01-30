@@ -101,21 +101,11 @@ const Banner = () => {
           <div className='col-md-6 right'>
             <div className='sliderbanner'>
               <Slider {...slider}>
-                <img loading="lazy"
-  decoding="async"
- src={Frame1} alt='frame' />
-                <img loading="lazy"
-  decoding="async"
- src={Frame2} alt='frame' />
-                <img loading="lazy"
-  decoding="async"
- src={Frame3} alt='frame' />
-                <img loading="lazy"
-  decoding="async"
- src={Frame4} alt='farme' />
-                <img loading="lazy"
-  decoding="async"
- src={Frame5} alt='farme' />
+                <img loading="lazy" decoding="async" src={Frame1} alt="frame" />
+                <img loading="lazy" decoding="async" src={Frame2} alt="frame" />
+                <img loading="lazy" decoding="async" src={Frame3} alt="frame" />
+                <img loading="lazy" decoding="async" src={Frame4} alt="farme" />
+                <img loading="lazy" decoding="async" src={Frame5} alt="farme" />
               </Slider>
             </div>
           </div>

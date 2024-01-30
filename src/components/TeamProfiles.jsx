@@ -23,19 +23,23 @@ const TeamProfiles = () => {
     profile9,
   ];
   return (
-    <div className="teamprofiles-container">
+    <div className="container">
       <div className="teamprofiles-grid-container">
-      {profileDetails.map((profile,index)=>(
-        <>
-        <div className="profilescontainer">
-          <img loading="lazy"
-  decoding="async"
- className="profile-img" src={profile} alt="" />
-          <h5 className="profile-name">Lorem ipsum</h5>
-          <p className="profile-description">Lorem ipsum</p>
-        </div>
-        </>
-      ))}
+        {profileDetails.map((profile, index) => (
+          <>
+            <div className="profilescontainer">
+              <img
+                loading="lazy"
+                decoding="async"
+                className="profile-img"
+                src={profile}
+                alt="profile-img"
+              />
+              <h5 className="profile-name">Lorem ipsum</h5>
+              <p className="profile-description">Lorem ipsum</p>
+            </div>
+          </>
+        ))}
       </div>
     </div>
   );

@@ -1,42 +1,41 @@
-import "./App.css";
-import "./style/Main.css"
-import React, { useEffect, useContext } from "react";
+import React, { useContext, useEffect } from "react";
+import { Helmet } from "react-helmet";
+import { BsArrowUpCircle } from "react-icons/bs";
 import { Outlet, Route, Routes, useLocation } from "react-router-dom";
-import Home from "./components/Home";
-import ResetPassword from "./components/ResetPassword";
-import AuthContext from "./context/AuthProvider.js";
 import OtpPage from "../src/components/OtpPage";
 import Test from "../src/components/Test";
-import CongratsModal from "./components/CongratulationModal";
-import Footer from "./components/Footer";
-import { Helmet } from "react-helmet";
-import Navbar from "./components/Navbar";
-import LoginEazotel from "./components/LoginEazotel";
-import Registration from "./components/Registration";
-import CreateWebsite from "./components/CreateWebsite";
-import BookingEngine from "./components/BookingEngine";
-import SocialMedia from "./components/SocialMedia";
-import Form from "./components/Form";
-import { BsArrowUpCircle } from "react-icons/bs";
+import "./App.css";
 import Aboutus from "./components/Aboutus";
-import Template from "./pages/Template";
+import BookingEngine from "./components/BookingEngine";
+import CongratsModal from "./components/CongratulationModal";
+import CreateWebsite from "./components/CreateWebsite";
 import Dashboard from "./components/Dashboard";
-import Imageupload from "./components/Imageupload";
-import PrivacyPolicy from "./components/PrivacyPolicy";
-import TermsCondition from "./components/TermsCondition";
-import Team from "./components/Team";
+import Footer from "./components/Footer";
+import Form from "./components/Form";
+import Home from "./components/Home";
+import LoginEazotel from "./components/LoginEazotel";
+import Navbar from "./components/Navbar";
 import OurWork from "./components/OurWork.jsx";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import Registration from "./components/Registration";
+import ResetPassword from "./components/ResetPassword";
+import SocialMedia from "./components/SocialMedia";
+import Team from "./components/Team";
+import TermsCondition from "./components/TermsCondition";
+import AuthContext from "./context/AuthProvider.js";
+import Template from "./pages/Template";
+import "./style/Main.css";
 
 
 function App() {
   // Context-> Auth Provider.js
-  const { baseUrl, auth, setAuth, setHaveDashboardPassword, setClientWebsite, setClientengine } =
+  const { baseUrl,baseUrl1, auth, setAuth, setHaveDashboardPassword, setClientWebsite, setClientengine } =
     useContext(AuthContext);
   const location = useLocation();
 
   async function CheckDashboardAPI() {
     const dashboard = await fetch(
-      `${baseUrl}/api/getDashboardStatus?id=${localStorage.getItem('Token')}`,
+      `${baseUrl1}/eazotel/getuser/${localStorage.getItem('Token')}`,
       {
         method: "GET",
         headers: {

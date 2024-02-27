@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "../style/OurWork.css";
-import Sparvhospitalitydesktop from "../assets/Sparvhospitalitydesktop.png";
-import Sparvhospitalitytablet from "../assets/Sparvhospitalitytablet.png";
 import Bhairahawagardenresortdesktop from "../assets/Bhairahawagardenresortdesktop.png";
 import Bhairahawagardenresorttablet from "../assets/Bhairahawagardenresorttablet.png";
+import BottomCurve from "../assets/BottomCurve.svg";
+import Groove from "../assets/Groove.svg";
 import Peaceatpeakdesktop from "../assets/Peaceatpeakdesktop.png";
 import Peaceatpeaktablet from "../assets/Peaceatpeaktablet.png";
-import Groove from "../assets/Groove.svg";
-import BottomCurve from "../assets/BottomCurve.svg";
+import Sparvhospitalitydesktop from "../assets/Sparvhospitalitydesktop.png";
+import Sparvhospitalitytablet from "../assets/Sparvhospitalitytablet.png";
+import "../style/OurWork.css";
 
 const OurWork = () => {
   const { pathname } = useLocation();
@@ -22,7 +22,7 @@ const OurWork = () => {
     Bhairahawa:
       "Home to the Gurkha soldiers and eight of the world's ten tallest mountains, including the mighty Everest, Nepal stands on the world's roof. Bhairahawa Garden Resort is a peaceful escape for travellers in the heart of Lumbini. Our 4-star retreat combines modern comforts with the cultural heritage of Buddha's birthplace. Enjoy a calm garden, delightful dining, and cosy rooms with city views. Whether exploring historic sites or relaxing with our amenities, you'll experience the true spirit of Nepal with Bhairahawa Resort.",
     Peace:
-      "In luxury’s lap at SPARV Aulakh Resort, Goa, witness the relaxing and laid-back life that is so characteristic of this sunny beach state. Located in Mandrem Rd, near the White Church on the North coast of Goa and overlooking the Arabian Sea, this resort in Mandrem, Goa will slow your time to a tranquil tempo. 17 Km and approximately 100 minutes from the city centre, SPARV beach resort in Goa expands over multiple acres of lush greenery, divided into the main hotel building with Standard, Deluxe and Premium category rooms. This accommodation in Mandrem coupled with a convenient location, and easy access to the city’s must-see destinations, makes for a perfect romantic or family holiday.",
+      "In luxury’s lap at Peace at Peak, Kanatal, witness the relaxing and laid-back life that is so characteristic of this sunny beach state. Located in Mandrem Rd, near the White Church on the North coast of Goa and overlooking the Arabian Sea, this resort in Mandrem, Goa will slow your time to a tranquil tempo. 17 Km and approximately 100 minutes from the city centre, SPARV beach resort in Goa expands over multiple acres of lush greenery, divided into the main hotel building with Standard, Deluxe and Premium category rooms. This accommodation in Mandrem coupled with a convenient location, and easy access to the city’s must-see destinations, makes for a perfect romantic or family holiday.",
 
     SPARV:
       "In luxury’s lap at SPARV Aulakh Resort, Goa, witness the relaxing and laid-back life that is so characteristic of this sunny beach state. Located in Mandrem Rd, near the White Church on the North coast of Goa and overlooking the Arabian Sea, this resort in Mandrem, Goa will slow your time to a tranquil tempo. 17 Km and approximately 100 minutes from the city centre, SPARV beach resort in Goa expands over multiple acres of lush greenery, divided into the main hotel building with Standard, Deluxe and Premium category rooms. This accommodation in Mandrem coupled with a convenient location, and easy access to the city’s must-see destinations, makes for a perfect romantic or family holiday.",
@@ -105,6 +105,8 @@ const OurWork = () => {
               </div>
             </div>
 
+            
+
             <div className="custom-container d-lg-flex col-12 d-md-none">
               <div className="row m-0 p-0">
                 <div className="cardContent col-lg-4">
@@ -159,6 +161,7 @@ const OurWork = () => {
               </div>
             </div>
 
+            
             {/* for 2nd card md(medium) device */}
 
             <div className="custom-container d-lg-none col-12">
@@ -268,6 +271,8 @@ const OurWork = () => {
                 </div>
               </div>
             </div>
+
+           
           </div>
         </div>
         {/* mobile view */}
@@ -301,15 +306,7 @@ const OurWork = () => {
                       alt=""
                     />
                   </div>
-                  {/* <div className="img-tab d-flex align-items-center justify-content-center">
-                    <img loading="lazy"
-  decoding="async"
-
-                      src={Bhairahawagardenresorttablet}
-                      alt=""
-                      className="d-block "
-                    />
-                  </div> */}
+                  
                 </div>
                 <div className="cardContent col-12 col-md-6">
                   <h3 className="cardtitle">Bhairahawa Garden Resort</h3>

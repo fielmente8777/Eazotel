@@ -1,7 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
-import "../style/TeamHeroSection.css";
+import React from "react";
 import teamhero from "../assets/teamhero.png";
+import "../style/TeamHeroSection.css";
 
 const TeamHeroSection = () => {
   const containerVariants = {
@@ -20,13 +20,13 @@ const TeamHeroSection = () => {
         <div className="row">
           <div className="col-lg-6 d-flex flex-column align-items-center align-items-lg-start justify-content-center h-100 gap-2">
           <h1 className="teamherosection-left-title">OUR TEAM</h1>
-        <h2 className="teamherosection-left-subtitle">
+        {/* <h2 className="teamherosection-left-subtitle">
           Lorem ipsum dolor sit amet sectetur.
         </h2>
         <p className="teamherosection-left-description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        </p> */}
           </div>
 
           <div className="col-lg-6 d-flex  justify-content-lg-end justify-content-center  ">

@@ -1,9 +1,9 @@
 //import React,{useState} from 'react'
-import {useForm} from 'react-hook-form'
-import { Button, Container,Form } from 'react-bootstrap'
-import {useNavigate} from 'react-router-dom'
+import { Button, Container, Form } from 'react-bootstrap'
+import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
-const Reset_Url= 'http://35.78.112.238/api/ChangePass/'
+const Reset_Url= 'https://nexon.eazotel.com/eazotel/edit/password'
 
 const ResetPassword = () => {
    
@@ -21,7 +21,13 @@ const ResetPassword = () => {
       headers: {
         'Content-Type': 'application/json', 
       },
-      body:JSON.stringify({Token:token, Old_Password: data.password, Password: data.new_password })
+      body:JSON.stringify(
+        {
+          "token":token,
+          "oldAccessId":data.password,
+          "newAccessId":data.new_password
+         }
+        )
     });
     const json1 = await response.json();
     console.log(json1);

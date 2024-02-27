@@ -1,19 +1,18 @@
 import React, { useContext, useState } from "react";
-import Logo from "../assets/EAZOTEL LOGO-09.png";
-import "../style/LoginEazotel.css";
-import { Link, useNavigate } from "react-router-dom";
-import Spinner from "../components/Loader";
-import AuthContext from "../context/AuthProvider";
 import { useForm } from "react-hook-form";
-import { LoginSocialGoogle } from "reactjs-social-login";
+import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-import { BsEyeSlash, BsEye } from "react-icons/bs";
+import { RxArrowLeft } from "react-icons/rx";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { RxArrowLeft } from "react-icons/rx";
+import { LoginSocialGoogle } from "reactjs-social-login";
+import Spinner from "../components/Loader";
+import AuthContext from "../context/AuthProvider";
+import "../style/LoginEazotel.css";
 
 const LoginEazotel = () => {
-  const { baseUrl, setAuth, setHaveDashboardPassword, setClientWebsite, setClientengine } =
+  const { baseUrl,baseUrl1, setAuth, setHaveDashboardPassword, setClientWebsite, setClientengine } =
     useContext(AuthContext);
   const newLoginAPI = `${baseUrl}/api/login`
   const {
@@ -27,7 +26,7 @@ const LoginEazotel = () => {
 
   async function CheckDashboardAPI() {
     const dashboard = await fetch(
-      `${baseUrl}/api/getDashboardStatus?id=${localStorage.getItem('Token')}`,
+      `${baseUrl1}/eazotel/getuser/${localStorage.getItem('Token')}`,
       {
         method: "GET",
         headers: {
@@ -54,13 +53,18 @@ const LoginEazotel = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(`${baseUrl}/api/login`, {
+      const response = await fetch(`${baseUrl1}/eazotel/ceateuser`, {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ emailId: data.email, accesskey: data.password }),
+        body: JSON.stringify({ 
+                            "register":"false",
+                            "emailId": data.email,
+                            "userName":"Testing",
+                            "accesskey": data.password,                
+                    }),
       });
 
       setLoading(false);
@@ -81,53 +85,25 @@ const LoginEazotel = () => {
     }
   };
 
-  const Dinabite = async (token) => {
-    const url = `${baseUrl}/api/dinabite/check`;
-    const payload = {
-      token: token
-    };
-
-    const headers = new Headers();
-    headers.append('accept', 'application/json');
-    headers.append('Content-Type', 'application/json');
-
-    await fetch(url, {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify(payload)
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data); // Process the response data here
-        if (data.Message !== "register") {
-          // alert("registering token to storage")
-          localStorage.setItem("dinabiteToken", data.Message)
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }
-
-
   const handleGoogleLogin = async (provider, data) => {
     const email = data.email;
     const password = data.email;
     try {
-      const response = await fetch(newLoginAPI, {
+      const response = await fetch(`${baseUrl1}/eazotel/ceateuser`, {
         method: "POST",
         headers: {
           Accept: "application/json, text/plain, */*",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          emailId: email,
-          accesskey: password
+          "register":"false",
+          "emailId": email,
+          "accesskey": password,
+          "userName":"Testing",
         }),
       });
       const json = await response.json();
       if (json.Status === true) {
-        Dinabite(data.access_token)
         toast("Login successful")
         localStorage.setItem("Token", json.Token);
         sessionStorage.setItem("Token", json.Token);

@@ -1,24 +1,24 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import Modal from "react-bootstrap/Modal";
-import { Button } from "react-bootstrap";
-import ConfettiExplosion from "react-confetti-explosion";
-import EmailRegisteredPopup from "../components/EmailRegistered";
-import TestImage from "../assets/Testform.png"
-import AuthContext from "../context/AuthProvider";
 import axios from "axios";
-import Spinner from "../components/Spinner"
-import Partner from "./Partner";
-import "../style/Test.css"
-import Hospitality from "./Hospitality";
+import React, { useContext, useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
+import Modal from "react-bootstrap/Modal";
+import ConfettiExplosion from "react-confetti-explosion";
+import { useForm } from "react-hook-form";
+import { GrClose } from "react-icons/gr";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import TestImage from "../assets/Testform.png";
+import EmailRegisteredPopup from "../components/EmailRegistered";
+import Spinner from "../components/Spinner";
+import AuthContext from "../context/AuthProvider";
+import "../style/Model.css";
+import "../style/Test.css";
 import AboutBookingEngine from "./AboutBookingEngine";
 import AboutDashboard from "./AboutDashboard";
 import BrowsMore from "./BrowsMore";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import "../style/Model.css"
-import { GrClose } from "react-icons/gr"
+import Hospitality from "./Hospitality";
+import Partner from "./Partner";
 import Registration from "./Registration";
 
 const Test = () => {
@@ -143,6 +143,7 @@ const Test = () => {
       CreateWebsite()
     }
   }
+
 
 
   return (
@@ -305,25 +306,11 @@ const Test = () => {
                         })}
                       />
                     </div>
-                    {/* <div className="col-md-6 forminput">
-                      <label htmlFor="name" class="form-label inputname">
-                        Hotel Domain
-                      </label>
-                      <input
-                        type="text"
-                        name="domain"
-                        placeholder="Enter hotel domain"
-                        class=" inputarea room"
-                        onChange={(e) => setData({ ...data, domain: e.target.value })}
-                        {...register("domain", {
-                          required: {
-                            value: true,
-                            message: "domain is required",
-                          },
-                        })}
-                      />
-                    </div> */}
+                    
                   </div>
+                 
+                  
+                  
                   <div className="ackrow">
 
                     <div className="ack">

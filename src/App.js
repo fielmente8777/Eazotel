@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { BsArrowUpCircle } from "react-icons/bs";
 import { Outlet, Route, Routes, useLocation } from "react-router-dom";
+import OtaPage from "../src/components/OtaForm.jsx";
 import OtpPage from "../src/components/OtpPage";
 import Test from "../src/components/Test";
 import "./App.css";
@@ -161,7 +162,7 @@ function App() {
         <Route path="/our-work" element={<OurWork />}/>
         <Route path="/team" element={<Team/>} />
 
-        {/* <Route path="/img" element={<Imageupload />} />  */}
+        <Route path="/ota" element={<OtaPage />} /> 
       </Routes>
       {location.pathname !== "/login" && location.pathname !== "/signup" && (
         <Footer />

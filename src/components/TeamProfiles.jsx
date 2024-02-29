@@ -15,7 +15,7 @@ const TeamProfiles = () => {
     {"img":profile3,"Name":"Sumanto Biswas","Position":""},
     {"img":profile2,"Name":"Divyanshu Sharma","Position":""},
     {"img":profile4,"Name":"Saurabh Sharma","Position":""},
-    {"img":profile8,"Name":"Abhijeet Kumar","Position":""},
+    {"img":profile8,"Name":"Abhijeet Singh","Position":""},
     {"img":profile5,"Name":"Hem Bhadur","Position":""},
     {"img":profile6,"Name":"Abhay Pratap","Position":""},
     {"img":profile7,"Name":"Sumit Kumar","Position":""},

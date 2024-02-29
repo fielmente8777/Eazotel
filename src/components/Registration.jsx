@@ -1,11 +1,9 @@
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { FcGoogle } from "react-icons/fc";
 import { GrClose } from "react-icons/gr";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { LoginSocialGoogle } from "reactjs-social-login";
 import Logo from "../assets/EAZOTEL LOGO-09.png";
 import Spinner from "../components/Spinner";
 import AuthContext from "../context/AuthProvider";
@@ -33,7 +31,47 @@ const Registration = ({ hoteldata }) => {
   const [loading, setLoading] = useState(false);
   const { load, setLoad, modalShow, setModalShow,clientWebsite, setClientWebsite,clientengine, setClientengine } = useContext(AuthContext);
 
+  const TemplateSwitch = async(token,number,json1)=>{
+    const response = await fetch(`${baseUrl1}/eazotel/changeTemplate`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(
+        {
+          "Token":token,
+          "template":number
+      }   
+      ),
+    });
+
+    const json = await response.json();
+    console.log(json)
+    if(json.Status){
+      setLoad(false)
+      setShowpop(false)
+      setModalShow(true)
+      setHaveDashboardPassword(true)
+      //redirections
+      window.open(json1.websiteLink, '_blank');
+      window.open(json1.engineLink, '_blank');
+      window.open(`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
+    }
+    else{
+      setLoad(false)
+      setShowpop(false)
+      setModalShow(true)
+      setHaveDashboardPassword(true)
+      //redirections
+      window.open(json1.websiteLink, '_blank');
+      window.open(json1.engineLink, '_blank');
+      window.open(`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
+    }
+  }
+
   const onSubmit = async () => {
+    setLoad(true)
     if(username==="" || Email==="" || Password===""){
       toast.warning("Please Fill fields")
     }
@@ -69,7 +107,8 @@ const Registration = ({ hoteldata }) => {
                 Accept: "application/json, text/plain, */*",
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify({
+              body: JSON.stringify(
+                {
                 Token: json.Token,
                 template: "1",
                 hotelName: hoteldata.HotelName,
@@ -95,7 +134,7 @@ const Registration = ({ hoteldata }) => {
                 "parkingLocation":"underground",
                 "pricingStructure":"",
                 "reservationRequirement":"false",
-                "logo":"https://urbanvenue.in/wp-content/uploads/2020/09/logo_uv-removebg-preview-e1701685619775.png",
+                "logo":"https://png.pngtree.com/png-vector/20190927/ourmid/pngtree-media-logo-png-image_1744656.jpg",
                 "totalroomCategory":"0",
                 "roomCategories":[],
                 "bannerVideo":"",
@@ -159,21 +198,18 @@ const Registration = ({ hoteldata }) => {
                 "document":{},
                 "otaRequired":{}
   
-              }),
+              }
+              ),
             });
-  
+           
             const json1 = await response1.json();
             if (json1.Status === true) {
-              setClientWebsite(json1.Website)
-              setClientengine(json1.BookingEngine)
-              setLoad(false)
-              setShowpop(false)
-              setModalShow(true)
-              setHaveDashboardPassword(true)
-              //redirections
-              const websiteTab = window.open(json1.Website, '_blank');
-              const dashboardTab = window.open(json1.BookingEngine, '_blank');
-              const bookingTab = window.open(`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
+              setClientWebsite(json1.websiteLink)
+              setClientengine(json1.engineLink)
+              const templates = ["1","2","3","4","5","6"]
+              const randomIndex = Math.floor(Math.random() * templates.length);
+              // alert(templates[randomIndex])
+              TemplateSwitch(json.Token,templates[randomIndex],json1)
             }
             else {
               setLoad(false)
@@ -401,7 +437,7 @@ const Registration = ({ hoteldata }) => {
             <button style={{marginLeft:"35%"}} onClick={()=>{onSubmit()}}  className="createwebsitebutton ">Submit</button>
           </div>
           or
-          <div className="googleauth mt-1 w-100">
+          {/* <div className="googleauth mt-1 w-100">
             <LoginSocialGoogle
               client_id="525278251391-g3jigd28se6a4fse2ld8pcp2spvv2jnp.apps.googleusercontent.com"
               scope="openid profile email"
@@ -422,7 +458,7 @@ const Registration = ({ hoteldata }) => {
                 <h3 className="glb">Continue with Google</h3>
               </div>
             </LoginSocialGoogle>
-          </div>
+          </div> */}
           <p className="abs mt-3">
             *By filling this information you’re agreeing to our terms and
             conditions{" "}

@@ -1,10 +1,10 @@
 import React from "react";
-import "../style/Footer.css";
+import { FaEnvelope, FaPhoneAlt, FaRegCopyright } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Logo from "../assets/EAZOTEL LOGO-09.png";
 import Instagram from "../assets/image 2.png";
 import Linkedin from "../assets/image 5.png";
-import { FaRegCopyright, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import "../style/Footer.css";
 
 const Footer = () => {
   return (
@@ -59,7 +59,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-md-6 col-lg-3 col-xl-3 service">
+            <div className="col-md-6 col-lg-4 col-xl-3 service">
               <h4 className="product-heading">PRODUCTS & SERVICES</h4>
               <ul className="product-list">
                 <li>
@@ -82,7 +82,7 @@ const Footer = () => {
                     Social Media Manager
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to={"/"} className="productlist">
                     Channel Manager
                   </Link>
@@ -91,10 +91,10 @@ const Footer = () => {
                   <Link to={"/"} className="productlist">
                     SEO Manager
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
-            <div className="col-md-6 col-lg-3 col-xl-2 careers ">
+            {/* <div className="col-md-6 col-lg-3 col-xl-2 careers ">
               <h4 className="careers-heading">CAREERS</h4>
               <ul className="careers-list">
                 <li>
@@ -117,9 +117,14 @@ const Footer = () => {
                     Benefits
                   </Link>
                 </li>
+                <li>
+                  <Link to={"/team"} className="companylist">
+                    Team
+                  </Link>
+                </li>
               </ul>
-            </div>
-            <div className="col-md-6 col-lg-3 col-xl-2 company">
+            </div> */}
+            <div className="col-md-6 col-lg-4 col-xl-2 company">
               <h4 className="company-heading">COMPANY</h4>
               <ul className="company-list">
                 <li>
@@ -127,26 +132,26 @@ const Footer = () => {
                     About Us
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to={"/"} className="companylist">
                     Our story
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to={"/our-work"} className="companylist">
                     Our work
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to={"/team"} className="companylist">
                     Team
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link to={"/"} className="companylist">
                     Legacy
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -198,12 +203,12 @@ const Footer = () => {
               <FaRegCopyright className="reserved-icon" /> 2020 Eazotel
             </h5>
             <div className="privacy">
-              <Link className="privacy-link" to="/privacypolicy">
+              {/* <Link className="privacy-link" to="/privacypolicy">
                 Privacy Policy |
               </Link>
               <Link className="privacy-link" to="/terms&condition">
                 Terms and Conditions |
-              </Link>
+              </Link> */}
               <Link className="privacy-link" to="/">
                 Cookies
               </Link>

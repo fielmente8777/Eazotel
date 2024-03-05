@@ -8,6 +8,7 @@ import Peaceatpeakdesktop from "../assets/Peaceatpeakdesktop.png";
 import Peaceatpeaktablet from "../assets/Peaceatpeaktablet.png";
 import Sparvhospitalitydesktop from "../assets/Sparvhospitalitydesktop.png";
 import Sparvhospitalitytablet from "../assets/Sparvhospitalitytablet.png";
+// import lesdesk from "../assets/lesdesk.png";
 import "../style/OurWork.css";
 
 const OurWork = () => {
@@ -26,6 +27,9 @@ const OurWork = () => {
 
     SPARV:
       "In luxury’s lap at SPARV Aulakh Resort, Goa, witness the relaxing and laid-back life that is so characteristic of this sunny beach state. Located in Mandrem Rd, near the White Church on the North coast of Goa and overlooking the Arabian Sea, this resort in Mandrem, Goa will slow your time to a tranquil tempo. 17 Km and approximately 100 minutes from the city centre, SPARV beach resort in Goa expands over multiple acres of lush greenery, divided into the main hotel building with Standard, Deluxe and Premium category rooms. This accommodation in Mandrem coupled with a convenient location, and easy access to the city’s must-see destinations, makes for a perfect romantic or family holiday.",
+
+    HotelAwadh:
+      "In luxury’s lap at Ayodhya witness the relaxing and laid-back life that is so characteristic of this sunny beach state.Make  a perfect  family holiday.",
   };
   return (
     <div>
@@ -351,11 +355,7 @@ const OurWork = () => {
                       alt=""
                     />
                   </div>
-                  {/* <div className="img-tab d-flex align-items-center justify-content-center">
-                    <img loading="lazy"
-  decoding="async"
- src={Peaceatpeaktablet} alt="" className="d-block " />
-                  </div> */}
+                 
                 </div>
                 <div className="cardContent col-12 col-md-6">
                   <h3 className="cardtitle">Peace at peak</h3>
@@ -425,6 +425,7 @@ const OurWork = () => {
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </section>

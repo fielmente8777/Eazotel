@@ -1,223 +1,88 @@
-import React from "react";
-import { FaEnvelope, FaPhoneAlt, FaRegCopyright } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import Logo from "../assets/EAZOTEL LOGO-09.png";
-import Instagram from "../assets/image 2.png";
-import Linkedin from "../assets/image 5.png";
-import "../style/Footer.css";
-
+import React from 'react'
+import { Link } from 'react-router-dom'
+import logo from "../assets/EAZOTEL LOGO-09.png"
+import Insta from "../assets/image 2.png"
+import linkedIn from "../assets/image 5.png"
 const Footer = () => {
   return (
-    <>
-      <div className="foot">
-        <div className="container footer">
-          <Link to="/">
-            <img
-              loading="lazy"
-              decoding="async"
-              className="footer-logo"
-              src={Logo}
-              alt="logo"
-            />
-          </Link>
-
-          <div className="row footer-body">
-            <div className="col-md-6 col-lg-5 col-xl-5 about">
-              <h4>Address:</h4>
-              <ul className="address">
-                <li className="address-list">We Work Forum, DLF Cyber City,</li>
-                <li>DLF Phase 3, Gurugram, Haryana 122002</li>
-                {/* <br /> */}
-                <li className="address-list">
-                  Eazotel Technologies, 71-75 Shelton St, London <br />
-                  WC2H 9JQ, United Kingdom
-                </li>
-              </ul>
-
-              <h4>Contact Details</h4>
-              <ul className="contact">
-                <li className="address-list">
-                  <FaPhoneAlt />
-                  <Link
-                    to="tel:9501868775"
-                    style={{ textDecoration: "none", color: " #193971" }}
-                  >
-                    +91 9501868775
-                  </Link>
-                </li>
-                <li className="address-list">
-                  <FaEnvelope />
-                  <Link
-                    to="mailto:sachin@eazotel.com"
-                    style={{
-                      textDecoration: "none",
-                      color: " #193971",
-                    }}
-                  >
-                    sachin@eazotel.com
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="col-md-6 col-lg-4 col-xl-3 service">
-              <h4 className="product-heading">PRODUCTS & SERVICES</h4>
-              <ul className="product-list">
-                <li>
-                  <Link to={"/create-hotel-website"} className="productlist">
-                    Create Website
-                  </Link>
-                </li>
-                <li>
-                  <Link to={"/booking-engine"} className="productlist">
-                    Booking Engine
-                  </Link>
-                </li>
-                <li>
-                  <Link to={"/dashboard"} className="productlist">
-                    Interactive Dashboard
-                  </Link>
-                </li>
-                <li>
-                  <Link to={"/social-media-manager"} className="productlist">
-                    Social Media Manager
-                  </Link>
-                </li>
-                {/* <li>
-                  <Link to={"/"} className="productlist">
-                    Channel Manager
-                  </Link>
-                </li>
-                <li>
-                  <Link to={"/"} className="productlist">
-                    SEO Manager
-                  </Link>
-                </li> */}
-              </ul>
-            </div>
-            {/* <div className="col-md-6 col-lg-3 col-xl-2 careers ">
-              <h4 className="careers-heading">CAREERS</h4>
-              <ul className="careers-list">
-                <li>
-                  <Link to={"/"} className="careerslist">
-                    Job opening
-                  </Link>
-                </li>
-                <li>
-                  <Link to={"/"} className="careerslist">
-                    Hiring
-                  </Link>
-                </li>
-                <li>
-                  <Link to={"/"} className="careerslist">
-                    Employee Success
-                  </Link>
-                </li>
-                <li>
-                  <Link to={"/"} className="careerslist">
-                    Benefits
-                  </Link>
-                </li>
-                <li>
-                  <Link to={"/team"} className="companylist">
-                    Team
-                  </Link>
-                </li>
-              </ul>
-            </div> */}
-            <div className="col-md-6 col-lg-4 col-xl-2 company">
-              <h4 className="company-heading">COMPANY</h4>
-              <ul className="company-list">
-                <li>
-                  <Link to={"/aboutus"} className="companylist">
-                    About Us
-                  </Link>
-                </li>
-                {/* <li>
-                  <Link to={"/"} className="companylist">
-                    Our story
-                  </Link>
-                </li> */}
-                <li>
-                  <Link to={"/our-work"} className="companylist">
-                    Our work
-                  </Link>
-                </li>
-                {/* <li>
-                  <Link to={"/team"} className="companylist">
-                    Team
-                  </Link>
-                </li> */}
-                {/* <li>
-                  <Link to={"/"} className="companylist">
-                    Legacy
-                  </Link>
-                </li> */}
-              </ul>
-            </div>
+    <div className="flex flex-col items-center self-stretch px-20 py-2 pt-3.5 mt-16 w-full text-[#0A3A75] bg-[#E8F1FD] max-md:px-5 max-md:pb-5  max-md:mt-10 max-md:max-w-full max-md:py-2">
+      <img
+        loading="lazy"
+        alt='Eazotel'
+        src={logo}
+        className="max-w-full aspect-[2.86] w-[218px]"
+      />
+      <div className="flex gap-5 justify-between self-stretch mx-10 mt-7 max-md:flex-wrap max-md:mx-2 max-md:mr-2 max-md:max-w-full">
+        <div className="flex gap-4 justify-between  max-md:flex-wrap max-md:max-w-full" >
+          <div className="grow self-start text-xl font-semibold leading-7">
+            Address:
           </div>
-          <div className="social">
-            <div className="social-icon">
-              {/*
-          <Link to="/"><img loading="lazy" decoding="async" className="socialimage " src={Facebook} alt='instagram' />
-          </Link> */}
-              <Link
-                to="https://instagram.com/eazotel?igshid=MzRlODBiNWFlZA== "
-                target="_blank"
-              >
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  className="socialimage"
-                  src={Instagram}
-                  alt="facebook"
-                />
-              </Link>
-              {/*
-          <Link to="/"><img loading="lazy" decoding="async" className="socialimage" src={Twitter} alt='youtube' />
-          </Link> */}
-              <Link
-                to="https://www.linkedin.com/company/eazotel/mycompany/"
-                target="_blank"
-              >
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  className="socialimage"
-                  src={Linkedin}
-                  alt="linkedin"
-                />
-              </Link>
+          <div className="flex gap-5 py-[4px] text-base leading-6 max-md:flex-wrap max-md:max-w-full">
+            <div className="flex-auto">
+              We Work Forum, DLF Cyber City, DLF Phase 3, Gurugram, Haryana
+              122002, 🇮🇳  India
             </div>
-            <div className="demo-button">
-              <Link to="/demo">
-                <button className="demobutton">Book Demo</button>
-              </Link>
+            <div className="w-px bg-[#0A3A75] h-[72px] max-md:w-[100%] max-md:h-px" />
+            <div className="flex-auto">
+              Eazotel Technologies, 71-75 Shelton St, London WC2H 9JQ,🇬🇧 United
+              Kingdom
             </div>
           </div>
         </div>
-
-        <div className="horizontal-line-below"></div>
-        <div className="container">
-          <div className="copywrite-section">
-            <h5 className="reserved">
-              <FaRegCopyright className="reserved-icon" /> 2020 Eazotel
-            </h5>
-            <div className="privacy">
-              {/* <Link className="privacy-link" to="/privacypolicy">
-                Privacy Policy |
+        <div className='flex flex-col'>
+          <div className="flex gap-4 justify-between whitespace-nowrap max-md:flex-col max-md:max-w-full">
+            <div className="grow self-start text-xl font-semibold leading-7">
+              Contact Details:
+            </div>
+            <div className="flex flex-col flex-1 justify-start  py-[4px] max-md:px text-base leading-6">
+              <div className="flex gap-2 justify-between">
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2301da23e35b1258fb3c0fa797af56b48fc19487f3f731dc9d0e546c835e8f8c?apiKey=c81aa461ed88497c9715fa37b92c8996&"
+                  className="w-6 aspect-square"
+                />
+                <a style={{textDecoration:"none",color:"#0A3A75"}} href='tel:+9501868775' className="grow">+91 9501868775</a>
+              </div>
+              <div className="flex gap-2 justify-between mt-2">
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/67ef70ddf2e60afd55dc17d5edce9c9d1db69f540a605b07ba4d25271b7928ee?apiKey=c81aa461ed88497c9715fa37b92c8996&"
+                  className="w-6 aspect-square"
+                />
+                <a style={{textDecoration:"none",color:"#0A3A75"}} href='mailto:sachin@eazotel.com' className="grow">Sachin@eazotel.com</a>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-between  gap-4 mt-3 max-md:flex-col max-md:max-w-full">
+            <div className="self-start text-xl font-semibold leading-7">
+              Follow Us:
+            </div>
+            <div className="flex flex-1 justify-center max-md:justify-start gap-3 py-[4px] max-md:px text-base leading-6">
+              <Link to="https://www.instagram.com/eazotel/?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank">
+                <img
+                  loading="lazy"
+                  src={Insta}
+                  className="w-10 aspect-square"
+                />
               </Link>
-              <Link className="privacy-link" to="/terms&condition">
-                Terms and Conditions |
-              </Link> */}
-              <Link className="privacy-link" to="/">
-                Cookies
+              <Link to="https://www.linkedin.com/company/eazotel/mycompany/verification/" target="_blank">
+                <img
+                  loading="lazy"
+                  src={linkedIn}
+                  className="w-10 aspect-square"
+                />
               </Link>
             </div>
           </div>
         </div>
       </div>
-    </>
-  );
-};
-
-export default Footer;
+      <div className="mt-16 text-base font-semibold leading-6 whitespace-nowrap max-md:mt-10">
+        © 2020 Eazotel
+      </div>
+      <div className="text-sm leading-5">
+        Privacy Policy | Terms & Conditions | Cookies
+      </div>
+    </div>
+  )
+}
+export default Footer

@@ -2,29 +2,13 @@ import React, { useContext, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { BsArrowUpCircle } from "react-icons/bs";
 import { Outlet, Route, Routes, useLocation } from "react-router-dom";
-import OtaPage from "../src/components/OtaForm.jsx";
-import OtpPage from "../src/components/OtpPage";
 import Test from "../src/components/Test";
 import "./App.css";
-import Aboutus from "./components/Aboutus";
-import BookingEngine from "./components/BookingEngine";
-import CongratsModal from "./components/CongratulationModal";
-import CreateWebsite from "./components/CreateWebsite";
-import Dashboard from "./components/Dashboard";
 import Footer from "./components/Footer";
-import Form from "./components/Form";
-import Home from "./components/Home";
 import LoginEazotel from "./components/LoginEazotel";
 import Navbar from "./components/Navbar";
 import OurWork from "./components/OurWork.jsx";
-import PrivacyPolicy from "./components/PrivacyPolicy";
-import Registration from "./components/Registration";
-import ResetPassword from "./components/ResetPassword";
-import SocialMedia from "./components/SocialMedia";
-import Team from "./components/Team";
-import TermsCondition from "./components/TermsCondition";
 import AuthContext from "./context/AuthProvider.js";
-import Template from "./pages/Template";
 import "./style/Main.css";
 
 
@@ -138,31 +122,34 @@ function App() {
         )}
       </>
       <></>
+      {/* https://app.eaotel.com/ */}
       <Routes element={<Outlet />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/resetpassword" element={<ResetPassword />} />
-        <Route path="/verification" element={<OtpPage />} />
+        {/* <Route path="/" element={<Home />} /> */}
+        {/* <Route path="/resetpassword" element={<ResetPassword />} /> */}
+        {/* <Route path="/verification" element={<OtpPage />} /> */}
+        <Route path="/" element={<Test />} />
         <Route path="/generatewebsite" element={<Test />} />
-        <Route path="/ready" element={<CongratsModal />} />
+        <Route path="/*" element={<Test />} />
+        {/* <Route path="/ready" element={<CongratsModal />} /> */}
         <Route path="/login" element={<LoginEazotel />} />
-        <Route path="/navbar" element={<Navbar />} />
-        <Route path="/signup" element={<Registration />} />
-        <Route path="/create-hotel-website" element={<CreateWebsite />} />
-        <Route path="/booking-engine" element={<BookingEngine />} />
-        <Route path="/social-media-manager" element={<SocialMedia />} />
-        <Route path="/demo" element={<Form />} />
-        <Route path="/aboutus" element={<Aboutus />} />
-        <Route path="/templates" element={<Template />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/navbar" element={<Navbar />} /> */}
+        {/* <Route path="/signup" element={<Registration />} /> */}
+        {/* <Route path="/create-hotel-website" element={<CreateWebsite />} /> */}
+        {/* <Route path="/booking-engine" element={<BookingEngine />} /> */}
+        {/* <Route path="/social-media-manager" element={<SocialMedia />} /> */}
+        {/* <Route path="/demo" element={<Form />} /> */}
+        {/* <Route path="/aboutus" element={<Aboutus />} /> */}
+        {/* <Route path="/templates" element={<Template />} /> */}
+        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
 
 
         {/* Saurabh Routes */}
-        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-        <Route path="/terms&condition" element={<TermsCondition />} />
+        {/* <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/terms&condition" element={<TermsCondition />} /> */}
         <Route path="/our-work" element={<OurWork />}/>
-        <Route path="/team" element={<Team/>} />
+        {/* <Route path="/team" element={<Team/>} /> */}
 
-        <Route path="/ota" element={<OtaPage />} /> 
+        {/* <Route path="/ota" element={<OtaPage />} />  */}
       </Routes>
       {location.pathname !== "/login" && location.pathname !== "/signup" && (
         <Footer />

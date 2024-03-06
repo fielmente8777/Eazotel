@@ -14,11 +14,7 @@ import Spinner from "../components/Spinner";
 import AuthContext from "../context/AuthProvider";
 import "../style/Model.css";
 import "../style/Test.css";
-import AboutBookingEngine from "./AboutBookingEngine";
-import AboutDashboard from "./AboutDashboard";
 import BrowsMore from "./BrowsMore";
-import Hospitality from "./Hospitality";
-import Partner from "./Partner";
 import Registration from "./Registration";
 
 const Test = () => {
@@ -140,7 +136,7 @@ const Test = () => {
       setShowpop(true)
     }
     else {
-      CreateWebsite()
+      toast.warning("You Have already Created Website")
     }
   }
 
@@ -365,12 +361,12 @@ const Test = () => {
 
       {load ? <Spinner /> : <div>
 
-
+{/* 
 
       <Hospitality />
       <Partner />
       <AboutDashboard />
-      <AboutBookingEngine />
+      <AboutBookingEngine /> */}
       <BrowsMore /> </div>}
     </>
   );

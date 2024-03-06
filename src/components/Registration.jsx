@@ -206,7 +206,7 @@ const Registration = ({ hoteldata }) => {
             if (json1.Status === true) {
               setClientWebsite(json1.websiteLink)
               setClientengine(json1.engineLink)
-              const templates = ["1","2","3","4","5","6"]
+              const templates = ["1","2","5","6"]
               const randomIndex = Math.floor(Math.random() * templates.length);
               // alert(templates[randomIndex])
               TemplateSwitch(json.Token,templates[randomIndex],json1)

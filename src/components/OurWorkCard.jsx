@@ -1,6 +1,6 @@
-import React from 'react'
-import "../style/ourWorkCard.css"
+import React from 'react';
 import { Link } from 'react-router-dom';
+import "../style/ourWorkCard.css";
 
 const OurWorkCard = ({ data, index }) => {
     const truncateText = (text, maxLength) => {
@@ -20,7 +20,7 @@ const OurWorkCard = ({ data, index }) => {
                         <p className="card-text">{truncateText(data.description, 400)}</p>
                     </div>
 
-                    <Link to={data.link} className='btn mt-3' style={{ backgroundColor: '#FC5C01', color: "#fff" }}>
+                    <Link to={data.link} className='btn mt-3' style={{ backgroundColor: '#FC5C01', color: "#fff" }} target='_blank'>
                         View Website
                     </Link>
                 </div>

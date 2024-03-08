@@ -3,7 +3,7 @@ import { createContext, useState } from 'react';
 const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
-    // const baseUrl = "http://127.0.0.1:8000"
+    // const baseUrl1 = "http://127.0.0.1:5000"
     const baseUrl = "https://api.eazotel.com"
     const baseUrl1 = "https://nexon.eazotel.com"
     const [auth, setAuth] = useState(false);

@@ -1,0 +1,54 @@
+.ourworkcard {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.ourworkcard .left h5 {
+    color: #FC5C01;
+    font-size: 2rem;
+}
+
+.ourworkcard .left p {
+    color: #193971;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.ourworkcard .right {
+    overflow: hidden;
+    /* height: 100%; */
+}
+
+.ourworkcard.right img {
+    /* height: 80%; */
+    /* overflow: hidden; */
+}
+
+.ourworkcard.right .img2 {
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .ourworkcard {
+        height: 100%;
+        overflow: hidden;
+
+    }
+
+    .ourworkcard .right {
+        margin-top: 1rem;
+        overflow: hidden;
+        /* height: 100%; */
+    }
+
+    .ourworkcard .right {
+        margin-top: 1rem;
+        overflow: hidden;
+        /* height: 100%; */
+    }
+
+}

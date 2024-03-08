@@ -148,16 +148,17 @@
 .gap2 {
   gap: 2rem;
 }
+
 @media only screen and (max-width: 992px) and (min-width: 768px) {
-    .custom-container {
-        gap: 4.063rem;
-        border-radius: 1.875rem;
-        border: 0.5px solid #fd5c01;
-        height: 42rem;
-        flex-shrink: 0;
-        margin-bottom: 5rem;
-        padding: 3rem 2rem;
-      }
+  .custom-container {
+    gap: 4.063rem;
+    border-radius: 1.875rem;
+    border: 0.5px solid #fd5c01;
+    height: 42rem;
+    flex-shrink: 0;
+    margin-bottom: 5rem;
+    padding: 3rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 1200px) and (min-width: 768px) {
@@ -187,13 +188,15 @@
     height: 10rem;
     width: 14.1rem;
   }
+
   .title-text {
     text-wrap: wrap;
   }
+
   .banner-text {
     width: 40rem;
   }
-  
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -231,6 +234,7 @@
     background: url(../assets/AppleiPadPro11SilverLandscape.png) no-repeat;
     background-size: cover;
   }
+
   .banner-text {
     width: 30rem;
   }
@@ -238,8 +242,19 @@
 
 @media only screen and (max-width: 480px) {
   .banner-text {
-    width: 25rem;
+    width: 100%;
   }
+
+  .title-heading {
+    text-align: center;
+    text-shadow: -1px 3px 0px rgba(0, 0, 0, 0.08);
+    font-family: Futura;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+  }
+
   .custom-container {
     gap: 4.063rem;
     height: auto;
@@ -291,7 +306,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 2rem;
-    width: 18rem;
-    margin: 1.2rem;
+    width: 100%;
+    margin: 0;
   }
 }

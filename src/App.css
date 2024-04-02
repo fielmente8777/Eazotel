@@ -1,9 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Playfair+Display&display=swap');
 
 * {
   font-family: var(--pix-heading-font), sans-serif !
-  /* font-family: "Playfair Display", serif; */
-  /* font-family: "Futura"; */
+    /* font-family: "Playfair Display", serif; */
+    /* font-family: "Futura"; */
 
 }
 
@@ -21,7 +25,7 @@
 }
 
 
-#root{
+#root {
   overflow: hidden;
 }
 

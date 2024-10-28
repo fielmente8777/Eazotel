@@ -18,7 +18,7 @@ import BrowsMore from "./BrowsMore";
 import Registration from "./Registration";
 
 const Test = () => {
-  const {baseUrl, auth,baseUrl1,setAuth,setHaveDashboardPassword } = useContext(AuthContext)
+  const { baseUrl, auth, baseUrl1, setAuth, setHaveDashboardPassword } = useContext(AuthContext)
   const { clientWebsite, clientengine } = useContext(AuthContext);
   const { modalShow, setModalShow } = useContext(AuthContext);
   const { load, setLoad, setClientWebsite, setClientengine } = useContext(AuthContext);
@@ -72,7 +72,7 @@ const Test = () => {
     }
   }, [auth]);
 
-  const TemplateSwitch = async(token,number,json1)=>{
+  const TemplateSwitch = async (token, number, json1) => {
     const response = await fetch(`${baseUrl1}/eazotel/changeTemplate`, {
       method: "POST",
       headers: {
@@ -81,15 +81,15 @@ const Test = () => {
       },
       body: JSON.stringify(
         {
-          "Token":token,
-          "template":number
-      }   
+          "Token": token,
+          "template": number
+        }
       ),
     });
 
     const json = await response.json();
     console.log(json)
-    if(json.Status){
+    if (json.Status) {
       setLoad(false)
       setShowpop(false)
       setModalShow(true)
@@ -99,7 +99,7 @@ const Test = () => {
       window.open(json1.engineLink, '_blank');
       window.open(`https://dashboard.eazotel.com/?id=${localStorage.getItem("Token")}`, '_blank');
     }
-    else{
+    else {
       setLoad(false)
       setShowpop(false)
       setModalShow(true)
@@ -114,7 +114,7 @@ const Test = () => {
   const CreateWebsite = async (formDataWithLocations) => {
     setLoad(true)
     console.log(formDataWithLocations)
-    if(!auth){
+    if (!auth) {
       const response = await fetch(`${baseUrl1}/eazotel/ceateuser`, {
         method: "POST",
         headers: {
@@ -123,7 +123,7 @@ const Test = () => {
         },
         body: JSON.stringify(
           {
-            "register":"true",
+            "register": "true",
             emailId: formDataWithLocations.email,
             userName: formDataWithLocations.HotelName,
             accesskey: formDataWithLocations.Password
@@ -132,17 +132,17 @@ const Test = () => {
 
       const json = await response.json();
       if (json.Status === true) {
-          setAuth(true)
-          localStorage.setItem("Token", json.Token);
+        setAuth(true)
+        localStorage.setItem("Token", json.Token);
       }
-      else{
+      else {
         toast.warning("Email Id Already Registered")
-        return  
+        return
       }
-      
+
     }
     toast.success("Creating Website for You")
-    
+
     try {
       const response1 = await fetch(`${baseUrl1}/eazotel/createwebsite`, {
         method: "POST",
@@ -152,113 +152,113 @@ const Test = () => {
         },
         body: JSON.stringify(
           {
-          Token: localStorage.getItem("Token"),
-          template: "1",
-          hotelName: formDataWithLocations.HotelName,
-          hotelPhone: formDataWithLocations.Hotelnumber,
-          hotelAddress:"addr",
-          hotelState: formDataWithLocations.State,
-          hotelCity: formDataWithLocations.City,
-          hotelCountry: formDataWithLocations.Country,
-          hotelPinCode: formDataWithLocations.pincode,
-          hotelEmail: formDataWithLocations.email,
-          oldWebsite: "",
-          "planName":"P1",
-          "category":"Hotel",
-          "currency":"INR",
-          "starRating":"4",
-          "hasPool":"false",
-          "breakfastOption":[],
-          "serveBreakfast":"false",
-          "breakfastIncluded":"false",
-          "parkingType":"best",
-          "parkingAvailability":"false",
-          "parkingCost":"200",
-          "parkingLocation":"underground",
-          "pricingStructure":"",
-          "reservationRequirement":"false",
-          "logo":"https://png.pngtree.com/png-vector/20190927/ourmid/pngtree-media-logo-png-image_1744656.jpg",
-          "totalroomCategory":"0",
-          "roomCategories":[],
-          "bannerVideo":"",
-          "hotelDescription":"Best Hotel",
-          "customDomain":"",
-          "colorCombination":{
-              "backgroundColor":"#153B5B",
-              "buttonColor":"#0A3A75",
-              "fontColor":"#0A3A75",
-              "boardColor":"#0A3A75"
-          },
-          "Facilities":{
-                        "FrontDesk":"true",
-                        "Wifi":"false",
-                        "Board":"false",
-                        "Rooftop_Cafe":"false",
-                        "Health_Club":"false",
-                        "Express_checks":"false",
-                        "Wave_Bar":"false",
-                        "Conference_Hall":"false",
-                        "Alchemy":"false",
-                        "Suncafe":"false",
-                        "Doctor":"false",
-                        "Spa":"false",
-                        "Babysitting":"false",
-                        "Electricity":"false",
-                        "Concierge":"false",
-                        "Conditinoer":"false",
-                        "Security":"false",
-                        "TravelTour":"false",
-                        "Currency_Exchange":"false",
-                        "Laundry":"false",
-                        "Casino":"false",
-                        "Parking":"false",
-                        "Elevator":"false",
-                        "Jacuzzi":"false",
-                        "Room_Service":"false",
-                        "Accept_Cards":"false",
-                        "Child_Care":"false",
-                        "Conference_Rooms":"false",
-                        "Fitness_Center":"false",
-                        "Health_&_Beauty":"false",
-                        "Restaurant":"false",
-                        "Swimming_Pool":"false",
-                        "Housekeep":"false",
-                        "cofeemaker":"false",
-                        "minibar":"false",
-                        "Evpoint":"false",
-                        "SaunaStream":"false"
-                        },
-          "checkInFrom":"2024-02-12",
-          "checkInUntil":"01:33",
-          "petCharges":"100",
-          "allowPets":"true",
-          "checkOutFrom":"2024-02-12",
-          "allowChildren":"true",
-          "checkOutUntil":"01:33",
-          "languages":["English"],
-          "pagesRequired":{},
-          "establishedSince":"1995",
-          "document":{},
-          "otaRequired":{}
+            Token: localStorage.getItem("Token"),
+            template: "1",
+            hotelName: formDataWithLocations.HotelName,
+            hotelPhone: formDataWithLocations.Hotelnumber,
+            hotelAddress: "addr",
+            hotelState: formDataWithLocations.State,
+            hotelCity: formDataWithLocations.City,
+            hotelCountry: formDataWithLocations.Country,
+            hotelPinCode: formDataWithLocations.pincode,
+            hotelEmail: formDataWithLocations.email,
+            oldWebsite: "",
+            "planName": "P1",
+            "category": "Hotel",
+            "currency": "INR",
+            "starRating": "4",
+            "hasPool": "false",
+            "breakfastOption": [],
+            "serveBreakfast": "false",
+            "breakfastIncluded": "false",
+            "parkingType": "best",
+            "parkingAvailability": "false",
+            "parkingCost": "200",
+            "parkingLocation": "underground",
+            "pricingStructure": "",
+            "reservationRequirement": "false",
+            "logo": "https://png.pngtree.com/png-vector/20190927/ourmid/pngtree-media-logo-png-image_1744656.jpg",
+            "totalroomCategory": "0",
+            "roomCategories": [],
+            "bannerVideo": "",
+            "hotelDescription": "Best Hotel",
+            "customDomain": "",
+            "colorCombination": {
+              "backgroundColor": "#153B5B",
+              "buttonColor": "#0A3A75",
+              "fontColor": "#0A3A75",
+              "boardColor": "#0A3A75"
+            },
+            "Facilities": {
+              "FrontDesk": "true",
+              "Wifi": "false",
+              "Board": "false",
+              "Rooftop_Cafe": "false",
+              "Health_Club": "false",
+              "Express_checks": "false",
+              "Wave_Bar": "false",
+              "Conference_Hall": "false",
+              "Alchemy": "false",
+              "Suncafe": "false",
+              "Doctor": "false",
+              "Spa": "false",
+              "Babysitting": "false",
+              "Electricity": "false",
+              "Concierge": "false",
+              "Conditinoer": "false",
+              "Security": "false",
+              "TravelTour": "false",
+              "Currency_Exchange": "false",
+              "Laundry": "false",
+              "Casino": "false",
+              "Parking": "false",
+              "Elevator": "false",
+              "Jacuzzi": "false",
+              "Room_Service": "false",
+              "Accept_Cards": "false",
+              "Child_Care": "false",
+              "Conference_Rooms": "false",
+              "Fitness_Center": "false",
+              "Health_&_Beauty": "false",
+              "Restaurant": "false",
+              "Swimming_Pool": "false",
+              "Housekeep": "false",
+              "cofeemaker": "false",
+              "minibar": "false",
+              "Evpoint": "false",
+              "SaunaStream": "false"
+            },
+            "checkInFrom": "2024-02-12",
+            "checkInUntil": "01:33",
+            "petCharges": "100",
+            "allowPets": "true",
+            "checkOutFrom": "2024-02-12",
+            "allowChildren": "true",
+            "checkOutUntil": "01:33",
+            "languages": ["English"],
+            "pagesRequired": {},
+            "establishedSince": "1995",
+            "document": {},
+            "otaRequired": {}
 
-        }
+          }
         ),
       });
-     
+
       const json1 = await response1.json();
       if (json1.Status === true) {
         setClientWebsite(json1.websiteLink)
         setClientengine(json1.engineLink)
-        const templates = ["1","2","5","6"]
+        const templates = ["1", "2", "5", "6"]
         const randomIndex = Math.floor(Math.random() * templates.length);
         // alert(templates[randomIndex])
-        TemplateSwitch(localStorage.getItem("Token"),templates[randomIndex],json1)
+        TemplateSwitch(localStorage.getItem("Token"), templates[randomIndex], json1)
       }
       else {
         setLoad(false)
         toast.error(json1.Message)
       }
-      
+
     }
     catch (error) {
       setLoad(false)
@@ -274,7 +274,7 @@ const Test = () => {
       City: location.city || "",
       State: location.state || "",
       Country: location.country || "",
-      pincode:"112233"
+      pincode: "112233"
     };
     await setFormdatawithLocation(formDataWithLocation);
     if (!auth) {
@@ -323,14 +323,14 @@ const Test = () => {
                       })}
                     />
                   </div>
-                  {!auth?<div className="mb-4 forminput">
+                  {!auth ? <div className="mb-4 forminput">
                     <label htmlFor="name" className="form-label inputname">
-                      Create Password 
+                      Create Password
                     </label>
                     <input
-                      type="text"
+                      type="password"
                       name="Password"
-                      placeholder="Name of the hotel"
+                      placeholder="Enter password"
                       class=" inputarea hotel"
                       onChange={(e) =>
                         setData({ ...data, password: e.target.value })
@@ -342,7 +342,7 @@ const Test = () => {
                         },
                       })}
                     />
-                  </div>:""}
+                  </div> : ""}
                   <div className="row mb-4">
                     <div className="col-md-6 forminput">
                       <label htmlFor="name" class="form-label inputname">
@@ -448,10 +448,10 @@ const Test = () => {
                       />
                     </div>
                   </div>
-                  
-                 
-                  
-                  
+
+
+
+
                   <div className="ackrow">
 
                     <div className="ack">
@@ -474,7 +474,7 @@ const Test = () => {
             </div>
             <div className="formImage">
               <img loading="lazy"
-  decoding="async"
+                decoding="async"
 
                 src={TestImage}
                 alt="leftimg"
@@ -506,13 +506,13 @@ const Test = () => {
 
       {load ? <Spinner /> : <div>
 
-{/* 
+        {/* 
 
       <Hospitality />
       <Partner />
       <AboutDashboard />
       <AboutBookingEngine /> */}
-      <BrowsMore /> </div>}
+        <BrowsMore /> </div>}
     </>
   );
 };
@@ -549,7 +549,7 @@ function MyVerticallyCenteredModal(props) {
               <p className="webLink">
                 <Link to={clientWebsite} target="_blank" rel="noreferrer">{clientWebsite}</Link>
               </p>
-              
+
             </div>
             <div className="test">
               <div>{props.expload && <ConfettiExplosion />}</div>

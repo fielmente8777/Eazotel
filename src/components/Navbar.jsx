@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <div className="header fixed-top">
-      <div className="container header-item">
+      <div className="header-item">
         <div>
           <Link to="/">
             <img

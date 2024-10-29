@@ -291,10 +291,10 @@ const Test = () => {
     <>
       {/* Main Code */}
 
-      <div className="test">
+      <div className="test flex-col flex items-center justify-center">
         <ToastContainer />
         {showpop ? <Registration hoteldata={FormdatawithLocation} /> : ""}
-        <div className="container" style={{ "overflowX": "hidden" }} >
+        <div className="max-w-[1320px] px-[.7rem] w-full" style={{ "overflowX": "hidden" }} >
           <div className="row test-data"
             id={load ? "top-div-opacity" : "top-div-test"}>
             <div className="test-content">

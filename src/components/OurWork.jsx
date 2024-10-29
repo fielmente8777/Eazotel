@@ -100,7 +100,6 @@ const OurWork = () => {
       "img": spice,
       "img2": "",
       "link": "https://test6.eazotel.com/",
-      "client": "",
       "client": "Spice Haven",
       "description": ` Spice Haven is a culinary oasis nestled in the heart of downtown, where exquisite flavors and aromas from the Indian subcontinent tantalize your senses. Our restaurant is renowned for its authentic Indian cuisine, meticulously prepared using traditional recipes passed down through generations. Our welcoming ambiance and embark on a culinary journey like no other. From rich and creamy curries to fiery tandoori delights, our menu offers a diverse selection of dishes to cater to every palate. Indulge in the robust flavors of our signature dishes, crafted with the finest ingredients and seasoned to perfection.`
     }
@@ -108,7 +107,7 @@ const OurWork = () => {
   return (
     <div>
       <div className="margin-top"></div>
-      <section className="container pt-5 pb-3">
+      <section className="max-w-[1320px] mx-auto w-full pt-5 pb-3">
         <div className="text-center mt-4 mb-3">
           <h1 className=" textblue fontfamily-fm-b title-heading">
             Our Featured <span className="textorange">Work</span>
@@ -123,7 +122,7 @@ const OurWork = () => {
         </div>
       </section>
 
-      <section className="container custom-padding px-0">
+      <section className="max-w-[1320px] mx-auto w-full custom-padding px-0">
         {datas.map((data, index) => (
           <OurWorkCard key={index} data={data} index={index} />
         ))}

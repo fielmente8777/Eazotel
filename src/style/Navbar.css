@@ -8,6 +8,9 @@
     justify-content: space-between;
     height: 70px;
     align-items: center;
+    max-width: 1320px;
+    margin: auto;
+    padding: 0 .7rem;
 }
 
 .logo {

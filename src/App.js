@@ -10,6 +10,8 @@ import Navbar from "./components/Navbar";
 import OurWork from "./components/OurWork.jsx";
 import AuthContext from "./context/AuthProvider.js";
 import "./style/Main.css";
+import Career from "./components/Career.jsx";
+import Contact from "./components/Contact.jsx";
 
 
 function App() {
@@ -132,6 +134,8 @@ function App() {
         <Route path="/*" element={<Test />} />
         {/* <Route path="/ready" element={<CongratsModal />} /> */}
         <Route path="/login" element={<LoginEazotel />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/contact" element={<Contact />} />
         {/* <Route path="/navbar" element={<Navbar />} /> */}
         {/* <Route path="/signup" element={<Registration />} /> */}
         {/* <Route path="/create-hotel-website" element={<CreateWebsite />} /> */}

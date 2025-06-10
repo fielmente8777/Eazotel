@@ -9,6 +9,11 @@ const Footer = () => {
   const getFullYear = new Date().getFullYear();
   return (
     <footer className="text-[#0A3A75] bg-[#E8F1FD] py-2 max-w-[1540px] w-full mx-auto">
+
+
+
+
+      
       <div className="flex flex-col items-center justify-center gap-4">
         <div className="relative aspect-[4/1.5] w-[218px]">
           <img
@@ -49,6 +54,7 @@ const Footer = () => {
                       listStyleType: "none",
                     }}
                     className="link"
+                    to="https://www.eazotel.com/"
                   >
                     Home
                   </Link>
@@ -61,6 +67,7 @@ const Footer = () => {
                       listStyleType: "none",
                     }}
                     className="link"
+                    to="/career"
                   >
                     Career
                   </Link>
@@ -73,6 +80,7 @@ const Footer = () => {
                       listStyleType: "none",
                     }}
                     className="link"
+                    to={"/contact"}
                   >
                     Contact
                   </Link>
@@ -101,7 +109,7 @@ const Footer = () => {
                 <ul className="flex flex-col gap-2 ps-0">
                   <li>
                     <Link
-                      to={"tel:+14388554446"}
+                      to={"tel:+919501868775"}
                       className="link text-decoration-none flex items-center gap-1 text-[#0A3A75]"
                     >
                       <span>
@@ -112,7 +120,7 @@ const Footer = () => {
                           className="w-6 aspect-square"
                         />
                       </span>
-                      +1(438) 855-4446
+                      +91 95018 68775
                     </Link>
                   </li>
                   <li>

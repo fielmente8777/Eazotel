@@ -4,7 +4,7 @@ import ContactImg from "../assets/Hotels.jpg";
 const Contact = () => {
   return (
     <div className="pt-2 pb-2 my-24">
-      <div className="container ">
+      <div className="max-w-[1280px] mx-auto max-md:px-4">
         <h1 className="pt-4 pb-4">Let's Have a Chat</h1>
         <div className="row justify-content-center ">
           <div className="col-md-6 d-flex flex-column h-100">

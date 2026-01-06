@@ -109,7 +109,9 @@ const Footer = () => {
                 <ul className="flex flex-col gap-2 ps-0">
                   <li>
                     <Link
-                      to={"tel:+919501868775"}
+                      to={"tel:+91 81789 39108"}
+                      
+                      // to={"tel:+919501868775"}
                       className="link text-decoration-none flex items-center gap-1 text-[#0A3A75]"
                     >
                       <span>
@@ -120,7 +122,7 @@ const Footer = () => {
                           className="w-6 aspect-square"
                         />
                       </span>
-                      +91 95018 68775
+                      +91 81789 39108
                     </Link>
                   </li>
                   <li>

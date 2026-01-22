@@ -1,11 +1,10 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import "../node_modules/react-bootstrap/dist/react-bootstrap";
 import App from './App';
-import {BrowserRouter as Router} from 'react-router-dom';
-import "../node_modules/react-bootstrap/dist/react-bootstrap"
-import "../node_modules/bootstrap/dist/css/bootstrap.css"
-import './style/Carousal.css'
 import { AuthProvider } from './context/AuthProvider';
+import './style/Carousal.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,42 +1,48 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { BsArrowUpCircle } from "react-icons/bs";
 import { Outlet, Route, Routes, useLocation } from "react-router-dom";
 import Test from "../src/components/Test";
-import "./App.css";
-import Footer from "./components/Footer";
+import "./App.scss";
+import Career from "./components/Career.jsx";
+import Contact from "./components/Contact.jsx";
 import LoginEazotel from "./components/LoginEazotel";
 import Navbar from "./components/Navbar";
+import NewFooter from "./components/NewFooter.jsx";
 import OurWork from "./components/OurWork.jsx";
 import AuthContext from "./context/AuthProvider.js";
 import "./style/Main.css";
-import Career from "./components/Career.jsx";
-import Contact from "./components/Contact.jsx";
-
 
 function App() {
   // Context-> Auth Provider.js
-  const { baseUrl,baseUrl1, auth, setAuth, setHaveDashboardPassword, setClientWebsite, setClientengine } =
-    useContext(AuthContext);
+  const {
+    baseUrl,
+    baseUrl1,
+    auth,
+    setAuth,
+    setHaveDashboardPassword,
+    setClientWebsite,
+    setClientengine,
+  } = useContext(AuthContext);
   const location = useLocation();
 
   async function CheckDashboardAPI() {
     const dashboard = await fetch(
-      `${baseUrl1}/eazotel/getuser/${localStorage.getItem('Token')}`,
+      `${baseUrl1}/eazotel/getuser/${localStorage.getItem("Token")}`,
       {
         method: "GET",
         headers: {
           Accept: "application/json, text/plain, */*",
           "Content-Type": "application/json",
         },
-      }
+      },
     );
     const nav = await dashboard.json();
     if (nav.Status) {
-      setAuth(true)
+      setAuth(true);
       setHaveDashboardPassword(true);
-      setClientWebsite(nav.Data.websiteLink)
-      setClientengine(nav.Data.bookingEngineLink)
+      setClientWebsite(nav.Data.websiteLink);
+      setClientengine(nav.Data.bookingEngineLink);
     }
   }
   useEffect(() => {
@@ -45,9 +51,8 @@ function App() {
       sessionStorage.getItem("Token") !== null
     ) {
       CheckDashboardAPI();
-    }
-    else {
-      setAuth(false)
+    } else {
+      setAuth(false);
     }
   }, [auth, setAuth]);
 
@@ -58,40 +63,41 @@ function App() {
     switch (location.pathname) {
       case "/":
         return {
-          title: "Best Hotel Booking & Hospitality Management Software | Eazotel",
+          title:
+            "Best Hotel Booking & Hospitality Management Software | Eazotel",
           description:
             "Eazotel is a leading Hotel Booking & Hospitality Management Software. We simplify hotel operations with website building, review management, SEO, and SMO of the website. ",
         };
-      case '/about':
+      case "/about":
         return {
-          title: 'Eazotel | About',
-          description: 'Description for the About page.',
+          title: "Eazotel | About",
+          description: "Description for the About page.",
         };
-      case '/login':
+      case "/login":
         return {
-          title: 'Eazotel | Login',
-          description: 'Description for the Login page.',
+          title: "Eazotel | Login",
+          description: "Description for the Login page.",
         };
-      case '/signup':
+      case "/signup":
         return {
-          title: 'Eazotel | Signup',
-          description: 'Description for the Signup page.',
+          title: "Eazotel | Signup",
+          description: "Description for the Signup page.",
         };
-      case '/services':
+      case "/services":
         return {
-          title: 'Eazotel | Services',
-          description: 'Description for the Services page.',
+          title: "Eazotel | Services",
+          description: "Description for the Services page.",
         };
-      case '/contact':
+      case "/contact":
         return {
-          title: 'Eazotel | Contact',
-          description: 'Description for the Contact page.',
+          title: "Eazotel | Contact",
+          description: "Description for the Contact page.",
         };
 
-      case '/resetpassword':
+      case "/resetpassword":
         return {
-          title: 'Eazotel | Reset Password',
-          description: 'Description for the Reset Password page.',
+          title: "Eazotel | Reset Password",
+          description: "Description for the Reset Password page.",
         };
       case "/createwebsite":
         return {
@@ -102,8 +108,7 @@ function App() {
         };
       case "/socialmedia":
         return {
-          title:
-            "Eazotel - Affordable Social Media Marketing for Your Hotels",
+          title: "Eazotel - Affordable Social Media Marketing for Your Hotels",
           description:
             "Boost your hotel's online presence with Eazoteland to engage the audience through effective hotel social media marketing. Enhance brand visibility and bookings.",
         };
@@ -146,17 +151,16 @@ function App() {
         {/* <Route path="/templates" element={<Template />} /> */}
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
 
-
         {/* Saurabh Routes */}
         {/* <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/terms&condition" element={<TermsCondition />} /> */}
-        <Route path="/our-work" element={<OurWork />}/>
+        <Route path="/our-work" element={<OurWork />} />
         {/* <Route path="/team" element={<Team/>} /> */}
 
         {/* <Route path="/ota" element={<OtaPage />} />  */}
       </Routes>
       {location.pathname !== "/login" && location.pathname !== "/signup" && (
-        <Footer />
+        <NewFooter />
       )}
       <BsArrowUpCircle
         size={500}

@@ -110,7 +110,7 @@ const NewFooter = () => {
               />
             </Link>
             <div className="">
-              <h2 className="text-2xl font-bold text-primary">
+              <h2 className="text-2xl font-bold text-[#0a3a75]!">
                 {links[0].title}
               </h2>
               <ul className="space-y-3">
@@ -132,7 +132,7 @@ const NewFooter = () => {
                 to={contacts.logoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-secondary border border-primary transition hover:scale-x-105 active:scale-95"
+                className="inline-flex items-center gap-2 mt-4 bg-[#0a3a75]! text-white px-4 py-2 rounded hover:bg-secondary border border-[#0a3a75]! transition hover:scale-x-105 active:scale-95"
               >
                 <span>
                   <LoginIcon />
@@ -144,7 +144,7 @@ const NewFooter = () => {
           {/* other links */}
           {links.slice(1, 4).map((link, index) => (
             <div key={index} className="space-y-4">
-              <h2 className="text-2xl font-bold text-primary">{link.title}</h2>
+              <h2 className="text-2xl font-bold text-[#0a3a75]!">{link.title}</h2>
               <ul className="space-y-2">
                 {link.listOfLinks.map((link, subIndex) => (
                   <li key={subIndex} className="my-2">
@@ -154,7 +154,7 @@ const NewFooter = () => {
                         link.href?.startsWith("http") ? "_blank" : "_self"
                       }
                       rel="noopener noreferrer"
-                      className="text-primary flex gap-2"
+                      className="text-[#0a3a75]! flex gap-2"
                     >
                       {link.icon && <span className="">{link.icon}</span>}
                       {link.name}
@@ -189,7 +189,7 @@ const NewFooter = () => {
           ))}
         </div>
       </div>
-      <div className="w-full bg-primary py-4">
+      <div className="w-full bg-[#0a3a75] py-4">
         <div className="max-width">
           <div className="flex items-center justify-between">
             <p className="text-white">

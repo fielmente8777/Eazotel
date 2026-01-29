@@ -110,7 +110,7 @@ const NewFooter = () => {
               />
             </Link>
             <div className="">
-              <h2 className="text-2xl font-bold text-[#0a3a75]!">
+              <h2 className="text-2xl font-bold text-[#0a3a75]">
                 {links[0].title}
               </h2>
               <ul className="space-y-3">
@@ -121,7 +121,7 @@ const NewFooter = () => {
                       to={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary"
+                      className="text-[#0a3a75]"
                     >
                       {link.name}
                     </Link>
@@ -132,7 +132,7 @@ const NewFooter = () => {
                 to={contacts.logoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 bg-[#0a3a75]! text-white px-4 py-2 rounded hover:bg-secondary border border-[#0a3a75]! transition hover:scale-x-105 active:scale-95"
+                className="inline-flex items-center gap-2 mt-4 bg-[#0a3a75] text-white px-4 py-2 rounded hover:bg-secondary border border-[#0a3a75]! transition hover:scale-x-105 active:scale-95"
               >
                 <span>
                   <LoginIcon />
@@ -144,7 +144,7 @@ const NewFooter = () => {
           {/* other links */}
           {links.slice(1, 4).map((link, index) => (
             <div key={index} className="space-y-4">
-              <h2 className="text-2xl font-bold text-[#0a3a75]!">{link.title}</h2>
+              <h2 className="text-2xl font-bold text-[#0a3a75]">{link.title}</h2>
               <ul className="space-y-2">
                 {link.listOfLinks.map((link, subIndex) => (
                   <li key={subIndex} className="my-2">
@@ -154,7 +154,7 @@ const NewFooter = () => {
                         link.href?.startsWith("http") ? "_blank" : "_self"
                       }
                       rel="noopener noreferrer"
-                      className="text-[#0a3a75]! flex gap-2"
+                      className="text-[#0a3a75] flex gap-2"
                     >
                       {link.icon && <span className="">{link.icon}</span>}
                       {link.name}
@@ -164,7 +164,7 @@ const NewFooter = () => {
               </ul>
               {index === 2 && (
                 <div className="mt-4">
-                  <h2 className="text-2xl font-bold text-primary">
+                  <h2 className="text-2xl font-bold text-[#0a3a75]">
                     {links[4].title}
                   </h2>
                   <ul className="flex items-center gap-4 mt-2">
@@ -175,7 +175,7 @@ const NewFooter = () => {
                             to={socialLink.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-10 rounded-md border border-secondary aspect-square flex items-center justify-center bg-primary text-white hover:shadow-xl shadow-secondary transition hover:scale-105 active:scale-95"
+                            className="w-10 rounded-md border border-secondary aspect-square flex items-center justify-center bg-[#0a3a75] text-white hover:shadow-xl shadow-secondary transition hover:scale-105 active:scale-95"
                           >
                             {socialLink.icon}
                           </Link>

@@ -193,7 +193,7 @@ const NewFooter = () => {
         <div className="max-width">
           <div className="flex items-center justify-between">
             <p className="text-white">
-              © {new Date().getFullYear()} Eazotel. All rights reserved. Developed by <Link href="https://www.fielmente.com/" target="_blank">Fielmente</Link>
+              © {new Date().getFullYear()} Eazotel. All rights reserved. Developed by <Link to="https://www.fielmente.com/" target="_blank">Fielmente</Link>
             </p>
             <ul className="flex items-center">
               {links[5].links.map((link, index) => (

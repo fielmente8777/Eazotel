@@ -1,5 +1,5 @@
 export const contacts = {
-  phone: ["+91 95018 68775"],
+  phone: ["+91 95018 68775","+91 81789 39108"],
   email: [
     "sachin@eazotel.com",
     "sachin@fielmente.com",

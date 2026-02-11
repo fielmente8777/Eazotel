@@ -48,11 +48,16 @@ const NewFooter = () => {
     {
       title: "Contact",
       listOfLinks: [
-        {
-          name: contacts.phone[0],
-          href: `tel:${contacts.phone[0]}`,
+        ...contacts.phone.map((phone) => ({
+          name: phone,
+          href: `tel:${phone}`,
           icon: <FillCallIcon />,
-        },
+        })),
+        // {
+        //   name: contacts.phone[0],
+        //   href: `tel:${contacts.phone[0]}`,
+        //   icon: <FillCallIcon />,
+        // },
         ...contacts.email.map((email) => ({
           name: email,
           href: `mailto:${email}`,

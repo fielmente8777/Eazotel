@@ -162,6 +162,18 @@ function App() {
       {location.pathname !== "/login" && location.pathname !== "/signup" && (
         <NewFooter />
       )}
+        <div className="fixed bottom-12 left-[20px] z-20">
+        <Link
+          to={`https://wa.me/${contacts.phone[1].replace(/ /g, "")}?text=Hello I would like to know more about Eazotel Technologies`}
+          target="_blank"
+        >
+          <img
+            src={WhatsApp}
+            alt="call"
+            className="object-cover w-12 aspect-square"
+          />
+        </Link>
+      </div>
       <BsArrowUpCircle
         size={500}
         style={{
